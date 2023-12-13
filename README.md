@@ -1,0 +1,2 @@
+# Project90 Website Revamp
+This project will be a complete makeover to the existing Project90 website. This website will ensure a stronger front end, back end, and smooth user experience. The programming languages used are: HTML, CSS, Javascript, React.js and Next.js.
