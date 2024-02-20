@@ -1,0 +1,114 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+:root
+{
+   --PrimaryFont: 'Source Sans Pro', sans-serif;
+   --SecondaryFont: 'Source Code Pro', monospace;
+
+   --Regular: 300;
+   --Bold: 900;
+
+   --Text: white;
+   --ColourStop1: #133082;
+   --ColourStop2: #293E75;
+   --ColourStop3: #356497;
+   --ColourStop4: #3E80B0;
+   --ColourStop5: #45ABDD;
+}
+
+/* Sizing for Different Media */
+@media (min-width: 300px)
+{
+   :root
+   {
+      --HeaderOne: 2.375rem;
+      --HeaderTwo: 1.625rem;
+      --HeaderThree: 1.125rem;
+      --Body: 0.875rem;
+   }
+}
+@media (min-width: 600px)
+{
+   :root
+   {
+      --HeaderOne: 2.5rem;
+      --HeaderTwo: 1.75rem;
+      --HeaderThree: 1.25rem;
+      --Body: 1rem;
+   }
+}
+@media (min-width: 900px)
+{
+   :root
+   {
+      --HeaderOne: 2.625rem;
+      --HeaderTwo: 1.875rem;
+      --HeaderThree: 1.375rem;
+      --Body: 1.125rem;
+   }
+}
+@media (min-width: 1200px)
+{
+   :root
+   {
+      --HeaderOne: 2.75rem;
+      --HeaderTwo: 2rem;
+      --HeaderThree: 1.50rem;
+      --Body: 1.25rem;
+   }
+   strong, a 
+   { 
+       font-size: var(--HeaderThree);
+   }
+}
+@media (min-width: 1500px)
+{
+   :root
+   {
+      --HeaderOne: 2.875rem;
+      --HeaderTwo: 2.125rem;
+      --HeaderThree: 1.625rem;
+      --Body: 1.375rem;
+   }
+   strong, a 
+   { 
+       font-size: var(--HeaderThree);
+   }
+}
+
+/* General Styling */
+body
+{
+   background: linear-gradient(var(--ColourStop1), var(--ColourStop2), var(--ColourStop3), 
+                                var(--ColourStop4), var(--ColourStop5));
+   color: var(--Text);
+   font-family: var(--PrimaryFont);
+   font-size: var(--Body);
+   font-weight: var(--Regular);
+   line-height: 1.5;
+   margin: 0;
+}
+
+section{ padding: 5em 2.5em; }
+
+strong, a 
+{ 
+   font-weight: var(--Bold);
+   color: var(--Text);
+   font-family: var(--SecondaryFont);
+   text-decoration: none;
+}
+
+/* Typography*/
+h1, h2, h3
+{
+   color: var(--Text);
+   font-weight: var(--Regular);
+   line-height: 1.25;
+   margin: 0;
+}
+
+h1 { font-size: var(--HeaderOne); }
+h2 { font-size: var(--HeaderTwo); }
+h3 { font-size: var(--HeaderThree); }
+p { font-weight: var(--Bold); }
