@@ -2,21 +2,33 @@
 
 :root
 {
-   --PrimaryFont: 'Source Sans Pro', sans-serif;
+   --PrimaryFont: 'Poppins', sans-serif;
    --SecondaryFont: 'Source Code Pro', monospace;
 
-   --Regular: 300;
-   --Bold: 900;
+   --Regular: 500;
+   /* --Bold: 900; */
 
    --Text: white;
    --ColourStop1: #133082;
-   --ColourStop2: #293E75;
-   --ColourStop3: #356497;
-   --ColourStop4: #3E80B0;
-   --ColourStop5: #45ABDD;
+   --ColourStop2: #000;
+   --ColourStop3: #133082;
+   --ColourStop4: #293E75;
+   --ColourStop5: #356497;
+   --ColourStop6: #3E80B0;
+   --ColourStop7: #45ABDD;
 }
 
 /* Sizing for Different Media */
+@media (min-width: 100px)
+{
+   :root
+   {
+      --HeaderOne: 2.15rem;
+      --HeaderTwo: 1.5rem;
+      --HeaderThree: 1rem;
+      --Body: 0.75rem;
+   }
+}
 @media (min-width: 300px)
 {
    :root
@@ -79,36 +91,37 @@
 /* General Styling */
 body
 {
-   background: linear-gradient(var(--ColourStop1), var(--ColourStop2), var(--ColourStop3), 
-                                var(--ColourStop4), var(--ColourStop5));
+   background: linear-gradient(var(--ColourStop1), var(--ColourStop2), var(--ColourStop2), var(--ColourStop2) , var(--ColourStop3), 
+                                var(--ColourStop4), var(--ColourStop5), var(--ColourStop6), var(--ColourStop7));
    color: var(--Text);
    font-family: var(--PrimaryFont);
    font-size: var(--Body);
    font-weight: var(--Regular);
-   line-height: 1.5;
+   line-height: 1.6;
    margin: 0;
 }
 
-section{ padding: 5em 2.5em; }
+section{ padding: 6em 2.5em; }
 
 strong, a 
 { 
    font-weight: var(--Bold);
    color: var(--Text);
-   font-family: var(--SecondaryFont);
+   font-family: var(--PrimaryFont);
    text-decoration: none;
 }
 
 /* Typography*/
 h1, h2, h3
 {
+   flex: 50%;
    color: var(--Text);
    font-weight: var(--Regular);
-   line-height: 1.25;
+   line-height: var(--height);
    margin: 0;
 }
 
 h1 { font-size: var(--HeaderOne); }
 h2 { font-size: var(--HeaderTwo); }
 h3 { font-size: var(--HeaderThree); }
-p { font-weight: var(--Bold); }
+p { font-weight: var(--Regular); }
