@@ -33,7 +33,7 @@ header
     margin: 0 50px;
     transition: all 0.5s ease;
 }
-.navigation-list a:hover { color: var(--ColourStop5); }
+.navigation-list a:hover { color: var(--ColourStop7); }
 
 .bx-menu
 {
