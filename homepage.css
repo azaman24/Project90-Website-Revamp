@@ -26,6 +26,9 @@
       --HeaderTwo: 1.5rem;
       --HeaderThree: 1rem;
       --Body: 0.5rem;
+      --rightIconsXPos: 260%;
+      --handshakeYPos: -140%;
+      --lightBulbYPos: -112.5%;
    }
 }
 @media (min-width: 300px)
@@ -36,6 +39,9 @@
       --HeaderTwo: 1.625rem;
       --HeaderThree: 1.125rem;
       --Body: 0.625rem;
+      --rightIconsXPos: 260%;
+      --handshakeYPos: -225%;
+      --lightBulbYPos: -112.5%;
    }
 }
 @media (min-width: 600px)
@@ -46,6 +52,9 @@
       --HeaderTwo: 1.75rem;
       --HeaderThree: 1.25rem;
       --Body: 0.75rem;
+      --rightIconsXPos: 260%;
+      --handshakeYPos: -145%;
+      --lightBulbYPos: -112.5%;
    }
 }
 @media (min-width: 900px)
@@ -56,6 +65,9 @@
       --HeaderTwo: 1.875rem;
       --HeaderThree: 1.375rem;
       --Body: 0.875rem;
+      --rightIconsXPos: 260%;
+      --handshakeYPos: -135%;
+      --lightBulbYPos: -112.5%;
    }
 }
 @media (min-width: 1200px)
@@ -66,6 +78,9 @@
       --HeaderTwo: 2rem;
       --HeaderThree: 1.50rem;
       --Body: 1rem;
+      --rightIconsXPos: 260%;
+      --handshakeYPos: -120%;
+      --lightBulbYPos: -100%;
    }
    strong, a 
    { 
@@ -80,6 +95,9 @@
       --HeaderTwo: 2.125rem;
       --HeaderThree: 1.625rem;
       --Body: 1.125rem;
+      --rightIconsXPos: 260%;
+      --handshakeYPos: -115%;
+      --lightBulbYPos: -95%;
    }
    strong, a 
    { 
@@ -110,7 +128,7 @@ body
    margin-top: 5%;
    margin-left: auto;
    margin-right: auto;
-   padding: 1.5% 3% 0.25% 3%;
+   padding: 1.5% 3% 2% 3%;
    border-radius: 20px;
 }
 
@@ -126,6 +144,12 @@ body
    border-radius: 20px;
 }
 
+.handshake {
+   fill: #45abdd;
+   /* transform: translate(260%, -140%); */
+   transform: translate(var(--rightIconsXPos), var(--handshakeYPos));
+}
+
 .goals {
    background: #3e80b02a;
    margin-left: 50%;
@@ -133,11 +157,33 @@ body
    border-radius: 20px;
 }
 
+.goalsPos {
+   transform: translate(0%, 0%);
+
+}
+
+.goalsHand {
+   fill: #45abdd;
+   /* transform: translate(260%, -140%); */
+   /* transform: translate(0%,0%); */
+}
+
+.goalsStars {
+   fill: #fff9b8;
+   /* transform: translate(0%,0%); */
+
+}
+
 .plans {
    background: #3564975d;
    margin-left: 6%;
    padding: 2% 2%; 
    border-radius: 20px;
+}
+
+.lightBulb {
+   fill: #45abdd;
+   transform: translate(var(--rightIconsXPos), var(--lightBulbYPos));
 }
 
 .bottomNav {
@@ -153,10 +199,15 @@ body
 .socials {
    margin-left: 4%;
    margin-right: 4%;
-
+   fill: red;
 }
 
-ul {
+.socials:hover {
+   fill: #45abdd;
+   transition: 0.3s ease;
+}
+
+li {
    word-spacing: 2px;
    margin-bottom: 3%;
 }
