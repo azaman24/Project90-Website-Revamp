@@ -119,6 +119,13 @@ body
    height: 40%;
 }
 
+.globe-gif{
+   text-align: center;
+   margin-top: 80px;
+}
+
+
+
 .purpose {
    background: #45aadd1f;
    margin-left: 6%;
@@ -138,6 +145,12 @@ body
    margin-left: 6%;
    padding: 2% 2%; 
    border-radius: 20px;
+}
+
+.starsIcon{
+   width: 15%;
+   position: relative;
+   
 }
 
 .bottomNav {
@@ -185,3 +198,4 @@ h1 { font-size: var(--HeaderOne); }
 h2 { font-size: var(--HeaderTwo); }
 h3 { font-size: var(--HeaderThree); }
 p { font-weight: var(--Regular); }
+
