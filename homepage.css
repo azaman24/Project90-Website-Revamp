@@ -29,6 +29,8 @@
       --rightIconsXPos: 260%;
       --handshakeYPos: -140%;
       --lightBulbYPos: -112.5%;
+      --starsXPos: 40%;
+      --starsYPos: -130%;
    }
 }
 @media (min-width: 300px)
@@ -42,6 +44,8 @@
       --rightIconsXPos: 260%;
       --handshakeYPos: -225%;
       --lightBulbYPos: -112.5%;
+      --starsXPos: 40%;
+      --starsYPos: -132.5%;
    }
 }
 @media (min-width: 600px)
@@ -53,8 +57,11 @@
       --HeaderThree: 1.25rem;
       --Body: 0.75rem;
       --rightIconsXPos: 260%;
+      --starsXPos: 40%;
       --handshakeYPos: -145%;
       --lightBulbYPos: -112.5%;
+      --starsXPos: 40%;
+      --starsYPos: -120%;
    }
 }
 @media (min-width: 900px)
@@ -66,8 +73,11 @@
       --HeaderThree: 1.375rem;
       --Body: 0.875rem;
       --rightIconsXPos: 260%;
+      --starsXPos: 40%;
       --handshakeYPos: -135%;
       --lightBulbYPos: -112.5%;
+      --starsXPos: 40%;
+      --starsYPos: -117.5%;
    }
 }
 @media (min-width: 1200px)
@@ -79,8 +89,11 @@
       --HeaderThree: 1.50rem;
       --Body: 1rem;
       --rightIconsXPos: 260%;
+      --starsXPos: 40%;
       --handshakeYPos: -120%;
       --lightBulbYPos: -100%;
+      --starsXPos: 40%;
+      --starsYPos: -115%;
    }
    strong, a 
    { 
@@ -96,8 +109,11 @@
       --HeaderThree: 1.625rem;
       --Body: 1.125rem;
       --rightIconsXPos: 260%;
+      --starsXPos: 45%;
       --handshakeYPos: -115%;
       --lightBulbYPos: -95%;
+      --starsXPos: 45%;
+      --starsYPos: -112.5%;
    }
    strong, a 
    { 
@@ -137,6 +153,11 @@ body
    height: 40%;
 }
 
+.globe-gif{
+   text-align: center;
+   margin-top: 80px;
+}
+
 .purpose {
    background: #45aadd1f;
    margin-left: 6%;
@@ -152,19 +173,20 @@ body
 
 .goals {
    background: #3e80b02a;
+   margin-left: 0%;
    margin-left: 50%;
    padding: 2% 2%; 
    border-radius: 20px;
 }
 
 .goalsPos {
-   transform: translate(0%, 0%);
+   transform: translate(var(--starsXPos), var(--starsYPos));
 
 }
 
 .goalsHand {
    fill: #45abdd;
-   /* transform: translate(260%, -140%); */
+   /* transform: translate(0%, 0%); */
    /* transform: translate(0%,0%); */
 }
 
@@ -186,6 +208,17 @@ body
    transform: translate(var(--rightIconsXPos), var(--lightBulbYPos));
 }
 
+.bottomNavContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.bottomNavContainer section {
+   flex: 25%;
+   margin: 10px 0;
+}
+
 .bottomNav {
    width: 32.5%;
    background: #3e80b04a;
@@ -196,14 +229,40 @@ body
    text-align: center;
 }
 
+.joinUsLink {
+   font-size: 1em;
+   color: #fff;
+   background: #133082;
+   padding: 2% 5%;
+   border-radius: 20px;
+   margin-bottom: 100%;
+   margin-top: 100%;
+}
+
+.joinUsLink:hover {
+   color: #133082;
+   background: #fff;
+   transition: 0.35s ease;
+}
+
+.P90Email {
+   color: #133082;
+}
+
+.P90Email:hover {
+   color: #fff;
+   transition: 0.3s ease;
+}
+
 .socials {
+   margin-top: 4%;
    margin-left: 4%;
    margin-right: 4%;
-   fill: red;
+   fill: #133082;
 }
 
 .socials:hover {
-   fill: #45abdd;
+   fill: #fff;
    transition: 0.3s ease;
 }
 
@@ -212,7 +271,24 @@ li {
    margin-bottom: 3%;
 }
 
-section{ padding: 7.25em 2.5em; }
+ul {
+   word-spacing: 2px;
+   margin-top: 3%;
+}
+
+section{ 
+   padding: 7.25em 1em; 
+}
+
+.hiddenSection {
+   transform: translateY(60%) perspective(9cm) rotateX(-20deg);
+}
+
+.showSection {
+   transition: linear 0.5s;
+   transform: translateY(0%) perspective(9cm) rotate3d(0, 1, 1, 0deg);
+
+}
 
 strong, a 
 { 
