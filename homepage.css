@@ -350,9 +350,11 @@ p { font-weight: var(--Regular); }
       transform: translate(var(--rightIconsXPos), var(--handshakeYPos));
    }
    10% {
+      fill: #3b97c6;
       transform: translate(var(--rightIconsXPos), calc(var(--handshakeYPos) + 15%));
    }
    15% {
+      fill: #45abdd;
       transform: translate(var(--rightIconsXPos), calc(var(--handshakeYPos) - 10%));
    }
    20% {
