@@ -18,96 +18,96 @@
 }
 
 /* Sizing for Different Media */
-@media (min-width: 100px)
-{
-   :root
-   {
-      --HeaderOne: 2.15rem;
-      --HeaderTwo: 1.5rem;
-      --HeaderThree: 1rem;
-      --Body: 0.5rem;
-
-      --rightIconsXPos: 260%;
-      --handshakeYPos: -140%;
-      --lightBulbYPos: -112.5%;
-      --starsXPos: 40%;
-      --starsYPos: -130%;
-
-      --bottomNavSize: 120px;
-   }
-}
 @media (min-width: 300px)
 {
    :root
    {
-      --HeaderOne: 2.375rem;
-      --HeaderTwo: 1.625rem;
-      --HeaderThree: 1.125rem;
+      --LogoWidth: 40%;
+      --globeSize: 500px;
+      --HeaderOne: 1.25rem;
+      --HeaderTwo: 0.682rem;
+      --HeaderThree: 0.5rem;
       --Body: 0.625rem;
 
-      --rightIconsXPos: 260%;
-      --handshakeYPos: -225%;
-      --lightBulbYPos: -112.5%;
-      --starsXPos: 40%;
-      --starsYPos: -132.5%;
+      --rightIconsXPos: 150%;
+      --handshakeYPos: -300px;
+      --lightBulbYPos: -280px;
+      --starsXPos: 150%;
+      --starsYPos: -310px;
 
-      --bottomNavSize: 160px;
+      --infoWidth: 100%;
+      --goalsWidth: 90%;
+      --marginOne: -0.5%;
+      --marginTwo: var(--marginOne);
+      --bottomNavSize: 100px;
    }
 }
 @media (min-width: 600px)
 {
    :root
    {
-      --HeaderOne: 2.5rem;
-      --HeaderTwo: 1.75rem;
-      --HeaderThree: 1.25rem;
+      --LogoWidth: 35%;
+      --HeaderOne: 1.5rem;
+      --HeaderTwo: 0.818rem;
+      --HeaderThree: 0.75rem;
       --Body: 0.75rem;
 
-      --rightIconsXPos: 260%;
-      --starsXPos: 40%;
-      --handshakeYPos: -145%;
-      --lightBulbYPos: -112.5%;
-      --starsXPos: 40%;
-      --starsYPos: -120%;
+      --rightIconsXPos: 280%;
+      --handshakeYPos: -160%;
+      --starsXPos: 30%;
+      --starsYPos: -130%;
+      --lightBulbYPos: -120%;
 
-      --bottomNavSize: 140px;
+      --infoWidth: 60%;
+      --marginOne: 0%;
+      --marginTwo: 39.75%;
+      --bottomNavSize: 120px;
    }
 }
 @media (min-width: 900px)
 {
    :root
    {
-      --HeaderOne: 2.625rem;
-      --HeaderTwo: 1.875rem;
-      --HeaderThree: 1.375rem;
+      --LogoWidth: 30%;
+      --HeaderOne: 1.75rem;
+      --HeaderTwo: 1.4rem;
+      --HeaderThree: 1.5rem;
       --Body: 0.875rem;
-      --rightIconsXPos: 260%;
-      --starsXPos: 40%;
-      --handshakeYPos: -135%;
-      --lightBulbYPos: -112.5%;
-      --starsXPos: 40%;
-      --starsYPos: -117.5%;
 
-      --bottomNavSize: 180px;
+      --rightIconsXPos: 275%;
+      --handshakeYPos: -140%;
+      --starsXPos: 25%;
+      --starsYPos: -130%;
+      --lightBulbYPos: -105%;
+      
+      --infoWidth: 60%;
+      --marginOne: 1%;
+      --marginTwo: 38.75%;
+
+
+      --bottomNavSize: 140px;
    }
 }
 @media (min-width: 1200px)
 {
    :root
    {
-      --HeaderOne: 2.75rem;
-      --HeaderTwo: 2rem;
+      --LogoWidth: 25%;
+      --HeaderOne: 2.3rem;
+      --HeaderTwo: 1.25rem;
       --HeaderThree: 1.50rem;
       --Body: 1rem;
+      --rightIconsXPos: 280%;
+      --handshakeYPos: -125%;
+      --starsXPos: 25%;
+      --starsYPos: -110%;
+      --lightBulbYPos: -107.5%;
+      --infoWidth: 60%;
+      --marginOne: 1%;
+      --marginTwo: 38.75%;
 
-      --rightIconsXPos: 260%;
-      --starsXPos: 40%;
-      --handshakeYPos: -120%;
-      --lightBulbYPos: -100%;
-      --starsXPos: 40%;
-      --starsYPos: -115%;
 
-      --bottomNavSize: 220px;
+      --bottomNavSize: 160px;
    }
    strong, a 
    { 
@@ -118,19 +118,21 @@
 {
    :root
    {
-      --HeaderOne: 2.875rem;
-      --HeaderTwo: 2.125rem;
+      --LogoWidth: 20%;
+      --HeaderOne: 2.75rem;
+      --HeaderTwo: 1.5rem;
       --HeaderThree: 1.625rem;
       --Body: 1.125rem;
 
-      --rightIconsXPos: 260%;
-      --starsXPos: 45%;
-      --handshakeYPos: -115%;
-      --lightBulbYPos: -95%;
-      --starsXPos: 45%;
-      --starsYPos: -112.5%;
-
-      --bottomNavSize: 240px;
+      --rightIconsXPos: 290%;
+      --handshakeYPos: -120%;
+      --starsXPos: 15%;
+      --starsYPos: -110%;
+      --lightBulbYPos: -90%;
+      --infoWidth: 65%;
+      --marginOne: 3%;
+      --marginTwo: 32.75%;
+      --bottomNavSize: 200px;
    }
    strong, a 
    { 
@@ -139,8 +141,7 @@
 }
 
 /* General Styling */
-body
-{
+body {
    background: linear-gradient(var(--ColourStop1) 0%, var(--ColourStop2) 7%, var(--ColourStop3) 100%, 
       var(--ColourStop4) 120%, var(--ColourStop5) 135%, var(--ColourStop6) 150%);
    color: var(--Text);
@@ -162,6 +163,10 @@ body
    border-radius: 20px;
 }
 
+.logoSizing {
+   width: var(--LogoWidth)
+}
+
 .content {
    width: 45%;
    height: 40%;
@@ -178,21 +183,17 @@ body
 
 .summarySpacing {
    margin-top: -32.5%;
+   margin-bottom: -5%;
 }
-.purposeSpacing {
-   margin-top: -5%;
-   margin-bottom: -20%;
-}
-.goalsSpacing {
-   margin-bottom: -25%;
-}
-.plansSpacing {
+
+.infoSpacing {
    margin-bottom: -20%;
 }
 
 .purpose {
    background: rgba(19, 78, 161, 0.145);
-   margin-left: 6%;
+   width: var(--infoWidth);
+   margin-left: var(--marginOne);
    padding: 2% 2%; 
    border-radius: 20px;
 }
@@ -207,8 +208,8 @@ body
 
 .goals {
    background: rgba(19, 78, 161, 0.21);
-   margin-left: 0%;
-   margin-left: 50%;
+   width: var(--infoWidth);
+   margin-left: var(--marginTwo);
    padding: 2% 2%; 
    border-radius: 20px;
 }
@@ -230,7 +231,8 @@ body
 
 .plans {
    background: rgba(19, 78, 161, 0.29);
-   margin-left: 6%;
+   width: var(--infoWidth);
+   margin-left: var(--marginOne);
    padding: 2% 2%; 
    border-radius: 20px;
 }
@@ -264,7 +266,7 @@ body
    text-align: center;
 }
 
-.joinUsLink {
+.joinOrContact {
    font-size: 1em;
    color: #fff;
    background: #45abdd;
@@ -273,18 +275,10 @@ body
    margin-bottom: 100%;
    margin-top: 100%;
 }
-.joinUsLink:hover {
+.joinOrContact:hover {
    color: #133082;
    background: #fff;
    transition: 0.35s ease;
-}
-
-.P90Email {
-   color: #45abdd;
-}
-.P90Email:hover {
-   color: #fff;
-   transition: 0.3s ease;
 }
 
 .socials {
@@ -310,16 +304,6 @@ ul {
 
 section{ 
    padding: 7.25em 1em; 
-}
-
-.hiddenSection {
-   transform: translateY(60%) perspective(9cm) rotateX(-20deg);
-}
-
-.showSection {
-   transition: linear 0.5s;
-   transform: translateY(0%) perspective(9cm) rotate3d(0, 1, 1, 0deg);
-
 }
 
 strong, a 
