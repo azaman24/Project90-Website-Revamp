@@ -25,21 +25,24 @@
       --LogoWidth: 40%;
       --globeSize: 500px;
       --HeaderOne: 1.25rem;
-      --HeaderTwo: 0.682rem;
-      --HeaderThree: 0.5rem;
+      --HeaderTwo: 0.625rem;
+      --HeaderThree: 0.45rem;
       --Body: 0.625rem;
 
+      --globeGif: -25%;
+      --slogan: -68%;
+
       --rightIconsXPos: 150%;
-      --handshakeYPos: -300px;
-      --lightBulbYPos: -280px;
+      --handshakeYPos: -510%;
       --starsXPos: 150%;
-      --starsYPos: -310px;
+      --starsYPos: -370%;
+      --lightBulbYPos: -310%;
 
       --infoWidth: 100%;
       --goalsWidth: 90%;
       --marginOne: -0.5%;
       --marginTwo: var(--marginOne);
-      --bottomNavSize: 100px;
+      --bottomNavSize: 65px;
    }
 }
 @media (min-width: 600px)
@@ -48,20 +51,23 @@
    {
       --LogoWidth: 35%;
       --HeaderOne: 1.5rem;
-      --HeaderTwo: 0.818rem;
+      --HeaderTwo: 1rem;
       --HeaderThree: 0.75rem;
       --Body: 0.75rem;
 
+      --globeGif: -5%;
+
+
       --rightIconsXPos: 280%;
-      --handshakeYPos: -160%;
+      --handshakeYPos: -165%;
       --starsXPos: 30%;
-      --starsYPos: -130%;
+      --starsYPos: -135%;
       --lightBulbYPos: -120%;
 
       --infoWidth: 60%;
       --marginOne: 0%;
       --marginTwo: 39.75%;
-      --bottomNavSize: 120px;
+      --bottomNavSize: 115px;
    }
 }
 @media (min-width: 900px)
@@ -70,22 +76,22 @@
    {
       --LogoWidth: 30%;
       --HeaderOne: 1.75rem;
-      --HeaderTwo: 1.4rem;
-      --HeaderThree: 1.5rem;
+      --HeaderTwo: 1.25rem;
+      --HeaderThree: 1rem;
       --Body: 0.875rem;
 
+      --globeGif: -5%;
+
       --rightIconsXPos: 275%;
-      --handshakeYPos: -140%;
+      --handshakeYPos: -150%;
       --starsXPos: 25%;
       --starsYPos: -130%;
-      --lightBulbYPos: -105%;
+      --lightBulbYPos: -102.5%;
       
       --infoWidth: 60%;
       --marginOne: 1%;
       --marginTwo: 38.75%;
-
-
-      --bottomNavSize: 140px;
+      --bottomNavSize: 160px;
    }
 }
 @media (min-width: 1200px)
@@ -94,20 +100,22 @@
    {
       --LogoWidth: 25%;
       --HeaderOne: 2.3rem;
-      --HeaderTwo: 1.25rem;
-      --HeaderThree: 1.50rem;
+      --HeaderTwo: 1.5rem;
+      --HeaderThree: 1.1rem;
       --Body: 1rem;
+
+      --globeGif: -2.5%;
+
       --rightIconsXPos: 280%;
-      --handshakeYPos: -125%;
+      --handshakeYPos: -130%;
       --starsXPos: 25%;
       --starsYPos: -110%;
-      --lightBulbYPos: -107.5%;
+      --lightBulbYPos: -97.5%;
+
       --infoWidth: 60%;
       --marginOne: 1%;
       --marginTwo: 38.75%;
-
-
-      --bottomNavSize: 160px;
+      --bottomNavSize: 170px;
    }
    strong, a 
    { 
@@ -120,15 +128,16 @@
    {
       --LogoWidth: 20%;
       --HeaderOne: 2.75rem;
-      --HeaderTwo: 1.5rem;
-      --HeaderThree: 1.625rem;
+      --HeaderTwo: 1.75rem;
+      --HeaderThree: 1.25rem;
       --Body: 1.125rem;
+      --globeGif: 2.5%;
 
       --rightIconsXPos: 290%;
-      --handshakeYPos: -120%;
+      --handshakeYPos: -115%;
       --starsXPos: 15%;
       --starsYPos: -110%;
-      --lightBulbYPos: -90%;
+      --lightBulbYPos: -95%;
       --infoWidth: 65%;
       --marginOne: 3%;
       --marginTwo: 32.75%;
@@ -177,13 +186,18 @@ body {
 }
 
 .globe-gif {
+   position: relative;
    text-align: center;
-   margin-top: 80px;
+   margin-top: var(--globeGif);
+}
+
+.slogan-path {
+   margin-top: var(--slogan);
 }
 
 .summarySpacing {
    margin-top: -32.5%;
-   margin-bottom: -5%;
+   margin-bottom: 5%;
 }
 
 .infoSpacing {
@@ -260,7 +274,7 @@ body {
    height: var(--bottomNavSize);
    background: rgba(20, 135, 222, 0.084);
    margin-left: 2%;
-   margin-bottom: 5%;
+   margin-bottom: 7.5%;
    padding: 2% 2%; 
    border-radius: 20px;
    text-align: center;
@@ -292,16 +306,6 @@ body {
    transition: 0.3s ease;
 }
 
-li {
-   word-spacing: 2px;
-   margin-bottom: 3%;
-}
-
-ul {
-   word-spacing: 2px;
-   margin-top: 3%;
-}
-
 section{ 
    padding: 7.25em 1em; 
 }
@@ -315,7 +319,7 @@ strong, a
 }
 
 /* Typography*/
-h1, h2, h3
+h1, h2
 {
    flex: 50%;
    color: var(--Text);
@@ -326,16 +330,29 @@ h1, h2, h3
 
 h1 { font-size: var(--HeaderOne); }
 h2 { font-size: var(--HeaderTwo); }
-h3 { font-size: var(--HeaderThree); }
-p { font-weight: var(--Regular); }
+ul, li { font-size: var(--HeaderThree); }
+p {font-size: var(--HeaderThree); font-weight: var(--Regular); }
+
+li {
+   word-spacing: 2px;
+   margin-bottom: 3%;
+}
+
+ul {
+   word-spacing: 2px;
+   margin-top: 3%;
+   margin-bottom: -1%;
+}
+
+.references { margin-top: 6.5%; }
 
 @keyframes bounce {
    from {
       transform: translate(var(--rightIconsXPos), var(--handshakeYPos));
    }
    10% {
-      fill: #3b97c6;
-      transform: translate(var(--rightIconsXPos), calc(var(--handshakeYPos) + 15%));
+      fill: #2d6b8b;
+      transform: translate(var(--rightIconsXPos), calc(var(--handshakeYPos) + 20%));
    }
    15% {
       fill: #45abdd;
