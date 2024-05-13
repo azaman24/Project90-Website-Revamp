@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #004aad;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="50" cy="50" r="47.5"/>
+  <g>
+    <rect class="cls-2" x="24.15" y="26.5" width="1.17" height="47"/>
+    <g>
+      <g>
+        <g>
+          <rect class="cls-2" x="34.97" y="30.56" width="7.01" height="1.17" transform="translate(-10.75 36.33) rotate(-45)"/>
+          <polygon class="cls-2" points="31.73 31.14 34.21 28.67 33.38 27.84 30.91 30.32 30.08 31.14 30.91 31.97 33.38 34.45 34.21 33.62 31.73 31.14"/>
+          <polygon class="cls-2" points="45.21 31.14 42.73 28.67 43.56 27.84 46.04 30.32 46.86 31.14 46.04 31.97 43.56 34.45 42.73 33.62 45.21 31.14"/>
+        </g>
+        <rect class="cls-2" x="17.14" y="29.98" width="2.34" height="2.34"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-2" x="34.97" y="68.27" width="7.01" height="1.17" transform="translate(-37.42 47.37) rotate(-45)"/>
+          <polygon class="cls-2" points="31.73 68.86 34.21 66.38 33.38 65.55 30.91 68.03 30.08 68.86 30.91 69.68 33.38 72.16 34.21 71.33 31.73 68.86"/>
+          <polygon class="cls-2" points="45.21 68.86 42.73 66.38 43.56 65.55 46.04 68.03 46.86 68.86 46.04 69.68 43.56 72.16 42.73 71.33 45.21 68.86"/>
+        </g>
+        <rect class="cls-2" x="17.14" y="67.69" width="2.34" height="2.34"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <rect class="cls-2" x="37.2" y="47.5" width="11.68" height="5"/>
+        <rect class="cls-2" x="52.4" y="47.5" width="25.69" height="5"/>
+        <rect class="cls-2" x="17.14" y="48.83" width="2.34" height="2.34"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-2" x="30.2" y="56.8" width="39.49" height="5"/>
+          <rect class="cls-2" x="74.08" y="56.8" width="10.78" height="5"/>
+          <rect class="cls-2" x="17.14" y="58.14" width="2.34" height="2.34"/>
+        </g>
+        <g>
+          <rect class="cls-2" x="30.08" y="38.2" width="11.68" height="5"/>
+          <rect class="cls-2" x="17.14" y="39.53" width="2.34" height="2.34"/>
+          <rect class="cls-2" x="45.28" y="38.2" width="18.56" height="5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
