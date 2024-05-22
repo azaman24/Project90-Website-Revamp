@@ -469,6 +469,10 @@ header
    border-radius: 20px;
 }
 
+.info{
+   text-align: left;
+}
+
 .info {
     font-size: 15px;
 }
