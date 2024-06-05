@@ -1,0 +1,252 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+:root
+{
+   --PrimaryFont: 'Poppins', sans-serif;
+   --SecondaryFont: 'Source Code Pro', monospace;
+
+   --Regular: 500;
+
+   --Text: white;
+   --ColourStop1: #133082;
+   --ColourStop2: #000;
+   --ColourStop3: #134da1ff;
+   --ColourStop4: #135cb0ff;
+   --ColourStop5: #1471c6ff;
+   --ColourStop6: #1488deff;
+}
+
+/* Sizing for Different Media */
+@media (min-width: 300px)
+{
+   :root
+   {
+      --LogoWidth: 40%;
+      --globeSize: 500px;
+      --HeaderOne: 1.25rem;
+      --HeaderTwo: 0.625rem;
+      --HeaderThree: 0.45rem;
+      --Body: 0.625rem;
+      --bottomNavSize: 65px;
+   }
+   strong, a 
+   { 
+       font-size: var(--HeaderThree);
+   }
+}
+@media (min-width: 600px)
+{
+   :root
+   {
+      --LogoWidth: 35%;
+      --HeaderOne: 1.5rem;
+      --HeaderTwo: 1rem;
+      --HeaderThree: 0.75rem;
+      --Body: 0.75rem;
+      --bottomNavSize: 115px;
+   }
+}
+@media (min-width: 900px)
+{
+   :root
+   {
+      --LogoWidth: 30%;
+      --HeaderOne: 1.75rem;
+      --HeaderTwo: 1.25rem;
+      --HeaderThree: 1rem;
+      --Body: 0.875rem;
+      --bottomNavSize: 160px;
+   }
+}
+@media (min-width: 1200px)
+{
+   :root
+   {
+      --LogoWidth: 25%;
+      --HeaderOne: 2.3rem;
+      --HeaderTwo: 1.5rem;
+      --HeaderThree: 1.1rem;
+      --Body: 1rem;
+      --bottomNavSize: 170px;
+   }
+}
+@media (min-width: 1500px)
+{
+   :root
+   {
+      --LogoWidth: 20%;
+      --HeaderOne: 2.75rem;
+      --HeaderTwo: 1.75rem;
+      --HeaderThree: 1.25rem;
+      --Body: 1.125rem;
+      --bottomNavSize: 215px;
+   }
+}
+
+/* General Styling */
+body {
+   background: linear-gradient(var(--ColourStop1) 0%, var(--ColourStop2) 8%, var(--ColourStop3) 100%, 
+      var(--ColourStop4) 120%, var(--ColourStop5) 135%, var(--ColourStop6) 150%);
+   color: var(--Text);
+   font-family: var(--PrimaryFont);
+   font-size: var(--Body);
+   font-weight: var(--Regular);
+   line-height: 1.6;
+   margin: 0;
+}
+
+.logoSizing {
+   width: var(--LogoWidth);
+}
+
+.dot {
+   height: 110px;
+   width: 110px;
+   display: grid;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   z-index: 1;
+   margin-left: 200px;
+   margin-right: 200px;
+   margin-bottom: 50px;
+
+}
+
+
+.projectForYou {
+   margin-top: 0%;
+   margin-bottom: -10%;
+}
+
+.project-for-you {
+  width: 65%;
+  height: 20%;
+  background: rgba(19, 78, 161, 0.158);
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5% 3% 2% 3%;
+  border-radius: 20px;
+}
+
+.Icons {
+   width: 100%;
+   overflow: auto;
+ }
+
+.Icons div {
+   text-align: center;
+   width:33%;
+   float:left;
+ }
+
+.IconInfo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.icon-info {
+  background:rgba(19, 78, 161, 0.158);
+  width: 300px;
+  border-radius: 30px;
+  padding: 15px 20px;
+  margin-bottom: 50px;
+}
+.icon_type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7.5px;
+}
+.iconName {
+  margin-left: 10px;
+}
+.info {
+   font-size: 15px;
+}
+
+.bottomNavContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.bottomNavContainer section {
+   flex: 25%;
+   margin: 10px 0;
+}
+.bottomNav {
+   width: 32.5%;
+   height: var(--bottomNavSize);
+   background: rgba(20, 135, 222, 0.084);
+   margin-left: 2%;
+   margin-bottom: 7.5%;
+   padding: 2% 2%; 
+   border-radius: 20px;
+   text-align: center;
+}
+
+.joinOrContact {
+   font-size: 1em;
+   color: #fff;
+   background: #45abdd;
+   padding: 2% 5%;
+   border-radius: 20px;
+   margin-bottom: 100%;
+   margin-top: 100%;
+}
+.joinOrContact:hover {
+   color: #133082;
+   background: #fff;
+   transition: 0.35s ease;
+}
+
+.socials {
+   margin-top: 4%;
+   margin-left: 4%;
+   margin-right: 4%;
+   fill: #45abdd;
+}
+.socials:hover {
+   fill: #fff;
+   transition: 0.3s ease;
+}
+
+section { 
+   padding: 7.25em 1em; 
+}
+
+strong, a { 
+   font-weight: var(--Regular);
+   color: var(--Text);
+   font-family: var(--PrimaryFont);
+   text-decoration: none;
+}
+
+/* Typography*/
+h1, h2 {
+   flex: 50%;
+   color: var(--Text);
+   font-weight: var(--Regular);
+   line-height: var(--height);
+   margin: 0;
+}
+
+h1 { font-size: var(--HeaderOne); }
+h2 { font-size: var(--HeaderTwo); }
+ul, li { font-size: var(--HeaderThree); }
+li {margin-left: 10px;}
+p {font-size: var(--HeaderThree); font-weight: var(--Regular); }
+
+li {
+   word-spacing: 2px;
+   margin-bottom: 3%;
+}
+ul {
+   word-spacing: 2px;
+   margin-top: 3%;
+   margin-bottom: -1%;
+}
