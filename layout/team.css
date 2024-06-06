@@ -1,76 +1,83 @@
-.slide-container
-{
-    max-width: 1120px;
-    width: 100%;
-    padding: 40px 0;
+section {
+    padding: 5vh 0 5vh 0;
 }
-.slide-content{ margin: 0 40px; }
-
-.card
-{
-    border-radius: 25px;
-    background-color: white;
+.slide-container {
+	max-width: 1120px;
+	width: 100%;
+	padding: 40px 0;
 }
 
-.image-content, .card-content
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
+.slide-content {
+	margin: 0 40px;
 }
 
-.image-content
-{
-    position: relative;
-    padding: 25px 0;
+.card {
+	border-radius: 25px;
+	background-color: white;
 }
 
-.overlay
-{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: blue;
-    border-radius: 25px 25px 0 25px;
-}
-
-.card-image
-{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: white;
-    padding: 3px;
-}
-
-.card-image .card-img
-{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid blue;
-}
-
-.name{ color: black; }
-.description
-{
-    color: black;
-    text-align: center;
-}
-.button
-{
-    border: none;
-    padding: 8px 16px;
+.image-content, .card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 14px;
+    font-size: 15px;
     color: white;
-    background-color: blue;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
-.button:hover{ background: lightblue; }
+
+.image-content {
+	position: relative;
+	padding: 25px 0;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: blue;
+	border-radius: 25px 25px 0 25px;
+}
+
+.card-image {
+	position: relative;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	background: white;
+	padding: 3px;
+}
+
+.card-image .card-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.team-photo {
+	display: flex;
+	justify-content: center;
+}
+
+.team-intro-box {
+	display: flex;
+	flex-direction: column;
+	margin-top: 8%;
+	text-align: left;
+}
+
+.member-heading {
+	font-size: 1rem;
+	color: white;
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.white-line {
+	width: 70%;
+	height: 1px;
+	background-color: white;
+	margin: 1rem auto;
+}
