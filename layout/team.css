@@ -200,6 +200,13 @@ section {
     margin: 0 10px;
 }
 
+.swiper-button-next1:hover, .swiper-button-prev1:hover,
+.swiper-button-next2:hover, .swiper-button-prev2:hover,
+.swiper-button-next3:hover, .swiper-button-prev3:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
 .bottomNavContainer {
     display: flex;
     justify-content: center;
