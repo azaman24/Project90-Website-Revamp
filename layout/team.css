@@ -99,7 +99,9 @@ section {
     flex-direction: column;
     padding: 20px;
     background-color: rgba(13, 40, 97, 0.329);
+    border-radius: 18px;
 }
+
 .team-intro-inner-box h1 {
     font-size: 20px;
 }
