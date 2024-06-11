@@ -66,7 +66,21 @@ var swiper3 = new Swiper("#swiper3", {
     }
 });
 
-document.querySelector('.hamburger-menu').addEventListener('click', () => {
-    document.querySelector('.navigation-list').classList.toggle('display');
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    var body = document.body;
+    var navigationList = document.querySelector('.navigation-list');
+    var socialContacts = document.querySelector('.social-contacts');
+    navigationList.classList.toggle('display');
+    if (navigationList.classList.contains('display')) {
+        body.style.overflow = 'hidden';
+        socialContacts.style.display = 'flex';
+    } else {
+        body.style.overflow = 'auto';
+        socialContacts.style.display = 'none';
+    }
 });
 
+window.onload = function() {
+    document.getElementById('toggle').checked = false;
+}
