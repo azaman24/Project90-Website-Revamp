@@ -65,3 +65,8 @@ var swiper3 = new Swiper("#swiper3", {
         950: { slidesPerView: 3 },
     }
 });
+
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.navigation-list').classList.toggle('display');
+});
+
