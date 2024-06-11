@@ -6,20 +6,23 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	transition: all 0.5s ease;
-    height: 10vh;
+	padding: 15px;
 }
 
 .navigation-logo img {
-	height: 30vh;
 	cursor: pointer;
 	z-index: 1;
 }
 
+.navigation-logo {
+	flex: 1;
+}
 
 .navigation-list {
 	display: flex;
 	z-index: 2;
 }
+
 .navigation-list li {
 	color: transparent;
 }
@@ -31,6 +34,7 @@ header {
 	margin: 0 50px;
 	transition: all 0.5s ease;
 }
+
 .navigation-list a:hover {
 	color: #45abdd;
 }
@@ -46,11 +50,6 @@ header {
 }
 
 @media (max-width: 1000px) {
-	.navigation-logo img {
-		top: 0px;
-		cursor: pointer;
-		z-index: 1;
-	}
 	.navigation-list {
 		position: fixed;
 		top: 0;
@@ -63,13 +62,13 @@ header {
 		padding: 0;
 		margin: 0;
 		display: flex;
-        justify-self: center;
-        align-items: center;
+		justify-self: center;
+		align-items: center;
 		flex-direction: column;
 		z-index: 100;
 		opacity: 0.9;
-        padding-top: 40px;
-        background: linear-gradient(to right, #081b4e, #1f3b70); 
+		padding-top: 40px;
+		background: linear-gradient(to right, #081b4e, #1f3b70);
 	}
 
 	.navigation-list.display {
@@ -79,9 +78,9 @@ header {
 	.navigation-list a {
 		display: block;
 		transition: all 0.5s ease;
-        padding: 1rem 0rem 1rem 0rem;
+		padding: 1rem 0rem 1rem 0rem;
 		font-size: 0.9rem;
-        margin: 0px;
+		margin: 0px;
 	}
 
 	.navigation-list a:hover {
