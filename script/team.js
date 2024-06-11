@@ -79,6 +79,14 @@ document.querySelector('.hamburger').addEventListener('click', () => {
         body.style.overflow = 'auto';
         socialContacts.style.display = 'none';
     }
+    window.addEventListener('resize', function() {
+        var socialContacts = document.querySelector('.social-contacts');
+        if (window.matchMedia("(min-width: 1000px)").matches) {
+            socialContacts.style.display = 'none';
+        } else {
+            socialContacts.style.display = 'flex';
+        }
+    });
 });
 
 window.onload = function() {
