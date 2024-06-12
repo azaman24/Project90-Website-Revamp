@@ -65,3 +65,30 @@ var swiper3 = new Swiper("#swiper3", {
         950: { slidesPerView: 3 },
     }
 });
+
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    var body = document.body;
+    var navigationList = document.querySelector('.navigation-list');
+    var socialContacts = document.querySelector('.social-contacts');
+    navigationList.classList.toggle('display');
+    if (navigationList.classList.contains('display')) {
+        body.style.overflow = 'hidden';
+        socialContacts.style.display = 'flex';
+    } else {
+        body.style.overflow = 'auto';
+        socialContacts.style.display = 'none';
+    }
+    window.addEventListener('resize', function() {
+        var socialContacts = document.querySelector('.social-contacts');
+        if (window.matchMedia("(min-width: 1000px)").matches) {
+            socialContacts.style.display = 'none';
+        } else {
+            socialContacts.style.display = 'flex';
+        }
+    });
+});
+
+window.onload = function() {
+    document.getElementById('toggle').checked = false;
+}
