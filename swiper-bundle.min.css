@@ -17,8 +17,7 @@
 	font-style: normal;
 }
 :root {
-	--swiper-theme-color: #000000;
-
+	--swiper-theme-color:#031956;
 }
 .swiper {
 	margin-left: auto;
@@ -514,7 +513,7 @@ button.swiper-pagination-bullet {
 	--swiper-preloader-color: #fff;
 }
 .swiper-lazy-preloader-black {
-	--swiper-preloader-color: #000;
+	--swiper-preloader-color: #1b41a7;
 }
 @keyframes swiper-preloader-spin {
 	0% {
@@ -606,7 +605,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-cube .swiper-cube-shadow:before {
 	content: "";
-	background: #000;
+	background: #1b41a7;
 	position: absolute;
 	left: 0;
 	top: 0;
