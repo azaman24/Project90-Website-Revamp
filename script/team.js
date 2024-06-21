@@ -49,6 +49,7 @@ var swiper1 = new Swiper("#swiper-teams-page-1", {
         950: { slidesPerView: 3 },
     }
 });
+
 var swiper2 = new Swiper("#swiper-teams-page-2", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -97,25 +98,15 @@ var swiper3 = new Swiper("#swiper-teams-page-3", {
 
 /* Swip buttons for sponsors page */
 
-var swiper4 = new Swiper("#swiper-sponsors-page-1", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    navigation: {
-        nextEl: '.swiper-button-next1',
-        prevEl: '.swiper-button-prev1',
-    },
-    pagination: {
-        el: ".swiper-pagination1",
-        clickable: true,
-        dynamicBullets: true,
-    },
-    breakpoints: {
-        0: { slidesPerView: 1 },
-        525: { slidesPerView: 1 },
-        950: { slidesPerView: 1 },
-    }
+var mySwiper = new Swiper('.mySwiper', {
+// Optional parameters
+loop: true,
+pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+},
+navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
 });
