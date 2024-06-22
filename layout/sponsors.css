@@ -42,6 +42,10 @@
 	border-radius: 18px;
 }
 
+.sponsor-top-msg {
+	margin-top: 3rem;
+}
+
 /* Mobile devices */
 @media (max-width: 600px) {
 	.intro-inner-box {
@@ -121,7 +125,6 @@
 	position: relative;
 }
 
-
 .circle .highlight {
 	color: #1237a0; /* Highlight color for "10+" */
 	font-size: 2rem; /* Larger font size for "10+" */
@@ -137,6 +140,7 @@
 		flex-direction: row;
 		margin-right: 0%;
 		margin-bottom: 450px;
+		margin-top: 3rem;
 	}
 	.sponsor-container .intro-inner-box h1 {
 		font-size: 1.3rem;
@@ -151,27 +155,26 @@
 	.circle {
 		margin-top: 1px;
 		margin-bottom: 60px;
-
 	}
 }
 
 /* iPad devices */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
 	.sponsor-container {
-		flex-direction: row;
+		flex-direction: column;
 	}
 }
 
 /* Laptop devices */
 @media (min-width: 1025px) {
 	.sponsor-container {
-		flex-direction: row;
+		flex-direction: column;
 	}
 	.circle:first-child {
 		top: 40px; /* Move the circle above the container */
 		left: 0px; /* Align to the left side of the container */
 	}
-	
+
 	.circle:last-child {
 		top: -20px; /* Adjust based on the desired position above the first circle */
 		left: 230px; /* Adjust so it's to the right of the first circle but still above the div */
@@ -179,12 +182,11 @@
 	.sponsor-container > div {
 		margin-right: 50px; /* Adds space to the right of each child div */
 	}
-	
+
 	.sponsor-container > div:last-child {
 		margin-right: 0; /* Removes the right margin from the last child div to avoid extra space at the end */
 	}
 }
-
 
 .impact-heading {
 	display: flex;
@@ -194,8 +196,6 @@
 	margin-top: 4rem;
 	margin-bottom: 4rem;
 }
-
-
 
 /*********************************/
 
@@ -208,7 +208,7 @@
 .swiper {
 	padding-left: 20px; /* Adjust based on the size of your arrows */
 	padding-right: 20px; /* Adjust based on the size of your arrows */
-	width: 90%;
+	width: 100%;
 }
 
 /* Styles for each slide */
@@ -251,17 +251,24 @@
 @media (max-width: 600px) {
 	.swiper-button-next,
 	.swiper-button-prev {
-		color: white;
+		display: none;
 	}
 
-	:root {	
-		--swiper-navigation-size: 60px;
+	:root {
+		--swiper-navigation-size: 50px;
+	}
+	.swiper-slide {
+		padding: 20px; /* Adds space inside each slide */
 	}
 
-	.swiper-slide div{
-		width: 85%;
-		max-width: 85%;
+	.swiper-slide div {
+		width: 100%;
+		max-width: 100%;
+	}
 
+	.swiper-slide div {
+		width: 100%;
+		max-width: 100%;
 	}
 
 	.swiper-slide div h1 {
@@ -274,6 +281,11 @@
 	:root {
 		--swiper-navigation-size: 45px;
 	}
+	.impact-heading {
+		margin-top: 32rem;
+		margin-bottom: 3rem;
+		font-size: 1.6rem;
+	}
 }
 
 /* iPad devices */
@@ -283,7 +295,7 @@
 		color: white;
 		margin: 0 2rem;
 	}
-	:root {	
+	:root {
 		--swiper-navigation-size: 70px;
 	}
 	.swiper-slide div h1 {
@@ -296,13 +308,13 @@
 }
 
 /* Laptop devices */
-@media (min-width: 1025px) and (max-width: 1200px){
+@media (min-width: 1025px) and (max-width: 1200px) {
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: white;
 		margin: 0 3.5rem;
 	}
-	:root {	
+	:root {
 		--swiper-navigation-size: 80px;
 	}
 	.swiper-slide div h1 {
@@ -320,10 +332,10 @@
 		color: white;
 		margin: 0 5rem;
 	}
-	:root {	
+	:root {
 		--swiper-navigation-size: 80px;
 	}
-	
+
 	.swiper-slide div h1 {
 		font-size: 1.5rem;
 	}
@@ -331,7 +343,6 @@
 	.swiper-slide div p {
 		font-size: 1.1rem;
 	}
-
 }
 
 /************************************/
@@ -359,29 +370,29 @@
 .sponsors img,
 .affiliations img {
 	width: 15%;
-    margin: 50px 50px;  /* Add some space between images */
+	margin: 50px 50px; /* Add some space between images */
 }
 
 .partners img {
 	width: 22%;
-	margin: 50px 50px;  /* Add some space between images */
+	margin: 50px 50px; /* Add some space between images */
 }
 
 .partners {
 	margin: 4rem 12rem 4rem 12rem;
-    text-align: center;
+	text-align: center;
 }
 
 .partner-images {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    overflow-x: auto;  /* Allows horizontal scrolling if the images don't fit in one line */
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	overflow-x: auto; /* Allows horizontal scrolling if the images don't fit in one line */
 }
 
 .partner-images img {
-    flex-shrink: 0;  /* Prevent images from shrinking */
-    max-height: 150px;  /* Adjust as necessary to fit your layout */
+	flex-shrink: 0; /* Prevent images from shrinking */
+	max-height: 150px; /* Adjust as necessary to fit your layout */
 }
 
 .become-sponsor-msg-container {
@@ -404,7 +415,11 @@
 }
 
 @keyframes bounceAnimation {
-	0%, 20%, 50%, 80%, 100% {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
 		transform: translateY(0);
 	}
 	40% {
@@ -417,4 +432,58 @@
 
 .bounce {
 	animation: bounceAnimation 1s;
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+	.affiliations h1,
+	.partners h1,
+	.sponsors h1 {
+		font-size: 1.6rem;
+		margin: 1rem 1rem;
+	}
+	.become-sponsor-msg {
+		font-size: 1.7rem;
+		margin: 0rem 0.7rem 4rem 0.7rem;
+	}
+	.sponsors img,
+	.affiliations img {
+		width: 40%;
+		margin: 25px 50px; /* Add some space between images */
+	}
+
+	.partners img {
+		width: 50%;
+		margin: 20px 50px; /* Add some space between images */
+	}
+	.partners {
+		margin: 1.5rem;
+		text-align: center;
+	}
+	.sponsors-page-images {
+		margin-top: 1rem;
+	}
+	.sponsors,
+	.partners,
+	.affiliations {
+		margin-bottom: 1.5rem;
+	}
+
+	.sponsors h1 {
+		text-align: center; /* Centers the <h1> block itself */
+	}
+
+	.sponsors h1 span {
+		display: inline-block;
+		text-align: center; /* Makes the content of each line start at the center */
+		max-width: 100%; /* Ensures the span does not overflow the parent */
+	}
+}
+
+/* iPad devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Laptop devices */
+@media (min-width: 1025px) and (max-width: 1200px) {
 }
