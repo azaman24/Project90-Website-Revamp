@@ -109,3 +109,17 @@ var mySwiper = new Swiper(".mySwiper", {
 		prevEl: ".swiper-button-prev",
 	},
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('bounce');
+      }
+    });
+  });
+
+  const target = document.querySelector('.become-sponsor-msg');
+  observer.observe(target);
+});
