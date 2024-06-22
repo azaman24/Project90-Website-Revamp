@@ -32,7 +32,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 50px 10%;
 }
 
 .intro-inner-box {
@@ -41,6 +40,7 @@
 	padding: 20px;
 	background-color: rgba(42, 75, 170, 0.3);
 	border-radius: 18px;
+	width: 50%;
 }
 
 .intro-inner-box h1 {
@@ -51,6 +51,106 @@
 	font-size: 1rem;
 }
 
+/*************************/
+.sponsor-container {
+	display: flex;
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-right: 10%;
+}
+
+.sponsor-container > div {
+	margin-right: 50px; /* Adds space to the right of each child div */
+}
+
+.sponsor-container > div:last-child {
+	margin-right: 0; /* Removes the right margin from the last child div to avoid extra space at the end */
+}
+
+.sponsor-container .intro-inner-box {
+	width: 100%;
+}
+
+.sponsor-container .intro-inner-box ul {
+	padding: 0px 25px;
+	font-size: 1rem;
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+	.sponsor-container {
+		flex-direction: column;
+	}
+}
+
+/* iPad devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.sponsor-container {
+		flex-direction: column;
+	}
+}
+
+/* Laptop devices */
+@media (min-width: 1025px) {
+	.sponsor-container {
+		flex-direction: row;
+	}
+}
+
+.circle {
+	width: 200px; /* Adjust size as needed */
+	height: 200px; /* Adjust size as needed */
+	border-radius: 50%; /* This creates the circle shape */
+	background-color: #58a1f8; /* Background color of the circle */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.5rem; /* Adjust base font size as needed */
+	color: white; /* Base text color */
+	margin: 20px; /* Adjust margin as needed */
+	border-color: #1237a0;
+	border-style: solid;
+	border-width: 5px;
+	position: relative;
+}
+
+
+.circle .highlight {
+	color: #1237a0; /* Highlight color for "10+" */
+	font-size: 2rem; /* Larger font size for "10+" */
+}
+
+.circle-text {
+	width: 80%;
+}
+
+
+.circle:first-child {
+	top: 40px; /* Move the circle above the container */
+	left: 0px; /* Align to the left side of the container */
+}
+
+.circle:last-child {
+	top: -20px; /* Adjust based on the desired position above the first circle */
+	left: 230px; /* Adjust so it's to the right of the first circle but still above the div */
+}
+
+.sponsor-container {
+	display: flex;
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+	align-items: center;
+	justify-content: center;
+	gap: 80px; /* Adjust gap as needed */
+	position: relative;
+	height: 400px;
+	flex-wrap: wrap; /* Allows items to wrap if needed */
+}
+
 .impact-heading {
 	display: flex;
 	flex-direction: column;
@@ -59,6 +159,8 @@
 	margin-top: 4rem;
 	margin-bottom: 4rem;
 }
+
+
 
 /*********************************/
 
