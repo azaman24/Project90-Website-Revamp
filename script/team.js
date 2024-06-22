@@ -123,3 +123,4 @@ document.addEventListener('DOMContentLoaded', function() {
   const target = document.querySelector('.become-sponsor-msg');
   observer.observe(target);
 });
+

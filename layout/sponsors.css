@@ -44,6 +44,9 @@
 
 .sponsor-top-msg {
 	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Mobile devices */
@@ -51,12 +54,15 @@
 	.intro-inner-box {
 		width: 80%;
 	}
+	.intro-outer-box {
+		width: 100%;
+	}
 }
 
 /* iPad devices */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
 	.intro-inner-box {
-		width: 70%;
+		width: 80%;
 	}
 	.intro-inner-box h1 {
 		font-size: 1.3rem;
@@ -65,6 +71,9 @@
 
 	.intro-inner-box p {
 		font-size: 1.1rem;
+	}
+	.intro-outer-box {
+		width: 100%;
 	}
 }
 
@@ -92,10 +101,9 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	margin-right: 10%;
 	height: 400px;
-	gap: 80px; /* Adjust gap as needed */
 	flex-wrap: wrap; /* Allows items to wrap if needed */
+	width: 100%;
 }
 
 .sponsor-container .intro-inner-box {
@@ -151,6 +159,7 @@
 	}
 	.sponsor-container .intro-outer-box {
 		width: 80%;
+		margin-bottom: 5rem;
 	}
 	.circle {
 		margin-top: 1px;
@@ -161,40 +170,101 @@
 /* iPad devices */
 @media (min-width: 600px) and (max-width: 1024px) {
 	.sponsor-container {
-		flex-direction: column;
+		flex-direction: row; /* Adjusted to match mobile, if needed */
+		margin-right: 0%;
+		margin-bottom: 450px; /* Adjust this value as needed for iPad */
+		margin-top: 3rem;
+	}
+	.sponsor-container .intro-inner-box h1 {
+		font-size: 1.5rem; /* Slightly larger than mobile for better readability */
+		margin-bottom: 0.5rem;
+	}
+	.sponsor-container .intro-inner-box ul li {
+		font-size: 1.3rem; /* Adjusted for iPad screen size */
+	}
+	.sponsor-container .intro-outer-box {
+		width: 80%; /* You might want to adjust this for iPad */
+		margin-bottom: 5rem;
+	}
+	.circle {
+		margin-top: 1px;
+		margin-bottom: 60px; /* Adjust if necessary for iPad layout */
 	}
 }
 
 /* Laptop devices */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
 	.sponsor-container {
 		flex-direction: column;
 	}
 	.circle:first-child {
-		top: 40px; /* Move the circle above the container */
-		left: 0px; /* Align to the left side of the container */
+		top: 5vh; /* Move the circle above the container */
+		left: 3vw; /* Align to the left side of the container */
 	}
 
 	.circle:last-child {
-		top: -20px; /* Adjust based on the desired position above the first circle */
-		left: 230px; /* Adjust so it's to the right of the first circle but still above the div */
+		top: -2vh; /* Adjust based on the desired position above the first circle */
+		left: 21vw; /* Adjust so it's to the right of the first circle but still above the div */
 	}
-	.sponsor-container > div {
-		margin-right: 50px; /* Adds space to the right of each child div */
+	.sponsor-container .intro-outer-box {
+		width: 50%;
 	}
-
-	.sponsor-container > div:last-child {
-		margin-right: 0; /* Removes the right margin from the last child div to avoid extra space at the end */
+	.sponsor-container .circle-container {
+		width: 50%;
+	}
+	.sponsor-container .intro-inner-box {
+		width: 60%;
+		margin-right: 50px;
+	}
+	.sponsor-container .intro-outer-box {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 }
+
+@media (min-width: 1200px) and (max-width: 1450px) {
+	.sponsor-container {
+		flex-direction: column;
+	}
+	.circle:first-child {
+		top: 5vh; /* Move the circle above the container */
+		left: -15vw; /* Align to the left side of the container */
+	}
+
+	.circle:last-child {
+		top: -2vh; /* Adjust based on the desired position above the first circle */
+		left: 2vw; /* Adjust so it's to the right of the first circle but still above the div */
+	}
+	.sponsor-container .circle-container {
+		width: 20%;
+	}
+}
+
+@media (min-width: 1450px) {
+	.sponsor-container {
+		flex-direction: column;
+	}
+	.circle:first-child {
+		top: 5vh; /* Move the circle above the container */
+		left: -15vw; /* Align to the left side of the container */
+	}
+
+	.circle:last-child {
+		top: -2vh; /* Adjust based on the desired position above the first circle */
+		left: -1vw; /* Adjust so it's to the right of the first circle but still above the div */
+	}
+}
+
+
 
 .impact-heading {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+	margin-top: 5rem;
+	margin-bottom: 3rem;
 }
 
 /*********************************/
@@ -241,7 +311,6 @@
 /* Ensures the navigation buttons are visible and positioned correctly */
 .swiper-button-prev,
 .swiper-button-next {
-	color: #000; /* Change the color as needed */
 	border-radius: 50%; /* Optional: Makes the background circle */
 	padding: 10px; /* Adjusts the size of the circle background */
 	width: calc(var(--swiper-navigation-size) / 44 * 100);
@@ -282,8 +351,6 @@
 		--swiper-navigation-size: 45px;
 	}
 	.impact-heading {
-		margin-top: 32rem;
-		margin-bottom: 3rem;
 		font-size: 1.6rem;
 	}
 }
@@ -294,6 +361,8 @@
 	.swiper-button-prev {
 		color: white;
 		margin: 0 2rem;
+		width: calc(var(--swiper-navigation-size) / 44 * 55);
+
 	}
 	:root {
 		--swiper-navigation-size: 70px;
@@ -305,6 +374,12 @@
 	.swiper-slide div p {
 		font-size: 1rem;
 	}
+	
+	.impact-heading {
+		margin-top: 30rem;
+		margin-bottom: 3rem;	
+		font-size: 2rem;
+	}
 }
 
 /* Laptop devices */
@@ -313,6 +388,7 @@
 	.swiper-button-prev {
 		color: white;
 		margin: 0 3.5rem;
+		top: 25%;
 	}
 	:root {
 		--swiper-navigation-size: 80px;
@@ -323,6 +399,11 @@
 
 	.swiper-slide div p {
 		font-size: 1.1rem;
+	}
+	
+	.impact-heading {
+		font-size: 2.2rem;
+		margin-bottom: 5rem;
 	}
 }
 
@@ -331,6 +412,7 @@
 	.swiper-button-prev {
 		color: white;
 		margin: 0 5rem;
+		top: 25%;
 	}
 	:root {
 		--swiper-navigation-size: 80px;
@@ -342,6 +424,11 @@
 
 	.swiper-slide div p {
 		font-size: 1.1rem;
+	}
+	
+	.impact-heading {
+		font-size: 2.2rem;
+		margin-bottom: 5rem;
 	}
 }
 
@@ -394,6 +481,7 @@
 	flex-shrink: 0; /* Prevent images from shrinking */
 	max-height: 150px; /* Adjust as necessary to fit your layout */
 }
+
 
 .become-sponsor-msg-container {
 	text-align: center;
@@ -448,12 +536,12 @@
 	}
 	.sponsors img,
 	.affiliations img {
-		width: 40%;
+		width: 35%;
 		margin: 25px 50px; /* Add some space between images */
 	}
 
 	.partners img {
-		width: 50%;
+		width: 40%;
 		margin: 20px 50px; /* Add some space between images */
 	}
 	.partners {
@@ -481,9 +569,106 @@
 }
 
 /* iPad devices */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+	.affiliations h1,
+	.partners h1,
+	.sponsors h1 {
+		font-size: 2rem; /* Slightly larger for better readability on iPads */
+		margin: 1.5rem 1.5rem;
+	}
+	.become-sponsor-msg {
+		font-size: 2rem;
+		margin: 4rem 1rem 6rem 1rem;
+	}
+	.sponsors img,
+	.affiliations img {
+		width: 25%; /* Adjusted for larger screen */
+		margin: 25px 50px; /* Slightly more space between images */
+	}
+
+	.partners img {
+		width: 35%; /* Adjusted for larger screen */
+		margin: 25px 60px; /* Slightly more space between images */
+	}
+	.partners {
+		margin: 2rem;
+		text-align: center;
+	}
+	.sponsors-page-images {
+		margin-top: 2rem;
+	}
+	.sponsors,
+	.partners,
+	.affiliations {
+		margin-bottom: 2rem;
+	}
+
+	.sponsors h1 {
+		text-align: center;
+	}
+
+	.sponsors h1 span {
+		display: inline-block;
+		text-align: center;
+		max-width: 100%;
+	}
 }
 
 /* Laptop devices */
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1024px) {
+	.affiliations h1,
+	.partners h1,
+	.sponsors h1 {
+		font-size: 2.2rem; /* Adjusted for laptop screens */
+		margin: 2rem 2rem;
+	}
+	.become-sponsor-msg {
+		font-size: 2.2rem;
+		margin: 4rem 1.5rem 7rem 1.5rem;
+	}
+	.sponsors img,
+	.affiliations img {
+		width: 15%; /* Larger images for larger screens */
+		margin: 35px 70px; /* More space between images */
+	}
+
+	.partners img {
+		width: 22%; /* Larger images for larger screens */
+		margin: 30px 70px; /* More space between images */
+	}
+	.partners {
+		margin: 2.5rem;
+		text-align: center;
+	}
+	.sponsors-page-images {
+		margin-top: 2.5rem;
+	}
+	.sponsors,
+	.partners,
+	.affiliations {
+		margin-bottom: 2.5rem;
+	}
+
+	.sponsors h1 {
+		text-align: center;
+	}
+
+	.sponsors h1 span {
+		display: inline-block;
+		text-align: center;
+		max-width: 100%;
+	}
+}
+
+.swiper-slide img {
+    max-width: 50%; /* Adjust this value based on your needs */
+    max-height: 200px; /* Adjust this value based on your needs */
+    width: auto; /* This makes the image responsive */
+    height: auto; /* This maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image within the slide */
+}
+
+.partners .swiper-button-next, .swiper-button-prev {
+	display: none;
 }
