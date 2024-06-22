@@ -1,3 +1,18 @@
+@media (min-width: 1200px)
+{
+   :root
+   {
+     display: block;
+   }
+}
+
+@media (min-width: 1500px)
+{
+   :root
+   {
+     display: block;
+   }
+}
 
 .row::after {
   content: "";
@@ -66,22 +81,39 @@
   margin-right: 50px;
 }
 
-
-.IconInfo div {
-    text-align: center;
-    width:30%;
-    float:left;
-    height: 20%;
-   background: rgba(33, 112, 235, 0.3);
-   margin-top: -8%;
-   margin-left: 1.5%;
-   margin-right: 1.5%;
-   padding: 1.5% 3% 2% 3%;
+.icon-info {
+  background:rgba(33, 112, 235, 0.3);
+  width: 300px;
+  border-radius: 30px;
+  padding: 15px 20px;
+  margin-bottom: 50px;
+}
+.icon_type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7.5px;
 }
 .iconName {
   margin-left: 10px;
 }
 .info {
    font-size: 15px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 10fr)); /* Play with min-value */
+  grid-template-rows: repeat(4, 100px); /* Play with min-value */
+  padding-inline-start: 80px;
+  padding-inline-end: 80px;
+  
+}
+.grid-item {
+    
+    background-color: rgb(5, 121, 159);
+    border: 1px solid blue;
+    object-fit: contain;
+    width: 100%;
 }
 
