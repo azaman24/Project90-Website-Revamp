@@ -156,7 +156,7 @@
 
 .circle {
 	backface-visibility: visible !important;
-	animation: circle 2s ease infinite;
+	animation: circle 3s ease infinite;
 }
 
 @keyframes circle {
