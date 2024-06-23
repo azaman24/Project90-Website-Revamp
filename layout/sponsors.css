@@ -156,30 +156,31 @@
 
 .circle {
 	backface-visibility: visible !important;
-	animation: circle 3s ease infinite;
+	animation: circle 4s ease infinite;
 }
 
 @keyframes circle {
-	0% {
+	0%, 100% {
 		transform: perspective(400px) rotateY(0);
-		animation-timing-function: ease-out;
+		animation-timing-function: ease-in;
 	}
-	40% {
+	25% {
 		transform: perspective(400px) translateZ(50px) rotateY(170deg);
 		animation-timing-function: ease-out;
 	}
-	50% {
+	37.5% {
 		transform: perspective(400px) translateZ(50px) rotateY(190deg) scale(1);
 		animation-timing-function: ease-in;
 	}
-	80% {
+	62.5% {
 		transform: perspective(400px) rotateY(360deg) scale(.95);
 		animation-timing-function: ease-in;
 	}
-	100% {
+	75% {
 		transform: perspective(400px) scale(1);
 		animation-timing-function: ease-in;
 	}
+
 }
 
 /* Mobile devices */
