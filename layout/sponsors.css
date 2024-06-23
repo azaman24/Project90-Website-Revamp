@@ -141,18 +141,7 @@
 .circle {
 	width: 200px; /* Adjust size as needed */
 	height: 200px; /* Adjust size as needed */
-	border-radius: 50%; /* This creates the circle shape */
-	background-color: #58a1f8; /* Background color of the circle */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-size: 1.5rem; /* Adjust base font size as needed */
-	color: white; /* Base text color */
 	margin: 20px; /* Adjust margin as needed */
-	border-color: #1242c1;
-	border-style: solid;
-	border-width: 7.5px;
 	position: relative;
 }
 
@@ -163,6 +152,19 @@
 
 .circle-text {
 	width: 80%;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.circle-svg {
+	animation: spin 10s linear infinite;
 }
 
 /* Mobile devices */

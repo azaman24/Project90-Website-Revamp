@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Airplane" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-size: 6px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Poppins-SemiBold, Poppins;
+        font-weight: 600;
+      }
+
+      .cls-3 {
+        fill: #12a4d9;
+        stroke: url(#Vision_Icons);
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #133082;
+        font-size: 10px;
+      }
+    </style>
+    <linearGradient id="Vision_Icons" data-name="Vision Icons" x1="1.5" y1="27.5" x2="53.5" y2="27.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#124cbf"/>
+      <stop offset=".5" stop-color="#13c9e6"/>
+      <stop offset="1" stop-color="#133082"/>
+    </linearGradient>
+  </defs>
+  <circle class="cls-3" cx="27.5" cy="27.5" r="25"/>
+  <text class="cls-1" transform="translate(20.93 19.4)"><tspan x="0" y="0">Live </tspan><tspan x="-9.12" y="7.2">Impacted:</tspan></text>
+  <text class="cls-2" transform="translate(13.63 40.16)"><tspan x="0" y="0">1000+</tspan></text>
+</svg>
