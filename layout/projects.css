@@ -101,10 +101,11 @@
 }
 
 .grid-container {
+  justify-content: center;
   display: grid;
-  gap: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 10fr)); /* Play with min-value */
-  grid-template-rows: repeat(4, 100px); /* Play with min-value */
+  gap: 200px;
+  grid-template-columns: repeat(auto-fit, 450px); 
+  grid-template-rows: repeat(4, 100px); 
   padding-inline-start: 80px;
   padding-inline-end: 80px;
   
@@ -114,6 +115,6 @@
     background-color: rgb(5, 121, 159);
     border: 1px solid blue;
     object-fit: contain;
-    width: 100%;
+    width: 450px;
 }
 
