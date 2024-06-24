@@ -2,58 +2,59 @@ section {
    padding: 5vh 0 5vh 0;
 }
 .slide-container {
-  max-width: 1120px;
-  width: 100%;
-  padding: 40px 0;
+   max-width: 1120px;
+   width: 100%;
+   padding: 40px 0;
 }
 
 .slide-content {
-  margin: 0 40px;
+   margin: 0 40px;
 }
 
 .card {
-  border-radius: 25px;
-  background-color: white;
+   border-radius: 25px;
+   background-color: white;
 }
 
 .image-content, .card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 14px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 14px;
    font-size: 15px;
    color: white;
 }
 
 .image-content {
-  position: relative;
-  padding: 25px 0;
+   position: relative;
+   padding: 25px 0;
 }
 
 .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  border-radius: 25px 25px 0 25px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: white;
+   border-radius: 25px 25px 0 25px;
 }
 
 .card-image {
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: white;
-  padding: 3px;
+   position: relative;
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   background: white;
+   padding: 3px;
+   margin-bottom: -5%;
 }
 
 .card-image .card-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 50%;
 }
 
 .team-photo {
@@ -65,31 +66,31 @@ section {
 /* Mobile devices */
 @media (max-width: 600px) {
    .team-photo img {
-       width: 100%;
-       height: 45vh;
+      width: 100%;
+      height: 45vh;
    }
 }
 
 /* iPad devices */
 @media (min-width: 601px) and (max-width: 1024px) {
    .team-photo img {
-       width: 100%;
-       height: 50vh;
+      width: 100%;
+      height: 50vh;
    }
 }
 
 /* Laptop devices */
 @media (min-width: 1025px) {
    .team-photo img {
-       width: 100%;
-       height: 70vh;
+      width: 100%;
+      height: 70vh;
    }
 }
 
 
 .team-intro-outer-box {
-  display: flex;
-  flex-direction: column;
+   display: flex;
+   flex-direction: column;
    align-items: center;
    margin: 50px 10%;
 }
@@ -111,29 +112,43 @@ section {
 }
 
 .member-heading {
-  font-size: 1.3rem;
-  color: white;
-  margin-bottom: 0.5rem;
-  text-align: center;
+   font-size: 1.3rem;
+   color: white;
+   margin-bottom: 0.5rem;
+   text-align: center;
 }
 
 .white-line {
-  width: 40%;
-  height: 2px;
-  background-color: white;
-  margin: 1rem auto;
+   width: 40%;
+   height: 2px;
+   background-color: white;
+   margin: 1rem auto;
 }
 
 .swiper-button-next1, .swiper-button-prev1, 
 .swiper-button-next2, .swiper-button-prev2, 
-.swiper-button-next3, .swiper-button-prev3 {
+.swiper-button-next3, .swiper-button-prev3,
+.swiper-button-next4, .swiper-button-prev4, 
+.swiper-button-next5, .swiper-button-prev5,
+.swiper-button-next6, .swiper-button-prev6, 
+.swiper-button-next7, .swiper-button-prev7, 
+.swiper-button-next8, .swiper-button-prev8,
+.swiper-button-next9, .swiper-button-prev9,
+.swiper-button-next10, .swiper-button-prev10 {
    color: white;
    margin: 0 10px;
 }
 
 .swiper-button-next1:hover, .swiper-button-prev1:hover,
 .swiper-button-next2:hover, .swiper-button-prev2:hover,
-.swiper-button-next3:hover, .swiper-button-prev3:hover {
+.swiper-button-next3:hover, .swiper-button-prev3:hover,
+.swiper-button-next4:hover, .swiper-button-prev4:hover,
+.swiper-button-next5:hover, .swiper-button-prev5:hover,
+.swiper-button-next6:hover, .swiper-button-prev6:hover,
+.swiper-button-next7:hover, .swiper-button-prev7:hover,
+.swiper-button-next8:hover, .swiper-button-prev8:hover,
+.swiper-button-next9:hover, .swiper-button-prev9:hover,
+.swiper-button-next10:hover, .swiper-button-prev10:hover {
    transform: scale(1.2);
    transition: transform 0.3s ease;
 }

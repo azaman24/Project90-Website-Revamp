@@ -1,3 +1,4 @@
+
 .row::after {
   content: "";
   clear: both;
@@ -46,9 +47,9 @@
 }
 
 .Icons {
-   width: 100%;
-   overflow: auto;
- }
+  width: 100%;
+  overflow: auto;
+}
 
 .Icons div {
    text-align: center;
@@ -82,4 +83,36 @@
 }
 .info {
    font-size: 15px;
+}
+
+.P90Projects {
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+}
+.white-line {
+  width: 40%;
+  height: 2px;
+  background-color: white;
+  margin: 1rem auto;
+  margin-bottom: 100px;
+}
+
+.grid-container {
+  justify-content: center;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, 450px); /* Play with min-value */
+  grid-template-rows: repeat(4, 100px); /* Play with min-value */
+  padding-inline-start: 80px;
+  padding-inline-end: 80px;
+  
+}
+
+.grid-item {
+    
+    background-color: rgb(5, 121, 159);
+    border: 1px solid blue;
+    object-fit: contain;
+    width: 100%;
 }
