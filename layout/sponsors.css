@@ -378,7 +378,7 @@
 
 @media (max-width: 600px) {
 	.impact-heading {
-		margin-top: 30rem;
+		margin-top: 25rem;
 	}
 	.swiper-button-next,
 	.swiper-button-prev {
@@ -412,6 +412,7 @@
 		font-size: 1.6rem;
 	}
 }
+
 @media (max-width: 390px) {
 	.impact-heading {
 		margin-top: 30rem;
