@@ -110,7 +110,7 @@ var mySwiper = new Swiper(".mySwiper", {
 	},
 });
 
-/* for creating a bounce effect to the "become sponsor message" in the sponsors page when the user reaches that message for the first time*/
+/* for creating a bounce effect to the "become sponsor message" in the sponsors page when the user reaches that message for the first time */
 
 document.addEventListener("DOMContentLoaded", function () {
 	const observer = new IntersectionObserver((entries) => {
