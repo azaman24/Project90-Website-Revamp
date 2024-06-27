@@ -247,3 +247,14 @@ section {
 	fill: #fff;
 	transition: 0.3s ease;
 }
+
+.swiper-pagination-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+	transform: none;
+}
