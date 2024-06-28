@@ -253,6 +253,8 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
 	.sponsor-container {
 		flex-direction: column;
+		margin-top: 7rem;
+		margin-bottom: 7rem;	
 	}
 	.circle:first-child {
 		top: 5vh; /* Move the circle above the container */
@@ -431,6 +433,7 @@
 		color: white;
 		margin: 0 2rem;
 		width: calc(var(--swiper-navigation-size) / 44 * 1);
+		height: calc(var(--swiper-navigation-size) / 2	* 1);
 	}
 	:root {
 		--swiper-navigation-size: 70px;
@@ -454,12 +457,14 @@
 }
 
 /* Laptop devices */
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: white;
 		margin: 0 3.5rem;
 		top: 25%;
+		height: calc(var(--swiper-navigation-size) / 0.65 );
+
 	}
 	:root {
 		--swiper-navigation-size: 80px;
