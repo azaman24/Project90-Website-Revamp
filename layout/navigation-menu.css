@@ -17,39 +17,39 @@ header {
 
 @media (max-width: 400px) {
 	.navigation-logo img {
-		width: 9.5rem; /* Adjust width for screens up to 400px wide */
+		width: 9.5rem;
 		margin-bottom: 15px;
 	}
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
 	.navigation-logo img {
-		width: 11.5rem; /* Adjust width for screens between 401px and 600px wide */
+		width: 11.5rem;
 		margin-bottom: 15px;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
 	.navigation-logo img {
-		width: 12rem; /* Adjust width for screens between 601px and 800px wide */
+		width: 12rem;
 	}
 }
 
 @media (min-width: 801px) and (max-width: 1024px) {
 	.navigation-logo img {
-		width: 14rem; /* Adjust width for screens between 801px and 1024px wide */
+		width: 14rem;
 	}
 }
 
 @media (min-width: 1025px) and (max-width: 1250px) {
 	.navigation-logo img {
-		width: 16rem; /* Adjust width for screens between 1025px and 1250px wide */
+		width: 16rem;
 	}
 }
 
 @media (min-width: 1251px) {
 	.navigation-logo img {
-		width: 18rem; /* Keep original width for screens wider than 1250px */
+		width: 18rem;
 	}
 }
 
