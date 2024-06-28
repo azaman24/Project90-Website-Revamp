@@ -4,17 +4,53 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	transition: all 0.5s ease;
-	padding: 1.5em;
-	margin-bottom: 5%;
 	height: 18vh;
 }
 
 .navigation-logo img
 {
-    position: absolute;
     top: 0px;
     cursor: pointer;
     z-index: 1;
+	width: 18rem;
+}
+
+@media (max-width: 400px) {
+	.navigation-logo img {
+		width: 9.5rem; /* Adjust width for screens up to 400px wide */
+		margin-bottom: 15px;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+	.navigation-logo img {
+		width: 11.5rem; /* Adjust width for screens between 401px and 600px wide */
+		margin-bottom: 15px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+	.navigation-logo img {
+		width: 12rem; /* Adjust width for screens between 601px and 800px wide */
+	}
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+	.navigation-logo img {
+		width: 14rem; /* Adjust width for screens between 801px and 1024px wide */
+	}
+}
+
+@media (min-width: 1025px) and (max-width: 1250px) {
+	.navigation-logo img {
+		width: 16rem; /* Adjust width for screens between 1025px and 1250px wide */
+	}
+}
+
+@media (min-width: 1251px) {
+	.navigation-logo img {
+		width: 18rem; /* Keep original width for screens wider than 1250px */
+	}
 }
 
 .navigation-logo {
@@ -37,6 +73,9 @@ header {
 	color: #45abdd;
 }
 
+
+
+
 .bx-menu {
 	font-size: var(--HeaderTwo);
 	cursor: pointer;
@@ -53,7 +92,7 @@ header {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		margin: 0;
 		background: #081b4e;
 		transform: translateX(-100%);
@@ -99,10 +138,8 @@ header {
 	.hamburger {
 		display: block;
 		position: absolute;
-		top: 5rem;
-		right: 8%;
+		right: 10%;
 		margin-left: -2em;
-		margin-top: -45px;
 		width: 2em;
 		z-index: 500;
 	}
@@ -117,6 +154,42 @@ header {
 		transition: all 0.3s ease-in-out;
 	}
 
+}
+
+/* Base case, no media query needed if you want it to apply from the start (0px) up to 300px */
+.hamburger {
+	right: 10%;
+}
+
+/* From 300px to 600px */
+@media (min-width: 300px) {
+	.hamburger {
+		right: 10%; /* Adjust value as needed */
+	}
+}
+
+/* From 600px to 900px */
+@media (min-width: 450px) {
+	.hamburger {
+		right: 8%; /* Adjust value as needed */
+	}
+	.hamburger div {
+		width: 4em;
+	}
+}
+
+/* From 900px to 1200px */
+@media (min-width: 800px) {
+	.hamburger {
+		right: 7%; /* Adjust value as needed */
+	}
+}
+
+/* From 1200px to 1500px */
+@media (min-width: 1000px) {
+	.hamburger {
+		right: 2%; /* Adjust value as needed */
+	}
 }
 
 .social-contacts {
@@ -166,3 +239,6 @@ header {
 	justify-content: space-between;
 	margin-bottom: 10px;
 }
+
+
+
