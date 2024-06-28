@@ -21,7 +21,7 @@
 }
 
 /* Laptop devices */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	.sponsor-photo img {
 		width: 100%;
 		height: 70vh;
@@ -102,7 +102,7 @@
 }
 
 /* Laptop devices */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	.intro-inner-box {
 		width: 50%;
 	}

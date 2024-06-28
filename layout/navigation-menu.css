@@ -16,6 +16,9 @@ header {
 }
 
 @media (max-width: 400px) {
+	.navigation-logo {
+		flex: 1;
+	}
 	.navigation-logo img {
 		width: 9.5rem;
 		margin-bottom: 15px;
@@ -23,6 +26,9 @@ header {
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
+	.navigation-logo {
+		flex: 1;
+	}
 	.navigation-logo img {
 		width: 11.5rem;
 		margin-bottom: 15px;
@@ -30,31 +36,41 @@ header {
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
+	.navigation-logo {
+		flex: 1;
+	}
 	.navigation-logo img {
 		width: 12rem;
 	}
 }
 
 @media (min-width: 801px) and (max-width: 1024px) {
+	.navigation-logo {
+		flex: 1;
+	}
 	.navigation-logo img {
 		width: 14rem;
 	}
 }
 
 @media (min-width: 1025px) and (max-width: 1250px) {
+	.navigation-logo {
+		flex: 1;
+		margin-top: 1rem;
+	}
 	.navigation-logo img {
 		width: 16rem;
 	}
 }
 
 @media (min-width: 1251px) {
+	.navigation-logo {
+		flex: 1;
+		margin-top: 1rem;
+	}
 	.navigation-logo img {
 		width: 18rem;
 	}
-}
-
-.navigation-logo {
-	flex: 1;
 }
 
 .navigation-list-items li {
@@ -70,7 +86,7 @@ header {
 }
 
 .navigation-list-items li a:hover {
-	color: #45abdd;
+	color: #133082;
 }
 
 
