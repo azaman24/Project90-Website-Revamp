@@ -384,8 +384,8 @@ body {
    margin-left: 4%;
    margin-right: 4%;
    fill: #45abdd;
-   background: linear-gradient(to right, #0091ff, #0a73d9); /* Adjust gradient colors as needed */
 }
+
 .socials:hover {
    fill: #fff;
    transition: 0.3s ease;
