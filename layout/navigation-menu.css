@@ -151,7 +151,6 @@ header {
 	.hamburger {
 		display: block;
 		position: absolute;
-		right: 10%;
 		margin-left: -2em;
 		width: 2em;
 		z-index: 500;
@@ -201,7 +200,7 @@ header {
 /* From 1200px to 1500px */
 @media (min-width: 1000px) {
 	.hamburger {
-		right: 2%; /* Adjust value as needed */
+		right: 7%; /* Adjust value as needed */
 	}
 }
 

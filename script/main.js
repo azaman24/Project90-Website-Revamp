@@ -3,7 +3,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 	var navigationList = document.querySelector(".navigation-list");
 	var socialContacts = document.querySelector(".social-contacts");
 	navigationList.classList.toggle("display");
-	if (navigationList.classList.contains("display")) {
+	if (navigationList.classList.contains("display")) {z
 		body.style.overflow = "hidden";
 		socialContacts.style.display = "flex";
 	} else {
@@ -113,14 +113,16 @@ var mySwiper = new Swiper(".mySwiper", {
 /* for creating a bounce effect to the "become sponsor message" in the sponsors page when the user reaches that message for the first time */
 
 document.addEventListener("DOMContentLoaded", function () {
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add("bounce");
-			}
-		});
-	});
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("bounce");
+            }
+        });
+    });
 
-	const target = document.querySelector(".become-sponsor-msg");
-	observer.observe(target);
+    const target = document.querySelector(".become-sponsor-msg");
+    if (target) { // Check if target is not null
+        observer.observe(target);
+    }
 });

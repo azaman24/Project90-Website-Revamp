@@ -169,6 +169,21 @@
       --handshakeYPos: -135%;
       --starsYPos: -120%;
       --lightBulbYPos: -97.5%;
+
+
+      --LogoWidth: 30%;
+      --HeaderOne: 1.75rem;
+      --HeaderTwo: 1.25rem;
+      --HeaderThree: 1rem;
+      --Body: 0.875rem;
+
+      --rightIconsXPos: 275%;
+      --starsXPos: 25%;
+         
+      --infoWidth: 60%;
+      --marginOne: 1%;
+      --marginTwo: 38.75%;
+      --bottomNavSize: 160px;
    }
 }
 @media (min-width: 1200px)
@@ -386,9 +401,9 @@ body {
    fill: #45abdd;
 }
 
-.socials:hover {
-   fill: #fff;
-   transition: 0.3s ease;
+.socials:hover path {
+   fill: #ffffff;
+   transition: fill 0.3s ease;
 }
 
 section { 
@@ -461,3 +476,4 @@ ul {
       transform: 0.3s ease;
    }
 }
+
