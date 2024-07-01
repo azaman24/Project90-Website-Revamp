@@ -869,3 +869,11 @@
 .bounce {
 	animation: bounceAnimation 1s;
 }
+.navigation-list-items a.active {
+	color: black;
+	text-decoration: none; /* Remove the default underline */
+	padding-bottom: 1.5px; /* Add some space between the text and the underline */
+	box-shadow: 
+		0px 5px 0px -3px black; /* Create a shadow that acts as an underline */
+	display: inline-block; /* This makes the padding effective */
+}
