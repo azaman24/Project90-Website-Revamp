@@ -126,3 +126,15 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(target);
     }
 });
+
+
+/* prevent the page from redirecting to itself when the current page is clicked in the navigation bar */
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const activeLink = document.querySelector('.navigation-list-items a.active');
+    if (activeLink) {
+        activeLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevents the link action
+        });
+    }
+});
