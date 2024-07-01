@@ -60,7 +60,6 @@ for (let i = 0; i < 10; i++) {
 
 /* Swip buttons for sponsors page */
 var mySwiper = new Swiper(".mySwiper", {
-	// Optional parameters
 	loop: true,
 	pagination: {
 		el: ".swiper-pagination",
@@ -72,15 +71,15 @@ var mySwiper = new Swiper(".mySwiper", {
 	},
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('bounce');
-      }
-    });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("bounce");
+			}
+		});
+	});
 
-  const target = document.querySelector('.become-sponsor-msg');
-  observer.observe(target);
+	const target = document.querySelector(".become-sponsor-msg");
+	observer.observe(target);
 });

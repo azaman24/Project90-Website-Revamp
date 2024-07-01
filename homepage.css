@@ -14,7 +14,7 @@
    --mediumBlue: #0091FF;
    --darkBlue: #1b41a7;
    --DefaultButtonGradient: linear-gradient(to right, #229fff 20%, #0c69c6);
-   --HoverButtonGradient: linear-gradient(to right, #0582FF 20%, #0158bc);
+   --HoverButtonGradient: linear-gradient(to right, #0582ff 20%, #0158bc);
 }
 
 /* Sizing for Different Media */
@@ -30,8 +30,8 @@
       --HeaderThree: 0.45rem;
       --Body: 0.625rem;
       --globeSpaceHeight: 85%;
-      --slogan: -68%;
-      --globeGif: -5%;
+      --slogan: -15%;
+      --globeGif: -67.5%;
 
       --rightIconsXPos: 150%;
       --handshakeYPos: -510%;
@@ -215,8 +215,9 @@
       --HeaderThree: 1.1rem;
       --Body: 1rem;
 
-      --globeSpaceHeight: 78.5%;
-      --globeGif: -2.5%;
+      --globeSpaceHeight: 85%;
+      --slogan: -15%;
+      --globeGif: -67.5%;
 
       --rightIconsXPos: 280%;
       --handshakeYPos: -130%;
@@ -240,7 +241,10 @@
       --HeaderTwo: 1.75rem;
       --HeaderThree: 1.25rem;
       --Body: 1.125rem;
-      --globeSpaceHeight: 79%;
+
+      --globeSpaceHeight: 95%;
+      --slogan: -12.5%;
+      --globeGif: -67.5%;
 
       --rightIconsXPos: 290%;
       --handshakeYPos: -115%;
@@ -423,15 +427,19 @@ body {
    transition: 0.35s ease-in-out;
 }
 .socials {
+   --startColor: #0091ff;
+   --endColor: #0a73d9;
+   transition: all 0.3s ease;
    margin-top: 4%;
    margin-left: 4%;
    margin-right: 4%;
-   fill: var(--mediumBlue);
-   transition: all 0.5s ease;
 }
+
+
 .socials:hover {
-   fill: var(--darkBlue);
-   transition: 0.3s ease-in-out;
+   --startColor: #0582ff;
+   --endColor: #0158bc;
+
 }
 
 /* Typography*/
