@@ -73,15 +73,28 @@ header {
 	}
 }
 
-.navigation-list-items li {
+.navigation-list {
+	width: 70%;
+}
+
+.navigation-list-items {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	padding: 0;
 	color: transparent;
+}
+
+
+.navigation-list-items li {
+	flex: 1;
+	text-align: center;
 }
 
 .navigation-list-items a {
 	color: var(--Text);
 	text-decoration: none;
 	font-weight: var(--Bold);
-	margin: 0 50px;
 	transition: all 0.5s ease;
 }
 
@@ -131,10 +144,13 @@ header {
 		transform: translateX(0);
 	}
 
+	.navigation-list-items li {
+		margin: 20px 0;
+	}
+
 	.navigation-list-items a {
 		display: block;
 		transition: all 0.5s ease;
-		padding: 1rem 1rem 1rem 1rem;
 		font-size: 1.2rem;
 		margin: 0px;
 	}
@@ -205,7 +221,7 @@ header {
 }
 
 .social-contacts {
-	margin-top: 20px;
+	margin-top: 30px;
 	justify-content: center;
 	flex-direction: column;
 }
