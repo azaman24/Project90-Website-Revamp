@@ -1,118 +1,33 @@
-*{ margin: 0; padding: 0; box-sizing: border-box; }
-
-:root
-{
-   --PrimaryFont: 'Poppins', sans-serif;
-   --SecondaryFont: 'Source Code Pro', monospace;
-
-   --Regular: 500;
-
-   --Text: white;
-   --ColourStop1: #133082;
-   --ColourStop2: #000;
-   --ColourStop3: #134da1ff;
-   --ColourStop4: #135cb0ff;
-   --ColourStop5: #1471c6ff;
-   --ColourStop6: #1488deff;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-/* Sizing for Different Media */
-@media (min-width: 300px)
-{
-   :root
-   {
-      --LogoWidth: 40%;
-      --globeSize: 500px;
-      --HeaderOne: 1.25rem;
-      --HeaderTwo: 0.625rem;
-      --HeaderThree: 0.45rem;
-      --Body: 0.625rem;
-      --bottomNavSize: 65px;
-   }
-   strong, a 
-   { 
-       font-size: var(--HeaderThree);
-   }
-}
-@media (min-width: 600px)
-{
-   :root
-   {
-      --LogoWidth: 35%;
-      --HeaderOne: 1.5rem;
-      --HeaderTwo: 1rem;
-      --HeaderThree: 0.75rem;
-      --Body: 0.75rem;
-      --bottomNavSize: 115px;
-   }
-}
-@media (min-width: 900px)
-{
-   :root
-   {
-      --LogoWidth: 30%;
-      --HeaderOne: 1.75rem;
-      --HeaderTwo: 1.25rem;
-      --HeaderThree: 1rem;
-      --Body: 0.875rem;
-      --bottomNavSize: 160px;
-   }
-}
-@media (min-width: 1200px)
-{
-   :root
-   {
-      --LogoWidth: 25%;
-      --HeaderOne: 2.3rem;
-      --HeaderTwo: 1.5rem;
-      --HeaderThree: 1.1rem;
-      --Body: 1rem;
-      --bottomNavSize: 170px;
-   }
-}
-@media (min-width: 1500px)
-{
-   :root
-   {
-      --LogoWidth: 20%;
-      --HeaderOne: 2.75rem;
-      --HeaderTwo: 1.75rem;
-      --HeaderThree: 1.25rem;
-      --Body: 1.125rem;
-      --bottomNavSize: 215px;
-   }
+.column {
+  float: left;
+  width: 33.33%;
+  position: relative;
 }
 
-/* General Styling */
-body {
-   background: linear-gradient(var(--ColourStop1) 0%, var(--ColourStop2) 8%, var(--ColourStop3) 100%, 
-      var(--ColourStop4) 120%, var(--ColourStop5) 135%, var(--ColourStop6) 150%);
-   color: var(--Text);
-   font-family: var(--PrimaryFont);
-   font-size: var(--Body);
-   font-weight: var(--Regular);
-   line-height: 1.6;
-   margin: 0;
+.picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.logoSizing {
-   width: var(--LogoWidth);
+.gradient{
+  width: 100%;
+  height: 100%;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-image: linear-gradient(to bottom, rgb(1,124,237) 0%, rgb(0,0,0,0) 10%,rgb(0,0,0,0) 90%, rgb(7,102,230) 100%);
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
-.dot {
-   height: 110px;
-   width: 110px;
-   display: grid;
-   background-color: #bbb;
-   border-radius: 50%;
-   display: inline-block;
-   z-index: 1;
-   margin-left: 200px;
-   margin-right: 200px;
-   margin-bottom: 50px;
-
-}
-
 
 .projectForYou {
    margin-top: 0%;
@@ -122,7 +37,7 @@ body {
 .project-for-you {
   width: 65%;
   height: 20%;
-  background: rgba(19, 78, 161, 0.158);
+  background: rgba(42, 75, 170, 0.3);
   margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
@@ -131,9 +46,9 @@ body {
 }
 
 .Icons {
-   width: 100%;
-   overflow: auto;
- }
+  width: 100%;
+  overflow: auto;
+}
 
 .Icons div {
    text-align: center;
@@ -151,7 +66,7 @@ body {
 }
 
 .icon-info {
-  background:rgba(19, 78, 161, 0.158);
+  background:rgba(33, 112, 235, 0.3);
   width: 300px;
   border-radius: 30px;
   padding: 15px 20px;
@@ -167,40 +82,92 @@ body {
 }
 .info {
    font-size: 15px;
+   margin-left: 5%;
 }
 
-section { 
-   padding: 7.25em 1em; 
+.P90Projects {
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+}
+.white-line {
+  width: 40%;
+  height: 2px;
+  background-color: white;
+  margin: 1rem auto;
+  margin-bottom: 100px;
 }
 
-strong, a { 
-   font-weight: var(--Regular);
-   color: var(--Text);
-   font-family: var(--PrimaryFont);
-   text-decoration: none;
+.grid-container {
+  justify-content: center;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, 450px); /* Play with min-value */
+  grid-template-rows: repeat(4, 100px); /* Play with min-value */
+  padding-inline-start: 80px;
+  padding-inline-end: 80px;
 }
 
-/* Typography*/
-h1, h2 {
-   flex: 50%;
-   color: var(--Text);
-   font-weight: var(--Regular);
-   line-height: var(--height);
-   margin: 0;
+.grid-item {
+    
+    background-color: rgb(5, 121, 159);
+    border: 1px solid blue;
+    object-fit: contain;
+    width: 100%;
 }
 
-h1 { font-size: var(--HeaderOne); }
-h2 { font-size: var(--HeaderTwo); }
-ul, li { font-size: var(--HeaderThree); }
-li {margin-left: 10px;}
-p {font-size: var(--HeaderThree); font-weight: var(--Regular); }
-
-li {
-   word-spacing: 2px;
-   margin-bottom: 3%;
+.projectCard {
+  width: 500px;
+  background-color: rgba(19,76,160,0.4);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures nothing spills out */
+  margin-left: auto; /*remove after adding projectCard into grid */
+  margin-right: auto; /*remove after adding projectCard into grid */
 }
-ul {
-   word-spacing: 2px;
-   margin-top: 3%;
-   margin-bottom: -1%;
+
+.projectTitle {
+  margin-top: -2.5%;
+}
+
+.card-image {
+  width: 100%; /* Makes the image stretch to cover the card width */
+  display: block; /* Removes bottom space/gap */
+}
+
+.card-content {
+  padding: 20px;
+  color: #fff; /* Sets text color to blue */
+}
+
+/* ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+} */
+
+.status {
+  width: 50%;
+  text-align: center;
+  color: #0056b3; /* Blue text */
+  background-color: rgba(255,255,255,0.75); /* White background */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15rem;
+  border: 2px solid #0056b3; /* Adding a blue border to match the text */
+}
+
+.placeHolder { /*temporary style, delete after adding in content*/
+  margin: auto;
+  margin-bottom: 20rem;
+  text-align: center;
+  width: 50%;
 }
