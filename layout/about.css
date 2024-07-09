@@ -1,0 +1,6 @@
+.centerText { /*temporary style, delete after adding in content*/
+    margin: auto;
+    margin-bottom: 20rem;
+    text-align: center;
+    width: 50%;
+}

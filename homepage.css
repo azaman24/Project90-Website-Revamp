@@ -8,12 +8,13 @@
    --Regular: 500;
 
    --Text: white;
-   --ColourStop1: #133082;
-   --ColourStop2: #000;
-   --ColourStop3: #134da1ff;
-   --ColourStop4: #135cb0ff;
-   --ColourStop5: #1471c6ff;
-   --ColourStop6: #1488deff;
+   --ColourStop1: #0080ff;
+   --ColourStop2: #133cbd;
+   --lightBlue: #45abdd;
+   --mediumBlue: #0091FF;
+   --darkBlue: #1b41a7;
+   --DefaultButtonGradient: linear-gradient(to right, #229fff 20%, #0c69c6);
+   --HoverButtonGradient: linear-gradient(to right, #0582ff 20%, #0158bc);
 }
 
 /* Sizing for Different Media */
@@ -22,13 +23,15 @@
    :root
    {
       --LogoWidth: 40%;
+      --LogoYPos: 15%;
       --globeSize: 500px;
       --HeaderOne: 1.25rem;
       --HeaderTwo: 0.625rem;
       --HeaderThree: 0.45rem;
       --Body: 0.625rem;
-      --slogan: -68%;
-      --globeGif: -5%;
+      --globeSpaceHeight: 85%;
+      --slogan: -15%;
+      --globeGif: -67.5%;
 
       --rightIconsXPos: 150%;
       --handshakeYPos: -510%;
@@ -50,6 +53,7 @@
 {
    :root
    {
+      --LogoYPos: 5%;
       --handshakeYPos: calc(-515% + ((100vw - 300px) * 0.8));
       --starsYPos: -330%;
       --lightBulbYPos: -265%;
@@ -59,6 +63,7 @@
 {
    :root
    {
+      --LogoYPos: 0%;
       --handshakeYPos: -400%;
       --starsYPos: -310%;
       --lightBulbYPos: -250%;
@@ -68,8 +73,10 @@
 {
    :root
    {
+      --LogoWidth: 35%;
+      --LogoYPos: 3%;
       --handshakeYPos: -375%;
-      --starsYPos: -295%;
+      --starsYPos: -295%0
       --lightBulbYPos: -240%;
    }
 }
@@ -77,6 +84,7 @@
 {
    :root
    {
+      --LogoYPos: -5%;
       --handshakeYPos: -350%;
       --starsYPos: -260%;
       --lightBulbYPos: -215%;
@@ -86,6 +94,9 @@
 {
    :root
    {
+      --LogoWidth: 30%;
+      --LogoYPos: -2.5%;
+      --globeSpaceHeight: 80%;
       --handshakeYPos: -330%;
       --starsYPos: -250%;
       --lightBulbYPos: -200%;
@@ -95,6 +106,7 @@
 {
    :root
    {
+      --LogoYPos: -5%;
       --handshakeYPos: -300%;
       --starsYPos: -230%;
       --lightBulbYPos: -195%;
@@ -104,11 +116,13 @@
 {
    :root
    {
-      --LogoWidth: 35%;
+      --LogoWidth: 27.5%;
+      --LogoYPos: -7.5%;
       --HeaderOne: 1.5rem;
       --HeaderTwo: 1rem;
       --HeaderThree: 0.75rem;
       --Body: 0.75rem;
+      --globeSpaceHeight: 80%;
 
       --rightIconsXPos: 280%;
       --handshakeYPos: -165%;
@@ -126,6 +140,8 @@
 {
    :root
    {
+      --LogoYPos: -15%;
+      --globeSpaceHeight: 77.5%;
       --handshakeYPos: -145%;
       --starsYPos: -125%;
       --lightBulbYPos: -105%;
@@ -135,6 +151,7 @@
 {
    :root
    {
+      --LogoYPos: -22.5%;
       --handshakeYPos: -135%;
       --starsYPos: -110%;
       --lightBulbYPos: -100%;
@@ -144,7 +161,8 @@
 {
    :root
    {
-      --LogoWidth: 30%;
+      --LogoWidth: 20%;
+      --LogoYPos: -10%;
       --HeaderOne: 1.75rem;
       --HeaderTwo: 1.25rem;
       --HeaderThree: 1rem;
@@ -166,37 +184,40 @@
 {
    :root
    {
+      --LogoYPos: -17.5%;
       --handshakeYPos: -135%;
       --starsYPos: -120%;
       --lightBulbYPos: -97.5%;
-
-
-      --LogoWidth: 30%;
-      --HeaderOne: 1.75rem;
-      --HeaderTwo: 1.25rem;
-      --HeaderThree: 1rem;
-      --Body: 0.875rem;
-
-      --rightIconsXPos: 275%;
-      --starsXPos: 25%;
-         
-      --infoWidth: 60%;
-      --marginOne: 1%;
-      --marginTwo: 38.75%;
-      --bottomNavSize: 160px;
+   }
+}
+@media (min-width: 1001px)
+{
+   :root
+   {
+      --LogoYPos: -12.5%;
+   }
+}
+@media (min-width: 1100px)
+{
+   :root
+   {
+      --LogoYPos: -17.5%;
    }
 }
 @media (min-width: 1200px)
 {
    :root
    {
-      --LogoWidth: 25%;
+      --LogoWidth: 17.5%;
+      --LogoYPos: -15%;
       --HeaderOne: 2.3rem;
       --HeaderTwo: 1.5rem;
       --HeaderThree: 1.1rem;
       --Body: 1rem;
 
-      --globeGif: -2.5%;
+      --globeSpaceHeight: 85%;
+      --slogan: -15%;
+      --globeGif: -67.5%;
 
       --rightIconsXPos: 280%;
       --handshakeYPos: -130%;
@@ -214,11 +235,16 @@
 {
    :root
    {
-      --LogoWidth: 20%;
+      --LogoWidth: 15%;
+      --LogoYPos: -20%;
       --HeaderOne: 2.75rem;
       --HeaderTwo: 1.75rem;
       --HeaderThree: 1.25rem;
       --Body: 1.125rem;
+
+      --globeSpaceHeight: 95%;
+      --slogan: -12.5%;
+      --globeGif: -67.5%;
 
       --rightIconsXPos: 290%;
       --handshakeYPos: -115%;
@@ -234,8 +260,7 @@
 
 /* General Styling */
 body {
-   background: linear-gradient(var(--ColourStop1) 0%, var(--ColourStop2) 8%, var(--ColourStop3) 100%, 
-      var(--ColourStop4) 120%, var(--ColourStop5) 135%, var(--ColourStop6) 150%);
+   background: linear-gradient(to bottom right, var(--ColourStop1), var(--ColourStop2) 70%);
    color: var(--Text);
    font-family: var(--PrimaryFont);
    font-size: var(--Body);
@@ -247,7 +272,7 @@ body {
 .centerBlocks {
    width: 65%;
    height: 20%;
-   background: rgba(19, 78, 161, 0.158);
+   background: rgba(42, 75, 170, 0.3);
    margin-top: 5%;
    margin-left: auto;
    margin-right: auto;
@@ -257,6 +282,7 @@ body {
 
 .logoSizing {
    width: var(--LogoWidth);
+   translate: 0 var(--LogoYPos);
 }
 
 .content {
@@ -264,8 +290,25 @@ body {
    height: 40%;
 }
 
+.globeSection {
+   background-position: center;
+   position: relative;
+}
+
 .globeSpacing {
    margin-bottom: -30%;
+}
+
+.globeBackground {
+   position: absolute; left: 0; top: 0; width: 100%; height: 500px;
+   padding: 2em;
+   height: var(--globeSpaceHeight);
+   background-image: linear-gradient(to bottom, 
+   rgba(0,0,0,0) 0%,
+   rgba(0,0,0,1) 5%,
+   rgba(0,0,0,1) 90%,
+   rgba(0,0,0,0) 100%);
+   z-index: -1;
 }
 
 .globe-gif {
@@ -279,8 +322,8 @@ body {
 }
 
 .summarySpacing {
-   margin-top: -32.5%;
-   margin-bottom: 5%;
+   margin-top: -22.5%;
+   margin-bottom: -5%;
 }
 
 .dot {
@@ -303,7 +346,7 @@ body {
 }
 
 .purpose {
-   background: rgba(19, 78, 161, 0.145);
+   background: rgba(33, 112, 235, 0.3);
    width: var(--infoWidth);
    margin-left: var(--marginOne);
    padding: 2% 2%; 
@@ -311,7 +354,7 @@ body {
 }
 
 .handshake {
-   fill: #45abdd;
+   opacity: 0.2;
    transform: translate(var(--rightIconsXPos), var(--handshakeYPos));
    animation: bounce 3s ease-in-out;
    animation-timeline: view(7.5%);
@@ -319,7 +362,7 @@ body {
 }
 
 .goals {
-   background: rgba(19, 78, 161, 0.21);
+   background: rgba(13, 92, 235, 0.3);
    width: var(--infoWidth);
    margin-left: var(--marginTwo);
    padding: 2% 2%; 
@@ -333,16 +376,9 @@ body {
    background-repeat: no-repeat;
 
 }
-.goalsHand {
-   fill: #45abdd;
-}
-.goalsStars {
-   fill: #fff9b8;
-
-}
 
 .plans {
-   background: rgba(19, 78, 161, 0.29);
+   background: rgba(31, 96, 236, 0.3);
    width: var(--infoWidth);
    margin-left: var(--marginOne);
    padding: 2% 2%; 
@@ -350,7 +386,6 @@ body {
 }
 
 .lightBulb {
-   fill: #45abdd;
    opacity: 0.2;
    animation: lightUp 3s ease-in;
    animation-timeline: view(7.5%);
@@ -358,6 +393,7 @@ body {
    transform: translate(var(--rightIconsXPos), var(--lightBulbYPos));
 }
 
+/* Bottom Navbar*/
 .bottomNavContainer {
    display: flex;
    justify-content: center;
@@ -370,54 +406,52 @@ body {
 .bottomNav {
    width: 32.5%;
    height: var(--bottomNavSize);
-   background: rgba(20, 135, 222, 0.084);
+   background: rgba(49, 90, 208, 0.3);
    margin-left: 2%;
    margin-bottom: 7.5%;
    padding: 2% 2%; 
    border-radius: 20px;
    text-align: center;
 }
-
 .joinOrContact {
    font-size: 1em;
-   color: #fff;
-   background: linear-gradient(to right, #0091ff, #0a73d9); /* Adjust gradient colors as needed */
+   color: var(--Text);
+   background: var(--DefaultButtonGradient);
    padding: 2% 5%;
    border-radius: 20px;
    margin-bottom: 100%;
    margin-top: 100%;
 }
-
 .joinOrContact:hover {
-   color: #133082;
-   background: #fff;
-   transition: 0.35s ease;
+   background: var(--HoverButtonGradient);
+   transition: 0.35s ease-in-out;
 }
-
 .socials {
+   --startColor: #0091ff;
+   --endColor: #0a73d9;
+   transition: all 0.3s ease;
    margin-top: 4%;
    margin-left: 4%;
    margin-right: 4%;
-   fill: #45abdd;
 }
 
-.socials:hover path {
-   fill: #ffffff;
-   transition: fill 0.3s ease;
+
+.socials:hover {
+   --startColor: #0582ff;
+   --endColor: #0158bc;
+
 }
 
+/* Typography*/
 section { 
    padding: 7.25em 1em; 
 }
-
 strong, a { 
    font-weight: var(--Regular);
    color: var(--Text);
    font-family: var(--PrimaryFont);
    text-decoration: none;
 }
-
-/* Typography*/
 h1, h2 {
    flex: 50%;
    color: var(--Text);
@@ -425,12 +459,10 @@ h1, h2 {
    line-height: var(--height);
    margin: 0;
 }
-
 h1 { font-size: var(--HeaderOne); }
 h2 { font-size: var(--HeaderTwo); }
 ul, li { font-size: var(--HeaderThree); }
 p {font-size: var(--HeaderThree); font-weight: var(--Regular); }
-
 li {
    word-spacing: 2px;
    margin-bottom: 3%;
@@ -441,16 +473,17 @@ ul {
    margin-bottom: -1%;
 }
 
+/* animations */
 @keyframes bounce {
    from {
       transform: translate(var(--rightIconsXPos), var(--handshakeYPos));
    }
    10% {
-      fill: #2d6b8b;
+      opacity: 0.5;
       transform: translate(var(--rightIconsXPos), calc(var(--handshakeYPos) + 20%));
    }
    15% {
-      fill: #45abdd;
+      opacity: 1;
       transform: translate(var(--rightIconsXPos), calc(var(--handshakeYPos) - 10%));
    }
    20% {
@@ -471,9 +504,7 @@ ul {
       opacity: 0.2;   
    }
    10% {
-      fill: #00d0ff;
       opacity: 1;
       transform: 0.3s ease;
    }
 }
-
