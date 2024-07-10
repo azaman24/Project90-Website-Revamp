@@ -139,10 +139,54 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	margin-top: 5rem;
-	margin-bottom: 5rem;
+	margin: 5rem 4rem;
+}
+
+.no-current-events-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #cccccc; /* Light gray dotted border */
+	padding: 0px 20px;
+  
+}
+
+.no-current-events {
+  font-size: 20px;
+  margin: 6rem 0rem;
+}
+
+.moon-animation {
+  animation: float 3s ease-in-out infinite;
+  padding: 20px;
+}
+
+
+
+@keyframes float {
+  0%, 100% {
+	transform: translateY(0);
+  }
+  50% {
+	transform: translateY(-20px);
+  }
 }
 
 .event-image {
-	width: 10%;
+  width: 22%;
+  height: 25rem;
+  margin: 5rem 4rem 5rem 4rem;
+  box-shadow: 0px 0px 5px 4px #1AACFF;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and box-shadow */
+  will-change: transform, box-shadow; /* Optimizes animations */
+  position: relative; /* Needed for pseudo-element positioning */
+  overflow: hidden; /* Ensures the pseudo-element does not extend outside */
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg); /* Initial 3D perspective */
+  border-radius: 5%;
 }
+
+.event-image:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for a "lifted" look */
+}
+

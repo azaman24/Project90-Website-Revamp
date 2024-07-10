@@ -113,16 +113,41 @@ var mySwiper = new Swiper(".mySwiper", {
 /* for creating a bounce effect to the "become sponsor message" in the sponsors page when the user reaches that message for the first time */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("bounce");
-            }
-        });
-    });
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("bounce");
+			}
+		});
+	});
 
-    const target = document.querySelector(".become-sponsor-msg");
-    if (target) { // Check if target is not null
-        observer.observe(target);
-    }
+	const target = document.querySelector(".become-sponsor-msg");
+	if (target) { // Check if target is not null
+		observer.observe(target);
+	}
 });
+
+// animation for event images in the events page
+document.querySelectorAll('.event-image').forEach(item => {
+  item.addEventListener('mousemove', e => {
+	var eventImg = document.getElementById("event-img");
+	
+
+	const rect = e.target.getBoundingClientRect();
+	const x = e.clientX - rect.left; // x position within the element.
+	const y = e.clientY - rect.top;  // y position within the element.
+
+	const centerX = rect.width / 2;
+	const centerY = rect.height / 2;
+
+	const deltaX = (x - centerX) / 20;
+	const deltaY = (y - centerY) / -20;
+
+	e.target.style.transform = `perspective(1000px) rotateY(${deltaX}deg) rotateX(${deltaY}deg)`;
+  });
+
+  item.addEventListener('mouseout', e => {
+	e.target.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+  });
+});
+
