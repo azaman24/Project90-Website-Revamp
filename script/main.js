@@ -128,12 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // animation for event images in the events page
-document.querySelectorAll('.event-image').forEach(item => {
-  item.addEventListener('mousemove', e => {
-	var eventImg = document.getElementById("event-img");
-	
-
-	const rect = e.target.getBoundingClientRect();
+document.querySelectorAll('.image-wrapper').forEach(item => {
+  item.addEventListener('mousemove', e => {	
+	console.log(item, e);
+	const rect = item.getBoundingClientRect(); // Use item here instead of e.target
 	const x = e.clientX - rect.left; // x position within the element.
 	const y = e.clientY - rect.top;  // y position within the element.
 
@@ -143,11 +141,30 @@ document.querySelectorAll('.event-image').forEach(item => {
 	const deltaX = (x - centerX) / 20;
 	const deltaY = (y - centerY) / -20;
 
-	e.target.style.transform = `perspective(1000px) rotateY(${deltaX}deg) rotateX(${deltaY}deg)`;
+	item.style.transform = `perspective(1000px) rotateY(${deltaX}deg) rotateX(${deltaY}deg)`; // Apply to item
   });
 
   item.addEventListener('mouseout', e => {
-	e.target.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+	item.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)'; // Apply to item
   });
 });
 
+// load more and load less functionality for the events page
+document.addEventListener("DOMContentLoaded", function() {
+	const images = document.querySelectorAll('.image-wrapper');
+	let currentCount = 6;
+  
+	document.getElementById('load-more-btn').addEventListener('click', function() {
+	  const nextCount = currentCount + 6;
+	  for (let i = currentCount; i < nextCount && i < images.length; i++) {
+		images[i].style.display = 'block';
+	  }
+	  currentCount += 6;
+	  if (currentCount >= images.length) {
+		var loadMoreBtnContainer = document.getElementsByClassName('load-more-btn-container')[0];
+		console.log(loadMoreBtnContainer);
+		loadMoreBtnContainer.style.display = 'none';
+		this.style.display = 'none'; // Hide the button if there are no more images to show
+	  }
+	});
+  });
