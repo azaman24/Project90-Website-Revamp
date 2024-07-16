@@ -46,8 +46,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 5rem;
-	margin-bottom: 3rem;
 }
 
 .event-icon-container {
@@ -60,16 +58,18 @@
 @media (max-width: 600px) {
 	.event-heading {
 		margin-top: 6rem;
+		margin-bottom: 2rem;
 		font-size: 1.6rem;
 	}
 	.event-icon-container {
-		margin-bottom: 3.5rem; /* Adjust margin for screens <= 600px */
+		margin-bottom: 2.5rem; /* Adjust margin for screens <= 600px */
 	}
 }
 
 /* iPad devices */
 @media (min-width: 601px) and (max-width: 1024px) {
 	.event-heading {
+		margin-top: 6rem;
 		margin-bottom: 3rem;
 		font-size: 2rem;
 	}
@@ -82,7 +82,7 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
 	.event-heading {
 		font-size: 2.2rem;
-		margin-bottom: 5rem;
+		margin-bottom: 3rem;
 	}
 	.event-icon-container {
 		margin-bottom: 5rem; /* Adjust margin for screens <= 600px */
@@ -92,7 +92,7 @@
 @media (min-width: 1200px) {
 	.event-heading {
 		font-size: 2.2rem;
-		margin-bottom: 5rem;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -228,7 +228,8 @@
 	align-items: center;
 	border: 2px solid #cccccc; /* Light gray dotted border */
 	padding: 0px 20px;
-	margin: 6rem 5rem;
+	margin: 3rem 3rem;
+	border-radius: 25px;
 }
 
 .no-current-events {
@@ -266,7 +267,7 @@
 
 @media (min-width: 1025px) {
 	.event-container {
-		margin: 5rem 4rem; /* Maintain original margin for screens > 1024px */
+		margin: 0rem 4rem 4rem 4rem;
 	}
 }
 
@@ -312,13 +313,7 @@
 /* Container needed to position the button. Adjust the width as needed */
 .image-wrapper {
 	position: relative;
-	margin: 5rem 4rem 5rem 4rem;
-	box-shadow: 0px 0px 5px 4px #1aacff;
-	transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and box-shadow */
-	will-change: transform, box-shadow; /* Optimizes animations */
-	position: relative; /* Needed for pseudo-element positioning */
 	overflow: hidden; /* Ensures the pseudo-element does not extend outside */
-	transform: perspective(1000px) rotateY(0deg) rotateX(0deg); /* Initial 3D perspective */
 	border-radius: 5%;
 }
 
@@ -350,8 +345,12 @@
 	.image-wrapper {
 		width: auto; /* Adjust width for screens > 1024px */
 		height: 20rem;
-		margin: 5rem 4rem 5rem 4rem;
+		margin: 4rem 4rem 4rem 4rem;
 	}
+}
+
+.image-wrapper:hover {
+	box-shadow: 0px 0px 5px 4px #1aacff;
 }
 
 .image-wrapper img:hover {
@@ -395,22 +394,30 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 5rem 0rem;
-	padding: 0.5rem 3rem 6rem 3rem; /* Increase padding for a larger button */
+	margin: 0rem 0rem 2rem 0rem;
+	padding: 0rem 3rem 6rem 3rem; /* Increase padding for a larger button */
 	font-size: 1.5rem; /* Increase font size for better visibility */
 	width: auto; /* Adjust width as needed */
 	height: auto; /* Adjust height as needed */
-	cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
 }
 
 #load-more-btn {
-	background: var(--DefaultButtonGradient);
-	color: white;
-	font-weight: bold;
-	padding: 0.8rem;
-	border-radius: 15px;
-	border: 0px;
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 20px;
+    border: 3.5px solid rgba(23, 10, 81); /* Use the primary color for the border */
+    color: rgba(23, 10, 81); /* Text color matches the border */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover and focus */
 }
+
+#load-more-btn:hover, #load-more-btn:focus {
+    color: white; /* White text on hover/focus */
+    border: 3.5px solid white; /* Transparent border on hover/focus */
+}
+
+
 
 @media (max-width: 600px) {
 	.load-more-btn-container {
@@ -421,11 +428,11 @@
 	#load-more-btn {
 		padding: 0.5rem; /* Adjust padding for screens <= 600px */
 		border-radius: 10px; /* Adjust border radius for screens <= 600px */
+		border: 3px solid rgba(23, 10, 81); /* Use the primary color for the border */
 	}
-}
-
-#load-more-btn:hover {
-	background: var(--HoverButtonGradient);
+	#load-more-btn:hover, #load-more-btn:focus {
+		border: 3px solid white;
+	}
 }
 
 .target-div {
