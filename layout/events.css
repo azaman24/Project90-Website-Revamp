@@ -249,7 +249,7 @@
 	}
 	.no-current-events-container {
 		flex-direction: column;
-		margin: 3rem 2rem 0rem 2rem; /* Adjust margin for screens <= 600px */
+		margin: 1.5rem 2rem 0rem 2rem; /* Adjust margin for screens <= 600px */
 	}
 	.no-current-events {
 		margin: 2rem 0rem;
