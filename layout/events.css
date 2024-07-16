@@ -405,16 +405,16 @@
     font-weight: bold;
     padding: 0.8rem;
     border-radius: 20px;
-    border: 3.5px solid rgba(23, 10, 81); /* Use the primary color for the border */
-    color: rgba(23, 10, 81); /* Text color matches the border */
+    border: 3.5px solid white; /* Use the primary color for the border */
+    color: white; /* Text color matches the border */
     background-color: transparent; /* Transparent background */
     cursor: pointer;
     transition: all 0.3s ease; /* Smooth transition for hover and focus */
 }
 
 #load-more-btn:hover, #load-more-btn:focus {
-    color: white; /* White text on hover/focus */
-    border: 3.5px solid white; /* Transparent border on hover/focus */
+    color: rgba(23, 10, 81); /* White text on hover/focus */
+    border: 3.5px solid rgba(23, 10, 81); /* Transparent border on hover/focus */
 }
 
 
@@ -428,10 +428,12 @@
 	#load-more-btn {
 		padding: 0.5rem; /* Adjust padding for screens <= 600px */
 		border-radius: 10px; /* Adjust border radius for screens <= 600px */
-		border: 3px solid rgba(23, 10, 81); /* Use the primary color for the border */
+		border: 3px solid white; /* Use the primary color for the border */
+		color: white;
 	}
 	#load-more-btn:hover, #load-more-btn:focus {
-		border: 3px solid white;
+		color: rgba(23, 10, 81);
+		border: 3px solid rgba(23, 10, 81);
 	}
 }
 
