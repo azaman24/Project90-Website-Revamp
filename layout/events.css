@@ -208,7 +208,7 @@
 		margin-right: 8rem;
 	}
 	.event-join-msg h2 {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 	}
 }
 
@@ -236,13 +236,19 @@
 	margin: 4rem 0rem;
 }
 
+@media (max-width: 400px) {
+	.no-current-events {
+		font-size: 0.8rem;
+	}
+}
+
 @media (max-width: 600px) {
 	.event-container {
-		margin: 1rem 1rem; /* Adjust margin for screens <= 600px */
+		margin: 1rem 1rem 0rem 1rem; /* Adjust margin for screens <= 600px */
 	}
 	.no-current-events-container {
 		flex-direction: column;
-		margin: 3rem 2rem; /* Adjust margin for screens <= 600px */
+		margin: 3rem 2rem 0rem 2rem; /* Adjust margin for screens <= 600px */
 	}
 	.no-current-events {
 		margin: 2rem 0rem;
@@ -252,6 +258,9 @@
 @media (min-width: 601px) and (max-width: 1024px) {
 	.event-container {
 		margin: 3.5rem 2.5rem; /* Adjust margin for screens between 601px and 1024px */
+	}
+	.no-current-events-container {
+		margin: 2rem 5rem 0rem 5rem;
 	}
 }
 
@@ -303,8 +312,6 @@
 /* Container needed to position the button. Adjust the width as needed */
 .image-wrapper {
 	position: relative;
-	width: 22%;
-	height: 25rem;
 	margin: 5rem 4rem 5rem 4rem;
 	box-shadow: 0px 0px 5px 4px #1aacff;
 	transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and box-shadow */
@@ -317,22 +324,25 @@
 
 @media (max-width: 450px) {
 	.image-wrapper {
-		width: 80%;
+		width: auto;
+		height: 17rem;
+		margin: 2rem 1rem;
 	}
 }
 
 @media (min-width: 451px) and (max-width: 600px) {
 	.image-wrapper {
-		width: 65%; /* Adjust width for screens <= 600px */
-		height: auto; /* Adjust height for screens <= 600px */
-		margin: 2rem 1rem; /* Adjust margin for screens <= 600px */
+		width: auto; /* Adjust width for screens <= 600px */
+		height: 18rem; /* Adjust height for screens <= 600px */
+		margin: 2rem 2rem; /* Adjust margin for screens <= 600px */
 	}
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
 	.image-wrapper {
-		width: 18%; /* Adjust width for screens between 601px and 1024px */
-		height: 20rem;
+		width: auto; /* Adjust width for screens between 601px and 1024px */
+		height: 18rem;
+		margin: 3rem 4rem 3rem 4rem;
 	}
 }
 
@@ -340,7 +350,7 @@
 	.image-wrapper {
 		width: auto; /* Adjust width for screens > 1024px */
 		height: 20rem;
-		margin: 4rem 2rem;
+		margin: 5rem 4rem 5rem 4rem;
 	}
 }
 
@@ -416,4 +426,50 @@
 
 #load-more-btn:hover {
 	background: var(--HoverButtonGradient);
+}
+
+.target-div {
+	display: none;
+	margin: 10rem;
+}
+
+.swal2-close {
+	font-size: 50px; /* Makes the icon bigger */
+	font-weight: bold; /* Makes the icon thicker, optional */
+	right: 20px; /* Adjusts the position from the right */
+	top: 20px; /* Adjusts the position from the top */
+	color: black;
+	margin-bottom: -25px; /* Adds space between the cross icon and the content below */
+}
+
+/* General styling for the SweetAlert2 popup */
+.swal2-popup {
+	font-size: 16px; /* Default font size */
+}
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+	.swal2-popup {
+		font-size: 14px; /* Smaller font size for smaller devices */
+	}
+}
+
+/* Adjustments for mobile phones */
+@media (max-width: 480px) {
+	.swal2-popup {
+		font-size: 12px; /* Even smaller font size for mobile phones */
+	}
+}
+
+/* Adjust close button size on smaller screens */
+@media (max-width: 768px) {
+	.swal2-close {
+		font-size: 40px; /* Smaller close button on tablets */
+	}
+}
+
+@media (max-width: 480px) {
+	.swal2-close {
+		font-size: 40px; /* Even smaller close button on mobile phones */
+	}
 }

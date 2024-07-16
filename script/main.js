@@ -185,3 +185,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 });
+
+function showPopup() {
+    // Determine screen size
+    let screenWidth = window.innerWidth;
+    let imageSize;
+
+	imageSize = { width: '100%', height: 'auto' };
+
+
+    Swal.fire({
+        title: "Date: Tuesday, March 26th, 2024.<br>Location: ENGG Lounge.",
+        text: `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: www.abcde.com`,
+        imageUrl: "../image/events_page_images/past_events/13.png",
+        imageWidth: imageSize.width, // Responsive width
+        imageHeight: imageSize.height, // Responsive height
+        showCloseButton: true,
+        confirmButtonText: "Close",
+    });
+};
