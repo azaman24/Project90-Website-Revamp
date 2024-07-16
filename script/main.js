@@ -226,7 +226,7 @@ function showPopup(popupBoxNum) {
 	} else if (popupBoxNum === "13") {
 		popupBoxTitle =
 			"Date: Tuesday, March 26th, 2024<br>Location: ENGG Lounge";
-		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: www.abcde.com`;
+		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: Link Closed`;
 	};
 
 	Swal.fire({
