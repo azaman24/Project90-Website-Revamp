@@ -152,6 +152,24 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 });
 
+// for display of "read more" button when the user hovers over the event image in the events page
+document.querySelectorAll(".image-wrapper").forEach((item) => {
+	item.addEventListener("mousemove", (e) => {
+		var btn = item.querySelector(".btn");
+		btn.style.display = "block";
+		var eventImg = item.querySelector(".event-image");
+		eventImg.style.opacity = "0.4";
+	});
+
+	item.addEventListener("mouseout", (e) => {
+		var btn = item.querySelector(".btn");
+		btn.style.display = "none";
+		var eventImg = item.querySelector(".event-image");
+		eventImg.style.opacity = "1";
+	});
+});
+
+
 // for pop up display containing event details when the "read more" button is pressed in the events page
 function showPopup(popupBoxNum) {
 	let imageSize, popupBoxTitle, popupBoxText;
