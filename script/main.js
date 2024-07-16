@@ -4,9 +4,8 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 	var socialContacts = document.querySelector(".social-contacts");
 	navigationList.classList.toggle("display");
 	if (navigationList.classList.contains("display")) {
-		z;
-		body.style.overflow = "hidden";
 		socialContacts.style.display = "flex";
+		body.style.overflowY = 'hidden';
 	} else {
 		body.style.overflow = "auto";
 		socialContacts.style.display = "none";
