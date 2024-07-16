@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Project 90 | Home</title>
-      <!-- Libraries -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
-      <!-- Font -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap">
-      <!-- Icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-      <!-- Layouts -->
-      <link rel="stylesheet" href="../homepage.css">
-      <link rel="stylesheet" href="../layout/navigation-menu.css">
-      <link rel="icon" href="../image/P90_Icon.svg" type="x-icon"/>
-   </head>
-   <body>
-      <!-- Main Page -->
-      <div class="main">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project 90: Our Team</title>
+		<!-- Libraries -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+			integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+			crossorigin="anonymous"
+		/>
+		<!-- Font -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap"
+		/>
+		<!-- Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<!-- Layouts -->
+		<link rel="stylesheet" href="../homepage.css" />
+		<link rel="stylesheet" href="../layout/navigation-menu.css" />
+		<link rel="stylesheet" href="../swiper-bundle.min.css" />
+		<link rel="stylesheet" href="../layout/events.css" />
+		<link rel="icon" href="../image/P90_Icon.svg" type="x-icon" />
+	</head>
+	<body>
+		<!-- Main Page -->
+		<div class="main">
 			<!-- Navigation Menu -->
 			<header>
 				<div class="navigation-logo">
-					<a href="../homepage.html">
-						<img src="../image/P90_Homepage_Logo.svg" alt="Project 90 Logo" class="logoSizing"/>
-					</a>
+					<a href="../homepage.html"
+						><img
+							src="../image/P90_Homepage_Logo.svg"
+							alt="Project 90 Logo"
+							class="logoSizing"
+					/></a>
 				</div>
 
 				<input id="toggle" type="checkbox" />
@@ -40,7 +62,7 @@
 					<ul class="navigation-list-items">
 						<li><a href="../page/about.html">About Us</a></li>
 						<li><a href="../page/projects.html">Projects</a></li>
-						<li><a href="../page/events.html">Events</a></li>
+						<li><a href="../page/events.html" class="active">Events</a></li>
 						<li><a href="../page/sponsors.html">Sponsors</a></li>
 						<li><a href="../page/team.html">Our Team</a></li>
 					</ul>
@@ -63,7 +85,7 @@
 									/>
 								</svg>
 							</a>
-
+		
 							<!--Instagram Logo -->
 							<!-- Reference link: https://iconduck.com/icons/21194/instagram -->
 							<a href="https://www.instagram.com/project90.uofc/">
@@ -81,25 +103,23 @@
 								</svg>
 							</a>
 						</div>
-
+		
 						<div class="link-row">
 							<!-- Linkedin Logo -->
 							<!-- Reference link: https://iconduck.com/icons/103018/social-linkedin -->
 							<a href="https://www.linkedin.com/company/project-90-ucalgary/mycompany/">
 								<svg class="socials" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="12.5%">
-									<defs>
-										<linearGradient id="iconGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-											<stop offset="0%" style="stop-color: var(--startColor)" />
-											<stop offset="100%" style="stop-color: var(--endColor)" />
-										</linearGradient>
-									</defs>
+									<linearGradient id="iconGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+										<stop offset="0%" style="stop-color: var(--startColor)" />
+										<stop offset="100%" style="stop-color: var(--endColor)" />
+									</linearGradient>
 									<path
 										fill="url(#iconGradient3)"
 										d="M256.48,25H43.45c-10.19,0-18.45,8.07-18.45,18.01v213.95c0,9.95,8.27,18.04,18.45,18.04h213.03c10.19,0,18.52-8.08,18.52-18.04V43.01c0-9.94-8.32-18.01-18.52-18.01ZM99.15,238.03h-37.1v-119.3h37.1v119.3ZM80.6,102.42c-11.89,0-21.49-9.63-21.49-21.51s9.61-21.49,21.49-21.49,21.49,9.63,21.49,21.49-9.63,21.51-21.49,21.51ZM238.02,238.03h-37.04v-58.01c0-13.84-.27-31.64-19.27-31.64s-22.24,15.07-22.24,30.63v59.02h-37.07v-119.31h35.57v16.29h.51c4.95-9.38,17.05-19.27,35.09-19.27,37.52,0,44.45,24.7,44.45,56.84v65.44h0Z"
 									/>
 								</svg>
 							</a>
-
+		
 							<!-- Github Logo -->
 							<!-- Reference link: https://iconduck.com/icons/11081/github -->
 							<a href="https://github.com/project90uc" alt="GitHub">
@@ -118,87 +138,224 @@
 							</a>
 						</div>
 					</div>
-				</div>
+						</div>
 			</header>
 
-         <!-- Slogan and Globe API -->
-         <!-- Reference link: https://commons.wikimedia.org/wiki/File:Rotating_earth_animated_transparent.gif -->
-         <section class="globeSection">
-            <h2 class="globeBackground"></h2>
-            <div class = "slogan-path" >
-               <svg viewBox = "-25 -20 500 400">
-                  <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,45.5,-106.8,148.6,-105.6c111.3,1.2,150.8,120.3,155.1,127" />
-                  <text width="500" text-anchor="middle">
-                     <textPath id = "path" xlink:href="#curve" startOffset="47.5%" style="fill: white;" spacing="auto">
-                        ENGINEERING FOR THE OTHER 90%
-                     </textPath>
-                  </text>
-               </svg>
-            </div>
-            <div class = "globe-gif">
-               <img src="Rotating_earth_animated_transparent.gif" alt=Globe_API height="65%" width="55%"></a>
-            </div>
-         </section>
+			<div class="sponsor-photo">
+				<img
+					src="../image/sponsors_page_images/blank photo.png"
+					alt="Our Team"
+					class="team-header"
+				/>
+			</div>
 
-         <!-- Summary -->
-         <section class="summarySpacing">
-            <div class="centerBlocks">
-               <h1 class="text">Who We Are</h1>
-               <p>Project90 is an engineering club at the University of Calgary that fosters hands-on design projects and partners with local non-profits to benefit communities in need.</p>
-            </div>
+			<h1 class="event-heading">Current Events</h1>
 
-         </section>
+			<div class="event-icon-container">
+				<div class="hr-div-class">
+					<hr class="hr-class-1" />
+				</div>
+				<div class="event-icon">
+					<img
+						src="../image/events_page_images/calendar.png"
+						alt="calendar icon"
+						class="event-icon-image"
+					/>
+				</div>
+				<div class="hr-div-class">
+					<hr class="hr-class-2" />
+				</div>
+			</div>
 
-         <!-- Purpose -->
-         <section class="infoSpacing">
-            <div class="content purpose">
-               <h1 class="text">Purpose</h1>
-               <li>We empower students to leverage their academic expertise for tangible impact.</ul>
-               <li>Collaborating with established NGOs, our organization fosters practical design projects that drive meaningful change.</ul>
-               <li>Through campus-wide seminars and events, we cultivate awareness and understanding of international development to take action towards global progress.</li>
-            </div>
+			<div class="event-join-msg">
+				<h2>
+					Join us for thrilling events, workshops, games, and more! Mark your
+					calendars and don't miss out!
+				</h2>
+			</div>
 
-             <img src="image/Handshake.svg" alt="Handshake" class="handshake" width=25%>
+			<div class="event-container">
+				<div class="no-current-events-container">
+					<p class="no-current-events">No events currently scheduled.</p>
+					<div class="moon-animation">
+						<img src="../image/events_page_images/sleep.png" alt="Cloud" />
+					</div>
+				</div>
+			</div>
 
-         </section>
+			<h1 class="event-heading">Past Events</h1>
 
-         <!-- Goals -->
-         <section class="infoSpacing">
-            <div class="content goals">
-               <h1 class="text">Goals</h1>
-               <li>Utilize academic knowledge to execute targeted, small-scale projects with precision and efficacy.</li>
-               <li>Foster active engagement within the campus community towards the advancement of international development initiatives.</li>
-               <li>Effectuate direct and tangible impact on the socio-economic landscape of developing nations through our strategic interventions.</li>
-            </div>
+			<div class="event-icon-container">
+				<div class="hr-div-class">
+					<hr class="hr-class-1" />
+				</div>
+				<div class="event-icon">
+					<img
+						src="../image/events_page_images/clock.png"
+						alt="calendar icon"
+						class="event-icon-image"
+					/>
+				</div>
+				<div class="hr-div-class">
+					<hr class="hr-class-2" />
+				</div>
+			</div>
 
-             <img src="image/Stars.svg" alt="Pointing at Stars" class="goalsPos goalsHand goalsStars" width=25%>
+			<div class="event-container">
 
-         </section>
 
-         <!-- Plans -->
-         <section class="infoSpacing">
-            <div class="content plans">
-               <h1 class="text">Plans</h1>
-               <li>Actively engage and make substantive contributions to small-scale development endeavors.</li>
-               <li>Promote heightened awareness by comprehensive campus-wide events and initiatives, fostering informed dialogue and action on critical global issues.</li>
-            </div>
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/13.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('13')">Read More</button>
+				</div>
 
-             <img src="image/Light_Bulb.svg" alt="Light Bulb" class="lightBulb" width=25%>
 
-         </section>
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/12.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('12')">Read More</button>
+				</div>
 
-         <div class="bottomNavContainer">
-            <!-- Join Us -->
-            <div class="bottomNav">
-               <h2><a href="https://linktr.ee/project90uofc" class="joinOrContact">Join Us</a></h2>
-               <ul>Click the button above to get started today!</ul>
-            </div>
 
-            <div class="bottomNav">
-               <h2 class="text"><a href="mailto:Project90@gmail.com" target="_blank" class="joinOrContact">Contact Us</a></h2>
-               <ul>Reach out to us for any inquiries!</ul>
-               
-				<!--Facebook Logo -->
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/11.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('11')">Read More</button>
+				</div>
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/10.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('10')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/9.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('9')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/8.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('8')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/7.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('7')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/6.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('6')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/5.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('5')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/4.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('4')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/3.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('3')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/2.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('2')">Read More</button>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/1.png"
+						alt="Event Image"
+					/>
+					<button class="btn" onclick="showPopup('1')">Read More</button>
+				</div>
+			</div>
+
+			<div class="load-more-btn-container">
+				<button id="load-more-btn" class="secondary-btn">Load More</button>
+			</div>
+		</div>
+
+
+		<div class="bottomNavContainer">
+			<!-- Join Us -->
+			<div class="bottomNav">
+				<h2>
+					<a href="https://linktr.ee/project90uofc" class="joinOrContact"
+						>Join Us</a
+					>
+				</h2>
+				<ul>
+					Click the button above to get started today!
+				</ul>
+			</div>
+
+			<div class="bottomNav">
+				<h2 class="text">
+					<a
+						href="mailto:Project90@gmail.com"
+						target="_blank"
+						class="joinOrContact"
+						>Contact Us</a
+					>
+				</h2>
+				<ul>
+					Reach out to us for any inquiries!
+				</ul>
+
+								<!--Facebook Logo -->
 				<!-- Reference link: https://iconduck.com/icons/21119/facebook -->
 				<a href="https://www.facebook.com/Project90uc/">
 					<svg class="socials" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="12.5%">
@@ -265,12 +422,15 @@
 						/>
 					</svg>
 				</a>
-         </div>
-      </div>
-      
-      <!-- JavaScript Scripts -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-      <script src="../swiper-bundle.min.js"></script>
-      <script src="../script/main.js"></script>
-   </body>
+       
+			</div>
+		</div>
+
+		<!-- JavaScript Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="../swiper-bundle.min.js"></script>
+		<script src="../script/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</body>
 </html>
+
