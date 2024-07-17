@@ -177,6 +177,8 @@ ul li {
 }
 
 .statusOpen {
+  display: block;
+  width: 100%;
   text-align: center;
   color: #fff; 
   background-image: linear-gradient(to right, #229fff, #0c69c6);
