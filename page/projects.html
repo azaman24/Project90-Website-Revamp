@@ -147,13 +147,22 @@
 
       <!-- Icons -->
       <section class="Icons">
-         <div class="icon">
+         <div class="iconTypeTop">
             <img src = "../icons/Mechanical_Icon.svg" alt="Mech Logo" width=25%/>
          </div>
-         <div class="icon">
+         <div class="iconTypeTop">
             <img src = "../icons/Civil_Icon.svg" alt="Civil Logo" width=25%/>
          </div>
-         <div class="icon">
+         <div class="iconTypeTop">
+            <img src = "../icons/Software_Icon.svg" alt="Software Logo" width=25%/>
+         </div>
+         <div class="iconTypeTop">
+            <img src = "../icons/Software_Icon.svg" alt="Software Logo" width=25%/>
+         </div>
+         <div class="iconTypeTop">
+            <img src = "../icons/Software_Icon.svg" alt="Software Logo" width=25%/>
+         </div>
+         <div class="iconTypeTop">
             <img src = "../icons/Software_Icon.svg" alt="Software Logo" width=25%/>
          </div>
       </section>
@@ -161,10 +170,10 @@
 
       <!-- Info about Icons -->
       <section class="IconInfo">
+         <!-- Mechanical Icon Info -->
          <div class="icon-info">
-            <!-- Mechanical Icon Info -->
             <div class="icon_type">
-               <img src = "../icons/Mechanical_Icon.svg" alt="Mech Logo" width=20%/>
+               <img src = "../icons/Mechanical_Icon.svg" alt="Mech Logo" width="20%"/>
                <h2 class="iconName">Mechanical</h2>
             </div>
             <ul class = "info" style="list-style-type:circle">
@@ -173,8 +182,9 @@
                <li>Apply DFMA principles to optimize part cost and reduce excess material</li>
             </ul>
          </div>
+
+         <!-- Civil Icon Info -->
          <div class="icon-info">
-            <!-- Civil Icon Info -->
             <div class="icon_type">
                <img src = "../icons/Civil_Icon.svg" alt="Civil Logo" width=20%/>
                <h2 class="iconName">Civil</h2>
@@ -185,8 +195,9 @@
                <li>Iterate simulations on computer software to ensure effective testing</li>
             </ul>
          </div>
+
+         <!-- Software Icon Info -->
          <div class="icon-info">
-            <!-- Software Icon Info -->
             <div class="icon_type">
                <img src = "../icons/Software_Icon.svg" alt="Software Logo" width=20%/>
                <h2 class="iconName">Software</h2>
@@ -197,80 +208,90 @@
                <li>Build full-stack applications comprised of frontend and backend</p></li>
             </ul>
          </div>
-         
       </section>
       
       <section>
-         <div class="P90Projects">Current Projects</div>
+         <div class="currentProjects">Current Projects</div>
          <hr class="white-line" />
-         <!-- <div class = "grid-container">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-         </div> -->
+         <!-- use placeholder below when there are no current projects -->
+         <!-- <h1 class="placeHolder">Coming Soon!</h1> -->
 
-         <section class="projectsInfo">
-            <div class="icon-info">
-               <!-- Mechanical Icon Info -->
-               <div class="icon_type">
-                  <img src = "../icons/Mechanical_Icon.svg" alt="Mech Logo" width=20%/>
-                  <h2 class="iconName">Mechanical</h2>
-               </div>
-               <ul class = "info" style="list-style-type:circle">
-                  <li>Design and manufacture mechanical systems to solve various issues</li>
-                  <li>Perform hands-on work to develop and integrate said systems </li>
-                  <li>Apply DFMA principles to optimize part cost and reduce excess material</li>
-               </ul>
+         <div class="grid-container">
+            <div class="about-container">
+              <div class="projectCard">
+                <img src="../image/project_images/Habitat_H.png" alt="Habitat" class="card-image">
+                <div class="card-content">
+                  <div class="icon_type projectTitle">
+                    <img src="../icons/Civil_Icon.svg" alt="Mech Logo" width="15%"/>
+                    <h2 class="iconName">Habitat for Humanity</h2>
+                  </div>
+                  <ul class="info" style="list-style-type:circle">
+                    <li>Volunteer in home construction to help families achieve home ownership</li>
+                    <li>Participate in tasks such as framing, painting, and drywall under professional guidance</li>
+                    <li>Apply construction techniques, adhere to safety protocols, and work collaboratively on-site</li>
+                  </ul>
+                  <button class="statusOpen" onclick="goToLink(this)" value="https://linktr.ee/project90uofc?fbclid=PAZXh0bgNhZW0CMTEAAaakuO1fdkMWr9MzXmhga8-LTYad-99OsUMMMuyJwHi081JtKLY4R6Nj6Ww_aem_cooQqUFqib3uPp6wpHECUg">APPLY</button>               
+                </div>
+              </div>
+          
+              <div class="projectCard">
+                <img src="../image/project_images/P90_WebDev_H.png" alt="Web Dev" class="card-image">
+                <div class="card-content">
+                  <div class="icon_type projectTitle">
+                    <img src="../icons/Software_Icon.svg" alt="Mech Logo" width="15%" />
+                    <h2 class="iconName">Website Revamp</h2>
+                  </div>
+                  <ul class="info" style="list-style-type:circle">
+                    <li>Create a more dynamic and user-friendly website to effectively represent Project90</li>
+                    <li>Utilize UX/UI skills to ensure the website is easy to navigate and find important information</li>
+                    <li>Program the visual appearance and seamless animations using HTML, CSS, and JavaScript</li>
+                  </ul>
+                  <div class="statusClosed">CLOSED</div>
+                </div>
+              </div>
             </div>
-         </section>
-
-         <div class="projectCard">
-            <img src="../image/project_images/CAWST_H.png" alt="CAWST Bio-Concrete" class="card-image">
-            <div class="card-content">
-               <div class="icon_type projectTitle">
-                  <img src = "../icons/Civil_Icon.svg" alt="Mech Logo" width=20%/>
-                  <h2 class="iconName">CAWST Bio-Concrete</h2>
-               </div>
-                <ul class = "info" style="list-style-type:circle">
-                  <li>Develop reinforced pit latrines for rural villages in Liberia to prevent collapses</li>
-                  <li>Create prototypes, conduct geotechnical analysis, and explore design improvements</li>
-                  <li>Use geotechnical testing equipment, CAD software, and perform laboratory experiments</li>
-               </ul>
-                <div class="statusClosed">CLOSED</div>
-            </div>
-         </div>
-
-         <div class="projectCard">
-            <img src="../image/project_images/CAWST_H.png" alt="CAWST Bio-Concrete" class="card-image">
-            <div class="card-content">
-               <div class="icon_type projectTitle">
-                  <img src = "../icons/Civil_Icon.svg" alt="Mech Logo" width=20%/>
-                  <h2 class="iconName">CAWST Bio-Concrete</h2>
-               </div>
-                <ul class = "info" style="list-style-type:circle">
-                  <li>Develop reinforced pit latrines for rural villages in Liberia to prevent collapses</li>
-                  <li>Create prototypes, conduct geotechnical analysis, and explore design improvements</li>
-                  <li>Use geotechnical testing equipment, CAD software, and perform laboratory experiments</li>
-               </ul>
-               <a href="https://www.instagram.com/project90.uofc/">
-                <div class="statusOpen">APPLY</div>
-               </a>
-            </div>
-         </div>
-
+          </div>
       </section>
 
       <section>
-         <div class="P90Projects">Previous Projects</div>
+         <div class="previousProjects">Previous Projects</div>
          <hr class="white-line" />
-         <h1 class="placeHolder">Coming Soon!</h1>
-         <!-- <div class = "grid-container">
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-         </div> -->
+
+         <div class="grid-container">
+            <div class="about-container">
+              <div class="projectCard">
+                <img src="../image/project_images/CAWST_H.png" alt="CAWST Bio-Concrete" class="card-image">
+                <div class="card-content">
+                  <div class="icon_type projectTitle">
+                    <img src="../icons/Civil_Icon.svg" alt="Mech Logo" width="15%"/>
+                    <h2 class="iconName">CAWST Bio-Concrete</h2>
+                  </div>
+                  <ul class="info" style="list-style-type:circle">
+                    <li>Develop reinforced pit latrines for rural villages in Liberia to prevent collapses</li>
+                    <li>Create prototypes, conduct geotechnical analysis, and explore design improvements</li>
+                    <li>Use geotechnical testing equipment, CAD software, and perform laboratory experiments</li>
+                  </ul>
+                  <div class="statusClosed">CLOSED</div>
+                </div>
+              </div>
+          
+              <div class="projectCard">
+                <img src="../image/project_images/Grow_Calgary_H.png" alt="Grow Calgary" class="card-image">
+                <div class="card-content">
+                  <div class="icon_type projectTitle">
+                    <img src="../icons/Mechanical_Icon.svg" alt="Mech Logo" width="15%"/>
+                    <h2 class="iconName">Grow Calgary</h2>
+                  </div>
+                  <ul class="info" style="list-style-type:circle">
+                    <li>Design and implement an irrigation system for a 2-3 acre farm in NE Calgary</li>
+                    <li>Develop the system considering energy usage, hydraulic design, and material usage</li>
+                    <li>Use CAD software for design, perform hydraulic calculations, and manage the project timeline</li>
+                  </ul>
+                  <div class="statusClosed">CLOSED</div>
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
 
       <div class="bottomNavContainer">
@@ -358,5 +379,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <script src="../swiper-bundle.min.js"></script>
       <script src="../script/main.js"></script>
+      <script src="../script/applyButton.js"></script>
    </body>
 </html>
