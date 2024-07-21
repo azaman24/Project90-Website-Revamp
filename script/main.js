@@ -5,7 +5,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 	navigationList.classList.toggle("display");
 	if (navigationList.classList.contains("display")) {
 		socialContacts.style.display = "flex";
-		body.style.overflowY = 'hidden';
+		body.style.overflowY = "hidden";
 	} else {
 		body.style.overflow = "auto";
 		socialContacts.style.display = "none";
@@ -153,22 +153,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // for display of "read more" button when the user hovers over the event image in the events page
-document.querySelectorAll(".image-wrapper").forEach((item) => {
-	item.addEventListener("mousemove", (e) => {
-		var btn = item.querySelector(".btn");
-		btn.style.display = "block";
-		var eventImg = item.querySelector(".event-image");
-		eventImg.style.opacity = "0.4";
-	});
+function updateEventListeners() {
+	// Check if screen width is less than 1024px
+	if (window.innerWidth >= 1024) {
+		// Add event listeners for desktop mode
+		document.querySelectorAll(".image-wrapper").forEach((item) => {
+			item.addEventListener("mousemove", (e) => {
+				var btn = item.querySelector(".btn");
+				var eventImg = item.querySelector(".event-image");
+				btn.style.display = "block";
+				eventImg.style.opacity = "0.4";
+			});
 
-	item.addEventListener("mouseout", (e) => {
-		var btn = item.querySelector(".btn");
-		btn.style.display = "none";
-		var eventImg = item.querySelector(".event-image");
-		eventImg.style.opacity = "1";
-	});
-});
+			item.addEventListener("mouseout", (e) => {
+				var btn = item.querySelector(".btn");
+				var eventImg = item.querySelector(".event-image");
+				btn.style.display = "none";
+				eventImg.style.opacity = "1";
+			});
+		});
+	} else {
+		document.querySelectorAll(".image-wrapper").forEach((item) => {
+			var btn = item.querySelector(".btn");
+			var eventImg = item.querySelector(".event-image");
+			btn.style.display = "block";
+			btn.style.opacity = "0.85";
+			eventImg.style.opacity = "1";
+		});
+	}
+}
 
+// Initial update
+updateEventListeners();
+
+// Update on window resize
+window.addEventListener("resize", updateEventListeners);
 
 // for pop up display containing event details when the "read more" button is pressed in the events page
 function showPopup(popupBoxNum) {
@@ -224,18 +243,71 @@ function showPopup(popupBoxNum) {
 			"Date: Thursday, November 2nd, 2023, 6:00pm-7:30pm<br>Location: HNSC 128";
 		popupBoxText = `In today's ever-changing business landscape, the expertise of students within the fields of science, technology, engineering, and mathematics has become more in demand as firms strive to gain a competitive advantage in the age of innovation. The unique skills and knowledge that STEM students possess are highly applicable within different areas of consulting! The University of Calgary of Calgary Association (UCCA) in collaboration with the Engineering Student Society (ESS), Project90, the Biology Students Association (BSA) and TechStart, would like to invite you to join us on Thursday, November 2, 2023 from 6:00 – 7:30 PM MT in HNSC 128 for our STEM In Consulting event! This year, UCCA is collaborating with Accenture, IBM, McKinsey and Deloitte to host a panel night to educate both business and STEM students on careers in consulting. Don’t miss out on the opportunity to learn from professionals in consulting with STEM backgrounds and to grow your professional network! Register here: https://forms.gle/iQS2EQTeUvFd7Hjk6. This event is open to University of Calgary students from any faculty and any year. To register, please fill out the registration form by Monday, October 31, 2023 at 11:59 PM MT and until spots remain.`;
 	} else if (popupBoxNum === "13") {
-		popupBoxTitle =
-			"Date: Tuesday, March 26th, 2024<br>Location: ENGG Lounge";
-		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: Link Closed`;
-	};
+		popupBoxTitle = "Date: Tuesday, March 26th, 2024<br>Location: ENGG Lounge";
+		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: Link Closed.`;
+	}
 
 	Swal.fire({
-		title: popupBoxTitle,
-		text: popupBoxText,
-		imageUrl: "../image/events_page_images/past_events/" + popupBoxNum + ".png",
-		imageWidth: imageSize.width,
-		imageHeight: imageSize.height,
+		html: `
+		<div id="custom-swal-content">
+			<button id="prev-btn">&#10094;</button> <!-- Left arrow button -->
+			<div style="flex: 1; display: flex; justify-content: center; height: 100%;">
+				<img src="../image/events_page_images/past_events/${popupBoxNum}.png" style="height:100%; object-fit: cover;">
+			</div>
+			<div style="flex: 1; text-align: left;">
+				${popupBoxTitle + "<br></br>" + popupBoxText}
+			</div>
+			<button id="next-btn">&#10095;</button> <!-- Right arrow button -->
+		</div>
+		`,
 		showCloseButton: true,
-		confirmButtonText: "Close",
+		showConfirmButton: false,
+		customClass: {
+			popup: "custom-swal-popup",
+			content: "custom-swal-content",
+		},
+		onOpen: () => {
+			const popup = document.querySelector(".custom-swal-popup");
+			if (popup) {
+				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
+			}
+
+			// Assuming popupBoxNum is defined and accessible
+			// Assuming loadCard is a function that updates the popup content based on popupBoxNum
+
+			// Event listener for the previous button
+			document.getElementById("prev-btn").addEventListener("click", () => {
+				// Decrement popupBoxNum to move to the previous card
+				popupBoxNum = Math.max(1, popupBoxNum - 1); // Prevent going below the first card
+				loadCard(popupBoxNum); // Update the popup content
+			});
+
+			// Event listener for the next button
+			document.getElementById("next-btn").addEventListener("click", () => {
+				// Increment popupBoxNum to move to the next card
+				popupBoxNum += 1; // Assuming you have a way to check not to exceed the max number of cards
+				loadCard(popupBoxNum); // Update the popup content
+			});
+
+			// Example loadCard function
+			function loadCard(num) {
+				// Logic to update the popup content based on the card number
+				// This might involve fetching new data or updating elements directly
+				Swal.update({
+					html: `
+        <div id="custom-swal-content">
+            <button id="prev-btn">&#10094;</button>
+            <div style="flex: 1; display: flex; justify-content: center; height: 100%;">
+                <img src="../image/events_page_images/past_events/${num}.png" style="height:100%; object-fit: cover;">
+            </div>
+            <div style="flex: 1; text-align: left;">
+                ${/* Logic to get title and text for the current num */ ""}
+            </div>
+            <button id="next-btn">&#10095;</button>
+        </div>
+        `,
+				});
+			}
+		},
 	});
 }
