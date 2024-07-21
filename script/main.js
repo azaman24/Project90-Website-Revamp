@@ -194,6 +194,10 @@ function showPopup(popupBoxNum) {
 	let imageSize, popupBoxTitle, popupBoxText;
 	imageSize = { width: "100%", height: "auto" };
 
+	if (typeof popupBoxNum === "number") {
+		popupBoxNum = popupBoxNum.toString();
+	}
+
 	if (popupBoxNum === "1") {
 		popupBoxTitle =
 			"Date: Thursday, April 1st, 2021, 7pm - 8:30pm<br>Location: Zoom (Online)";
@@ -247,15 +251,33 @@ function showPopup(popupBoxNum) {
 		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: Link Closed.`;
 	}
 
+	console.log(typeof popupBoxNum);
+
 	Swal.fire({
 		html: `
-		<div id="custom-swal-content">
-			<div>
-				<img src="../image/events_page_images/past_events/${popupBoxNum}.png">
+		<div id="custom-swal-container">
+			<div id="custom-swal-content">
+				<div>
+					<img src="../image/events_page_images/past_events/${popupBoxNum}.png">
+				</div>
+
+				<div>
+					${`<span id="popupBoxTitle">${popupBoxTitle}</span><br></br>${popupBoxText}`}
+				</div>
 			</div>
-			<div>
-				${`<span id="popupBoxTitle">${popupBoxTitle}</span><br></br>${popupBoxText}`}
+
+			<div id="event-buttons">
+				<button id="prevBtn" onclick="showPopup(${(Number(popupBoxNum) + 1).toString()})" ${
+					popupBoxNum === "13" ? "disabled" : ""
+				}>Previous
+				</button>
+
+				<button id="nextBtn" onclick="showPopup(${(Number(popupBoxNum) - 1).toString()})" ${
+					popupBoxNum === "1" ? "disabled" : ""
+				}>Next
+				</button>
 			</div>
+
 		</div>
 		`,
 		showCloseButton: true,
@@ -268,7 +290,7 @@ function showPopup(popupBoxNum) {
 			const popup = document.querySelector(".custom-swal-popup");
 			if (popup) {
 				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
-			};
+			}
 		},
 	});
 }
