@@ -513,10 +513,6 @@ div:where(.swal2-container) button:where(.swal2-close):hover {
 	color: rgba(224, 208, 208, 0.579);
 }
 
-div:where(.swal2-container) div:where(.swal2-popup) {
-	background-color: rgba(5, 17, 52, 0.888);
-}
-
 #custom-swal-content {
 	display: flex;
 	align-items: center;
@@ -556,16 +552,14 @@ div:where(.swal2-container) .swal2-html-container {
 }
 
 div:where(.swal2-container) div:where(.swal2-popup) {
-	padding: 0px;
-}
-
-div:where(.swal2-container) div:where(.swal2-popup) {
 	display: space-between;
+	background-color: rgba(5, 17, 52, 0.888);
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup {
 	border-radius: 25px;
 }
+
 
 #popupBoxTitle {
 	font-size: 1.4rem;

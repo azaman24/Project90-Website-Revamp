@@ -251,7 +251,7 @@ function showPopup(popupBoxNum) {
 		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.   Sign up through this link: Link Closed.`;
 	}
 
-	console.log(typeof popupBoxNum);
+	const maxNumberOfCards = document.getElementsByClassName('event-image').length;
 
 	Swal.fire({
 		html: `
@@ -268,7 +268,7 @@ function showPopup(popupBoxNum) {
 
 			<div id="event-buttons">
 				<button id="prevBtn" onclick="showPopup(${(Number(popupBoxNum) + 1).toString()})" ${
-					popupBoxNum === "13" ? "disabled" : ""
+					popupBoxNum === maxNumberOfCards.toString() ? "disabled" : ""
 				}>Previous
 				</button>
 
