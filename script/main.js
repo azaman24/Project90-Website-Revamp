@@ -250,14 +250,12 @@ function showPopup(popupBoxNum) {
 	Swal.fire({
 		html: `
 		<div id="custom-swal-content">
-			<button id="prev-btn">&#10094;</button> <!-- Left arrow button -->
-			<div style="flex: 1; display: flex; justify-content: center; height: 100%;">
-				<img src="../image/events_page_images/past_events/${popupBoxNum}.png" style="height:100%; object-fit: cover;">
+			<div>
+				<img src="../image/events_page_images/past_events/${popupBoxNum}.png">
 			</div>
-			<div style="flex: 1; text-align: left;">
-				${popupBoxTitle + "<br></br>" + popupBoxText}
+			<div>
+				${`<span id="popupBoxTitle">${popupBoxTitle}</span><br></br>${popupBoxText}`}
 			</div>
-			<button id="next-btn">&#10095;</button> <!-- Right arrow button -->
 		</div>
 		`,
 		showCloseButton: true,
@@ -270,44 +268,7 @@ function showPopup(popupBoxNum) {
 			const popup = document.querySelector(".custom-swal-popup");
 			if (popup) {
 				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
-			}
-
-			// Assuming popupBoxNum is defined and accessible
-			// Assuming loadCard is a function that updates the popup content based on popupBoxNum
-
-			// Event listener for the previous button
-			document.getElementById("prev-btn").addEventListener("click", () => {
-				// Decrement popupBoxNum to move to the previous card
-				popupBoxNum = Math.max(1, popupBoxNum - 1); // Prevent going below the first card
-				loadCard(popupBoxNum); // Update the popup content
-			});
-
-			// Event listener for the next button
-			document.getElementById("next-btn").addEventListener("click", () => {
-				// Increment popupBoxNum to move to the next card
-				popupBoxNum += 1; // Assuming you have a way to check not to exceed the max number of cards
-				loadCard(popupBoxNum); // Update the popup content
-			});
-
-			// Example loadCard function
-			function loadCard(num) {
-				// Logic to update the popup content based on the card number
-				// This might involve fetching new data or updating elements directly
-				Swal.update({
-					html: `
-        <div id="custom-swal-content">
-            <button id="prev-btn">&#10094;</button>
-            <div style="flex: 1; display: flex; justify-content: center; height: 100%;">
-                <img src="../image/events_page_images/past_events/${num}.png" style="height:100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1; text-align: left;">
-                ${/* Logic to get title and text for the current num */ ""}
-            </div>
-            <button id="next-btn">&#10095;</button>
-        </div>
-        `,
-				});
-			}
+			};
 		},
 	});
 }
