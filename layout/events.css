@@ -774,4 +774,3 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
     z-index: 1; /* Ensure the message is on top */
 	font-size: 1rem;
 }
-
