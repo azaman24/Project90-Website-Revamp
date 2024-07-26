@@ -4,77 +4,87 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	transition: all 0.5s ease;
-	height: 18vh;
+	height: 9rem;
+}
+
+.navigation-logo a {
+	width: 100%;
+	height: 100%;
 }
 
 .navigation-logo img
 {
-    top: 0px;
-    cursor: pointer;
-    z-index: 1;
-	width: 18rem;
+	width: auto;
+	height: auto;
 }
 
-@media (max-width: 400px) {
+.navigation-logo {
+	display: flex;
+	align-items: center;
+	width: 45%;
+	height: 100%;
+}
+
+/* Base styles */
+.navigation-logo {
+	display: flex;
+	align-items: center;
+	width: 20%;
+	height: 100%;
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
 	.navigation-logo {
-		flex: 1;
-	}
-	.navigation-logo img {
-		width: 9.5rem;
-		margin-bottom: 15px;
+		width: 50%;
 	}
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
 	.navigation-logo {
-		flex: 1;
-	}
-	.navigation-logo img {
-		width: 11.5rem;
-		margin-bottom: 15px;
+		width: 40%;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
 	.navigation-logo {
-		flex: 1;
-	}
-	.navigation-logo img {
-		width: 12rem;
+		width: 35%;
 	}
 }
 
-@media (min-width: 801px) and (max-width: 1024px) {
+@media (min-width: 800px) and (max-width: 1000px) {
 	.navigation-logo {
-		flex: 1;
-	}
-	.navigation-logo img {
-		width: 14rem;
+		width: 30%;
 	}
 }
 
-@media (min-width: 1025px) and (max-width: 1250px) {
+@media (min-width: 1000px) and (max-width: 1200px) {
 	.navigation-logo {
-		flex: 1;
-		margin-top: 1rem;
-	}
-	.navigation-logo img {
-		width: 16rem;
+		width: 30%;
 	}
 }
 
-@media (min-width: 1251px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
 	.navigation-logo {
-		flex: 1;
-		margin-top: 1rem;
-	}
-	.navigation-logo img {
-		width: 18rem;
+		width: 20%;
 	}
 }
+
+.logoSizing {
+    max-width: 100%;
+    height: auto;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px; /* Adjust the width of the bars */
+    height: 5px; /* Adjust the height of the bars */
+    background-color: #333; /* Adjust the color of the bars */
+    margin: 6px 0; /* Adjust the spacing between the bars */
+    transition: 0.4s;
+}
+
 
 .navigation-list {
-	width: 60%;
+	width: 70%;
 }
 
 .navigation-list-items {
@@ -84,7 +94,6 @@ header {
 	padding: 0;
 	color: transparent;
 }
-
 
 .navigation-list-items li {
 	flex: 1;

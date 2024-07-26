@@ -4,9 +4,8 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 	var socialContacts = document.querySelector(".social-contacts");
 	navigationList.classList.toggle("display");
 	if (navigationList.classList.contains("display")) {
-		z;
-		body.style.overflow = "hidden";
 		socialContacts.style.display = "flex";
+		body.style.overflowY = "hidden";
 	} else {
 		body.style.overflow = "auto";
 		socialContacts.style.display = "none";
@@ -72,6 +71,8 @@ var mySwiper = new Swiper(".mySwiper", {
 	},
 });
 
+/* for creating a bounce effect to the "become sponsor message" in the sponsors page when the user reaches that message for the first time */
+
 document.addEventListener("DOMContentLoaded", function () {
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
@@ -83,25 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const target = document.querySelector(".become-sponsor-msg");
 	if (target) {
+		// Check if target is not null
 		observer.observe(target);
 	}
-});
-
-// for display of "read more" button when the user hovers over the event image in the events page
-document.querySelectorAll(".image-wrapper").forEach((item) => {
-	item.addEventListener("mousemove", (e) => {
-		var btn = item.querySelector(".btn");
-		btn.style.display = "block";
-		var eventImg = item.querySelector(".event-image");
-		eventImg.style.opacity = "0.4";
-	});
-
-	item.addEventListener("mouseout", (e) => {
-		var btn = item.querySelector(".btn");
-		btn.style.display = "none";
-		var eventImg = item.querySelector(".event-image");
-		eventImg.style.opacity = "1";
-	});
 });
 
 // load more and load less functionality for the events page
@@ -109,7 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const images = document.querySelectorAll(".image-wrapper");
 	let currentCount = 6;
 
-	document.getElementById("load-more-btn").addEventListener("click", function () {
+	document
+		.getElementById("load-more-btn")
+		.addEventListener("click", function () {
 			const nextCount = currentCount + 6;
 			for (let i = currentCount; i < nextCount && i < images.length; i++) {
 				images[i].style.display = "block";
@@ -126,71 +113,188 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 });
 
+// for display of "read more" button when the user hovers over the event image in the events page
+function updateEventListeners() {
+	// Check if screen width is less than 1024px
+	if (window.innerWidth >= 1024) {
+		// Add event listeners for desktop mode
+		document.querySelectorAll(".image-wrapper").forEach((item) => {
+			item.addEventListener("mousemove", (e) => {
+				var btn = item.querySelector(".btn");
+				var eventImg = item.querySelector(".event-image");
+				btn.style.display = "block";
+				eventImg.style.opacity = "0.4";
+			});
+
+			item.addEventListener("mouseout", (e) => {
+				var btn = item.querySelector(".btn");
+				var eventImg = item.querySelector(".event-image");
+				btn.style.display = "none";
+				eventImg.style.opacity = "1";
+			});
+		});
+	} else {
+		document.querySelectorAll(".image-wrapper").forEach((item) => {
+			var btn = item.querySelector(".btn");
+			var eventImg = item.querySelector(".event-image");
+			btn.style.display = "block";
+			btn.style.opacity = "0.85";
+			eventImg.style.opacity = "1";
+		});
+	}
+}
+
+// Initial update
+updateEventListeners();
+
+// Update on window resize
+window.addEventListener("resize", updateEventListeners);
+
+// for pop up display containing event details when the "read more" button is pressed in the events page
 function showPopup(popupBoxNum) {
 	let imageSize, popupBoxTitle, popupBoxText;
 	imageSize = { width: "100%", height: "auto" };
 
+	if (typeof popupBoxNum === "number") {
+		popupBoxNum = popupBoxNum.toString();
+	}
+
 	if (popupBoxNum === "1") {
-		popupBoxTitle =
-			"Date: Thursday, April 1st, 2021, 7pm - 8:30pm<br>Location: Zoom (Online)";
-		popupBoxText = `Ever wondered what a career path in the non-profit sector is like? Join us and learn about how you can make a larger impact on communities worldwide. Link in bio!`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Thursday, April 1st, 2021
+			<br><i class="fa fa-clock"></i> 7:00PM - 8:30PM
+			<br><i class="fa">&#xf041;</i> Zoom (Online)
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Ever wondered what a career in the non-profit sector is like? 🌍 Join us to explore unique opportunities and challenges of this fulfilling career path and learn how you can drive positive change worldwide!`;
 	} else if (popupBoxNum === "2") {
-		popupBoxTitle =
-			"Date: Monday, September 13th, 2021, 8pm<br>Location: Zoom (Online)";
-		popupBoxText = `Meet our exec council and learn more about our projects, leadership opportunities and how you can contribute! All faculties are welcome at Project 90. Zoom link in our bio. One lucky student will win an Amazon Gift Card! We would love to have you on our team💙💙💙`;
+		popupBoxTitle =	`
+			<i class="fa fa-calendar"></i> Monday, September 13th, 2021
+			<br><i class="fa fa-clock"></i> 8:00 PM
+			<br><i class="fa fa-map-marker"></i> Zoom (Online)
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Come meet our exec council and dive into our projects and leadership opportunities! All faculties are welcome at Project 90. Plus, one lucky student will win an Amazon Gift Card! We would love to have you on our team 💙`;
 	} else if (popupBoxNum === "3") {
-		popupBoxTitle =
-			"Date: Friday, December 3rd, 2021, 6:30pm<br>Location: ENGG Lounge";
-		popupBoxText = `Come join us at our Charity Paint Night! There are only a limited number of tickets, so register now! Link is in our bio. All proceeds will be donated to Calgary Alzheimer’s society. We’ve got pizza and sparkling apple juice, so you can relax and grab a bite while you paint with your friends and meet new people! Live music is courtesy of Schulich Soundstage @soundstage_uofcalgary 🤩 At the end of the night, feel free to take your painting with you, and grab a film picture of you and your painting at our event.`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Wednesday, March 23rd, 2022
+			<br><i class="fa fa-clock"></i> 5:00 PM
+			<br><i class="fa fa-map-marker"></i> TBD
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Project90 is hosting a 90’s night!!! 🎉 Join us for a fun-filled evening with food, drinks, and musical chairs. Open to all members, this night will also feature current project updates and a presentation from REDESIGN’s Project Manager Kaitlyn!`;
 	} else if (popupBoxNum === "4") {
-		popupBoxTitle =
-			"Date: Wednesday, March 23rd, 2022, 5:00pm<br>Location: TBD";
-		popupBoxText = `Project 90 is hosting a 90’s night!!! This is an opportunity to boost our Project 90 community spirit and build stronger relationships with fellow club members. This event is open to executive and general members across all projects! The theme for this 90’s night is a Musical Night! There will be food, drinks, and games including musical chairs. The night will also consist of a update of our current projects and a presentation from the REDESIGN Project Manager, Kaitlyn! 👉🏻This event is first come, first serve; our maximum capacity is 25. Sign up ASAP if you are interested !!`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Wednesday, April 6th, 2022
+			<br><i class="fa fa-clock"></i> 5:00 PM
+			<br><i class="fa fa-map-marker"></i> ENGG Lounge
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Join us at our Charity Paint Night 🤩! All proceeds will be donated to the Calgary Alzheimer's Society. Enjoy pizza and apple juice as you paint, socialize, and meet new people. Take your painting home and capture the moment with a photo!`;
 	} else if (popupBoxNum === "5") {
-		popupBoxTitle =
-			"Date: Wednesday, April 6th, 2022, 5:00pm<br>Location: ENGG Lounge";
-		popupBoxText = `Project90 is hosting another paint night! This is an opportunity to paint and have fun with your friends. There will be food, drinks & live music by provided by Schulich Soundstage.🤩 The paint will be provided and you can take home a piece of art that you made yourself, with a possible film picture of yourself with your painting!🎨🖌 There is a $15 entry fee; all proceeds will be going to the Calgary Alzheimer’s Society. This event is first come, first serve; there are only 30 tickets available. If you are interested, sign up ASAP! Project90 will donate all leftover materials. Please e-transfer project90.finance@gmail.com by April 4th, your spot in the event is only guaranteed after you pay. Sign up here: https://docs.google.com/forms/d/1kXmamHCBmrwWKI3k70wTljEeJpK-E4Q88hOwY_Kce6A/prefill (Or Scan the barcode)`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Friday, November 18th, 2022
+			<br><i class="fa fa-clock"></i> 5:30 PM
+			<br><i class="fa fa-map-marker"></i> ENGG Lounge
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+			popupBoxText = `Join us to learn more about Project90 and our current projects on Friday, November 18th at 5:30pm! Link in bio to sign up! 💙💙💙 This is an opportunity to broaden your network, and as a bonus food and drinks will be provided.`;
 	} else if (popupBoxNum === "6") {
-		popupBoxTitle =
-			"Date: Frdiay, November 18th, 2022, 5:30pm<br>Location: ENGG Lounge";
-		popupBoxText = `Join us to learn more about Project90 and our current projects on Friday, November 18th at 5:30pm! Link in bio to sign up! 💙💙💙 This is an opportunity to broaden your network, and as a bonus food and drinks will be provided.`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Friday, December 2nd, 2022
+			<br><i class="fa fa-clock"></i> 5:30 PM
+			<br><i class="fa fa-map-marker"></i> ENGG Lounge
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Looking for a fun way to relax before finals? 🎨 Join Project90's Charity Paint Night! We'll provide food, drinks, and supplies, so get artsy and paint whatever you dream about. All proceeds go to the Calgary Alzheimer's Society. Join this great cause!`;
 	} else if (popupBoxNum === "7") {
-		popupBoxTitle =
-			"Date: Friday, December 2nd, 2022, 5:30pm<br>Location: ENGG Lounge";
-		popupBoxText = `Looking for a fun way to relax before finals? Come unwind with Project90 at our Charity Paint Night! You don't want to miss this - We've got you covered with the supplies, food, drinks, and music. The best part? You'll be painting for a good cause! All proceeds from this event will be donated to the Calgary Alzheimer's Society. Tickets are $15 and sold on a first come first served basis. Sign up by scanning the QR code!`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Friday, March 3rd, 2023
+			<br><i class="fa fa-clock"></i> 5:00 PM
+			<br><i class="fa fa-map-marker"></i> ENGG Lounge
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Unwind from midterms with an evening of painting and games! 🎨🕹️ Spend time with friends and create fun artwork to take home. No registration fee, no hassle. All supplies will be provided by Project90!`;
 	} else if (popupBoxNum === "8") {
-		popupBoxTitle =
-			"Date: Friday, March 3rd, 2023, 5:00pm<br>Location: ENGG Lounge";
-		popupBoxText = `Join Project90 for an evening of painting and games after the midterm season. This is an opportunity to unwind with your friends, have a slice of pizza, and create a piece of artwork in the process that you can take home at the end of the night! Entry is FREE and registration is not required. All supplies will be provided by Project90.`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Thursday, March 30th, 2023
+			<br><i class="fa fa-clock"></i> 7:00 PM
+			<br><i class="fa fa-map-marker"></i> HNSC 122
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		// expand the paragraph below
+		popupBoxText = `Ready to break your fast? 🌙 Join us for a delicious iftar and enjoy memorables games to relax after the feast. Make new friends and learn more about Project90!`;
 	} else if (popupBoxNum === "9") {
-		popupBoxTitle =
-			"Date: Friday, March 24th, 2023, 6:00pm-10:00pm<br>Location: Kilkenny Irish Pub, 3630 Brentwood Road NW";
-		popupBoxText = `The Help Bolivia: Rooftop Greenhouse Project is organizing a Fundraiser Pub Night! This project aims to create a rooftop greenhouse for a community in Bolivia. Come on down to show your support! Serving pizza and drinks 🍺. Donations payable at door!`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Monday, October 30th, 2023
+			<br><i class="fa fa-clock"></i> 5:30 PM
+			<br><i class="fa fa-map-marker"></i> HNSC 123
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Looking for a fun way to enjoy Halloween? 🎃 Come unwind with Project90 at our Horror Movie Night on October 30th! Come to HNSC 123 at 5:30 PM, where we'll be playing The Grudge and selling pizza! Grab your friends and come on over!`;
 	} else if (popupBoxNum === "10") {
-		popupBoxTitle =
-			"Date: Thursday, March 30th, 2023, 7:00pm<br>Location: HNSC 122";
-		popupBoxText = `Join Project 90 for a fun evening of games and Iftar! Make new friends and learn more about our club. Make sure to sign up as spots are limited. Link: https://docs.google.com/forms/u/2/d/e/1FAIpQLSdPzGFI4g-q7u_TxRF9pRhQ4xTf1RdNfXEM_rHO7QdqgxNqaA/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link`;
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Thursday, November 2nd, 2023
+			<br><i class="fa fa-clock"></i> 6:00PM - 7:30 PM
+			<br><i class="fa fa-map-marker"></i> HNSC 128
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Attend our Consulting event to learn up-to-date STEM skills and knowledge! 🌟 Meet industry experts who will teach you about consulting careers, expanding your network, and gaining insights of the STEM industry. Don't miss out on this opportunity!`;
 	} else if (popupBoxNum === "11") {
-		popupBoxTitle =
-			"Date: Monday, October 30th, 2023, 5:30pm<br>Location: HNSC 123";
-		popupBoxText = `Looking for a fun way to enjoy Halloween?! Come unwind with Project90 at our Horror Movie Night on October 30th in HNSC 123 at 5:30pm! We’ll be playing the grudge and have $2 pizza slices for the night!! So grab your friends and come on over 🎬✨! Link to register: https://forms.gle/Ym1JUo67ekWLE3ZY8. Limited Spots! 👀`;
-	} else if (popupBoxNum === "12") {
-		popupBoxTitle =
-			"Date: Thursday, November 2nd, 2023, 6:00pm-7:30pm<br>Location: HNSC 128";
-		popupBoxText = `In today's ever-changing business landscape, the expertise of students within the fields of science, technology, engineering, and mathematics has become more in demand as firms strive to gain a competitive advantage in the age of innovation. The unique skills and knowledge that STEM students possess are highly applicable within different areas of consulting! The University of Calgary of Calgary Association (UCCA) in collaboration with the Engineering Student Society (ESS), Project90, the Biology Students Association (BSA) and TechStart, would like to invite you to join us on Thursday, November 2, 2023 from 6:00 – 7:30 PM MT in HNSC 128 for our STEM In Consulting event! This year, UCCA is collaborating with Accenture, IBM, McKinsey and Deloitte to host a panel night to educate both business and STEM students on careers in consulting. Don’t miss out on the opportunity to learn from professionals in consulting with STEM backgrounds and to grow your professional network! Register here: https://forms.gle/iQS2EQTeUvFd7Hjk6. This event is open to University of Calgary students from any faculty and any year. To register, please fill out the registration form by Monday, October 31, 2023 at 11:59 PM MT and until spots remain.`;
-	} else if (popupBoxNum === "13") {
-		popupBoxTitle =
-			"Date: Tuesday, March 26th, 2024<br>Location: ENGG Lounge";
-		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary. Sign up through this link: Link Closed`;
-	};
+		popupBoxTitle = `
+			<i class="fa fa-calendar"></i> Tuesday, March 26th, 2024
+			<br><i class="fa fa-clock"></i> 5:00 PM - 7:00 PM
+			<br><i class="fa fa-map-marker"></i> ENGG Lounge
+			<br><a href='#' class='highlight-link link-closed'>Join here</a>
+		`;
+		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! 🎨 For just $5, dive into a night of vibrant colors at Project90's Charity Paint Night. Enjoy painting, pizza, and the chance to support a worthy cause. All proceeds will go to Grow Calgary.`;	}
+
+	const maxNumberOfCards = document.getElementsByClassName('event-image').length;
 
 	Swal.fire({
-		title: popupBoxTitle,
-		text: popupBoxText,
-		imageUrl: "../image/events_page_images/past_events/" + popupBoxNum + ".png",
-		imageWidth: imageSize.width,
-		imageHeight: imageSize.height,
+		html: `
+		<div id="custom-swal-container">
+			<div id="custom-swal-content">
+				<div>
+					<img src="../image/events_page_images/past_events/${popupBoxNum}.png">
+				</div>
+
+				<div>
+					${`<span id="popupBoxTitle">${popupBoxTitle}</span><br></br>${popupBoxText}`}
+				</div>
+			</div>
+
+			<div id="event-buttons">
+				<button id="prevBtn" onclick="showPopup(${(Number(popupBoxNum) + 1).toString()})" ${
+					popupBoxNum === maxNumberOfCards.toString() ? "disabled" : ""
+				}>
+					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+						<path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+					</svg>
+				</button>
+
+				<button id="nextBtn" onclick="showPopup(${(Number(popupBoxNum) - 1).toString()})" ${
+					popupBoxNum === "1" ? "disabled" : ""
+				}>
+					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+						<path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+					</svg>
+				</button>
+			</div>
+
+		</div>
+		`,
 		showCloseButton: true,
-		confirmButtonText: "Close",
+		showConfirmButton: false,
+		customClass: {
+			popup: "custom-swal-popup",
+			content: "custom-swal-content",
+		},
+		onOpen: () => {
+			const popup = document.querySelector(".custom-swal-popup");
+			if (popup) {
+				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
+			}
+		},
 	});
 }

@@ -40,6 +40,10 @@
 	margin-bottom: 5rem;
 }
 
+.event-calendar {
+	width: 50px;
+}
+
 /* Mobile devices */
 
 @media (max-width: 600px) {
@@ -97,7 +101,6 @@
 	height: 2px;
 	width: 40%;
 	background-color: white;
-	border: none;
 	margin-left: auto;
 }
 
@@ -105,7 +108,6 @@
 	height: 2px;
 	width: 40%;
 	background-color: white;
-	border: none;
 }
 
 @media (max-width: 600px) {
@@ -119,7 +121,7 @@
 @media (min-width: 600px) and (max-width: 1024px) {
 	.hr-class-1,
 	.hr-class-2 {
-		height: 2px; /* Adjust height for screens between 600px and 1024px */
+		height: 2px; /* Adjust height for screens between 601px and 1024px */
 	}
 }
 
@@ -151,7 +153,7 @@
 
 @media (min-width: 600px) and (max-width: 1024px) {
 	.event-icon img {
-		width: 35%; /* Adjust width for screens between 600px and 1024px */
+		width: 35%; /* Adjust width for screens between 601px and 1024px */
 	}
 }
 
@@ -181,7 +183,7 @@
 
 @media (min-width: 600px) and (max-width: 1024px) {
 	.event-join-msg {
-		margin-bottom: 3.5rem; /* Adjust margin for screens between 600px and 1024px */
+		margin-bottom: 3.5rem; /* Adjust margin for screens between 601px and 1024px */
 		margin-left: 8rem;
 		margin-right: 8rem;
 	}
@@ -247,7 +249,7 @@
 
 @media (min-width: 600px) and (max-width: 1024px) {
 	.event-container {
-		margin: 3.5rem 2.5rem; /* Adjust margin for screens between 600px and 1024px */
+		margin: 3.5rem 2.5rem; /* Adjust margin for screens between 601px and 1024px */
 	}
 	.no-current-events-container {
 		margin: 2rem 5rem 0rem 5rem;
@@ -314,7 +316,7 @@
 	}
 }
 
-@media (min-width: 451px) and (max-width: 600px) {
+@media (min-width: 450px) and (max-width: 600px) {
 	.image-wrapper {
 		width: auto; /* Adjust width for screens <= 600px */
 		height: 18rem; /* Adjust height for screens <= 600px */
@@ -324,7 +326,7 @@
 
 @media (min-width: 600px) and (max-width: 1024px) {
 	.image-wrapper {
-		width: auto; /* Adjust width for screens between 600px and 1024px */
+		width: auto; /* Adjust width for screens between 601px and 1024px */
 		height: 18rem;
 		margin: 3rem 4rem 3rem 4rem;
 	}
@@ -339,11 +341,11 @@
 }
 
 .image-wrapper:hover {
-	box-shadow: 0px 0px 5px 4px #1aacff;
+	box-shadow: 0 0 40px rgba(0, 128, 255, 0.75);
 }
 
 .image-wrapper img:hover {
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Deeper shadow for a "lifted" look */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	opacity: 0.4;
 	background-image: linear-gradient(to right, #0582ff 20%, #0158bc);
 }
@@ -360,6 +362,7 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	background-image: linear-gradient(to right, #229fff, #0c69c6);
 }
 
 /* Style the button and place it in the middle of the container/image */
@@ -373,11 +376,35 @@
 	padding: 10px 18px;
 	border: none;
 	cursor: pointer;
-	border-radius: 1px;
+	border-radius: 5px;
 	background-color: #5d9eeb;
 	color: white;
 	border-radius: 10px;
 	display: none;
+}
+
+@media (max-width: 1024px) {
+	.image-wrapper .btn {
+		display: block;
+		opacity: 0.85;
+		top: 92%;
+	}
+	.image-wrapper img:hover {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 600px) {
+	.image-wrapper .btn {
+		display: block;
+		opacity: 0.85;
+		font-size: 14px;
+		padding: 8px 16px;
+		top: 92%;
+	}
+	.image-wrapper img:hover {
+		opacity: 1;
+	}
 }
 
 .load-more-btn-container {
@@ -392,22 +419,21 @@
 }
 
 #load-more-btn {
-    font-weight: bold;
-    padding: 0.8rem;
-    border-radius: 20px;
-    border: 3.5px solid white; /* Use the primary color for the border */
-    color: white; /* Text color matches the border */
-    background-color: transparent; /* Transparent background */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover and focus */
+	font-weight: bold;
+	padding: 0.8rem;
+	border-radius: 20px;
+	border: 3.5px solid white; /* Use the primary color for the border */
+	color: white; /* Text color matches the border */
+	background-color: transparent; /* Transparent background */
+	cursor: pointer;
+	transition: all 0.2s ease; /* Smooth transition for hover and focus */
 }
 
-#load-more-btn:hover, #load-more-btn:focus {
-    color: rgba(23, 10, 81); /* White text on hover/focus */
-    border: 3.5px solid rgba(23, 10, 81); /* Transparent border on hover/focus */
+#load-more-btn:hover,
+#load-more-btn:focus {
+	color: rgba(23, 10, 81); /* White text on hover/focus */
+	border: 3.5px solid rgba(23, 10, 81); /* Transparent border on hover/focus */
 }
-
-
 
 @media (max-width: 600px) {
 	.load-more-btn-container {
@@ -421,7 +447,8 @@
 		border: 3px solid white; /* Use the primary color for the border */
 		color: white;
 	}
-	#load-more-btn:hover, #load-more-btn:focus {
+	#load-more-btn:hover,
+	#load-more-btn:focus {
 		color: rgba(23, 10, 81);
 		border: 3px solid rgba(23, 10, 81);
 	}
@@ -432,43 +459,309 @@
 	margin: 10rem;
 }
 
-.swal2-close {
-	font-size: 50px; /* Makes the icon bigger */
-	font-weight: bold; /* Makes the icon thicker, optional */
-	right: 20px; /* Adjusts the position from the right */
-	top: 20px; /* Adjusts the position from the top */
-	color: black;
-	margin-bottom: -25px; /* Adds space between the cross icon and the content below */
-}
-
 /* General styling for the SweetAlert2 popup */
 .swal2-popup {
-	font-size: 16px; /* Default font size */
+	font-size: 15px; /* Default font size */
 }
 
 /* Adjustments for tablets */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.swal2-popup {
-		font-size: 14px; /* Smaller font size for smaller devices */
+		font-size: 13px; /* Smaller font size for smaller devices */
 	}
 }
 
 /* Adjustments for mobile phones */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 	.swal2-popup {
 		font-size: 12px; /* Even smaller font size for mobile phones */
 	}
 }
 
+.swal2-close {
+	position: absolute;
+	font-size: 50px; /* Makes the icon bigger */
+	font-weight: bold; /* Makes the icon thicker, optional */
+	right: 20px; /* Adjusts the position from the right */
+	color: white;
+	/* margin-bottom: -25px;  Adds space between the cross icon and the content below */
+}
+
 /* Adjust close button size on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.swal2-close {
 		font-size: 40px; /* Smaller close button on tablets */
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 	.swal2-close {
 		font-size: 40px; /* Even smaller close button on mobile phones */
 	}
+}
+
+div:where(.swal2-container) button:where(.swal2-close):hover {
+	color: rgba(224, 208, 208, 0.579);
+}
+
+#custom-swal-content {
+	display: flex;
+	align-items: center;
+	color: white;
+	height: 100%;
+	width: 100%;
+	overflow-y: hidden;
+}
+
+#custom-swal-content div:first-child {
+    width: 55%;
+    height: 100%;
+    justify-content: center;
+	border-radius: 25px 0px 0px 0px;
+}
+
+#custom-swal-content div:last-child {
+	width: 45%;
+	text-align: left;
+	margin-top: 8rem;
+	margin-left: 2rem;
+	margin-right: 1rem;
+	height: 100%;
+	overflow-y: auto;
+	padding-right: 30px; /* Adjust this value as needed */
+}
+
+#custom-swal-content img {
+	width: 100%;
+	height: 100%;
+	border-radius: 25px 0px 25px 0px;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+	padding: 0px;
+	height: 100%;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+	display: space-between;
+	background-color: rgba(5, 17, 52, 0.888);
+}
+
+div:where(.swal2-container).swal2-center > .swal2-popup {
+	border-radius: 25px;
+}
+
+
+#popupBoxTitle {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+/* For screens up to 600px wide */
+@media (max-width: 600px) {
+	#custom-swal-content {
+		display: block;
+		height: 50rem;	
+	}
+
+	#custom-swal-content {
+		border-radius: 25px 25px 0px 0px;
+	}
+
+	#custom-swal-content img {
+		border-radius: 25px 25px 0px 0px;
+	}
+
+	div:where(.swal2-container) div:where(.swal2-popup) {
+		width: 85%; /* Adjust as needed */
+		height: auto; 
+	}
+	#custom-swal-content div:first-child {
+		display: flex;
+		height: 40%;
+		width: 100%;
+		justify-content: center;
+	}
+
+	#custom-swal-content div:last-child {
+		text-align: left;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+		height: 50%;
+		width: calc(100% - 3rem);
+		padding-right: 0px;
+	}
+
+	#popupBoxTitle {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+	.swal2-close {
+		right: 0px;
+	}
+}
+
+/* For screens between 601px and 1024px wide */
+@media (min-width: 601px) and (max-width: 1024px) {
+	div:where(.swal2-container) div:where(.swal2-popup) {
+		width: 80%; /* Adjust as needed */
+		height: 35rem; /* Adjust as needed */
+	}
+	#custom-swal-content {
+		height: 80%;
+	}
+	#popupBoxTitle {
+		font-size: 1rem;
+	}
+}
+
+
+/* For screens wider than 1024px */
+@media (min-width: 1025px) {
+	/* Original styles */
+	div:where(.swal2-container) div:where(.swal2-popup) {
+		width: 70%;
+		height: 40rem;
+	}
+	#custom-swal-content {
+		height: 82%;
+	}
+}
+
+#event-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 0rem 1rem 0rem;
+}
+
+#prevBtn, #nextBtn {
+    background: none; /* Remove background */
+    color: white;
+    border: 2px solid white; /* Add white border */
+    cursor: pointer;
+    padding: 10px 20px; /* Slightly larger padding for a better visual */
+    border-radius: 30px; /* More rounded corners */
+    margin: 0rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 30px; /* Increase font size for larger arrows */
+}
+
+@media (max-width: 600px) {
+	#event-buttons {
+		margin: 0rem 0rem 1rem 0rem; /* Adjust margin for screens <= 600px */
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+	#event-buttons {
+		margin: 1.5rem 0rem 1.5rem 0rem;
+	}
+}
+
+#prevBtn, #nextBtn {
+    border: 2px solid transparent; /* Initial border color */
+    width: 61px; /* Set a fixed width for the button */
+    height: 61px; /* Set a fixed height for the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Ensure background is transparent */
+    cursor: pointer; /* Change cursor to pointer */
+	border-color: white;
+}
+
+/* Media query for screens up to 600px */
+@media (max-width: 600px) {
+    #prevBtn, #nextBtn {
+        width: 57px; /* Adjust width for smaller screens */
+        height: 57px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Media query for screens between 601px and 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #prevBtn, #nextBtn {
+        width: 61px; /* Adjust width for medium screens */
+        height: 61px; /* Adjust height for medium screens */
+    }
+}
+
+/* Media query for screens larger than 1024px */
+@media (min-width: 1025px) {
+    #prevBtn, #nextBtn {
+        width: 61px; /* Adjust width for larger screens */
+        height: 61px; /* Adjust height for larger screens */
+    }
+}
+
+#prevBtn:hover, #nextBtn:hover {
+	color: black;
+	border-color: white;
+	background: white;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+#prevBtn:hover .arrow-btn-svg path, #nextBtn:hover .arrow-btn-svg path {
+    fill: black; /* Change SVG fill color on hover */
+}
+
+#prevBtn:disabled, #nextBtn:disabled {
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    cursor: not-allowed;
+    box-shadow: none; /* Remove shadow to make it look flat and disabled */
+}
+
+#prevBtn:disabled .arrow-btn-svg path, #nextBtn:disabled .arrow-btn-svg path {
+    fill: #ffffff; /* Keep SVG fill color consistent when button is disabled */
+}
+
+#custom-swal-container {
+	display: block;
+	height: 100%;
+}
+
+@keyframes simpleSlideIn {
+	from {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.card {
+	animation: simpleSlideIn 0.5s ease-out;
+}
+
+.highlight-link {
+    text-decoration: underline;
+    padding: 2px 4px;
+    border-radius: 3px;
+	font-size: 1.2rem;
+}
+
+.link-closed {
+    padding: 2px 4px; /* Add some padding for better readability */
+    border-radius: 3px; /* Slightly round the corners */
+    position: relative; /* Required for the hover effect */
+}
+
+.link-closed:hover::after {
+    content: 'Link Closed'; /* Display the message */
+    position: absolute;
+    top: 100%; /* Position below the link */
+    left: 0;
+    background-color: #000; /* Black background for the message */
+    color: #fff; /* White text color */
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 1; /* Ensure the message is on top */
+	font-size: 1rem;
 }
