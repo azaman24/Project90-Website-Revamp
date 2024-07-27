@@ -185,19 +185,13 @@ function updateEventListeners() {
 
 // Initial update
 updateEventListeners();
-
 // Update on window resize
 window.addEventListener("resize", updateEventListeners);
 
-// for pop up display containing event details when the "read more" button is pressed in the events page
-function showPopup(popupBoxNum) {
-	let imageSize, popupBoxTitle, popupBoxText;
-	imageSize = { width: "100%", height: "auto" };
 
-	if (typeof popupBoxNum === "number") {
-		popupBoxNum = popupBoxNum.toString();
-	}
+let popupBoxTitle, popupBoxText, maxNumberOfCards;
 
+function returnPopupBoxContent(popupBoxNum) {
 	if (popupBoxNum === "1") {
 		popupBoxTitle =
 			"Date: Thursday, April 1st, 2021<br>Time: 7:00pm - 8:30pm MT<br>Location: Zoom (Online)<br><a href='#' class='highlight-link link-closed'>Join here</a>";
@@ -251,7 +245,18 @@ function showPopup(popupBoxNum) {
 		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.`;
 	}
 
-	const maxNumberOfCards = document.getElementsByClassName('event-image').length;
+	maxNumberOfCards = document.getElementsByClassName('event-image').length;
+}
+
+// for pop up display containing event details when the "read more" button is pressed in the events page
+function showPopup(popupBoxNum, popupAnimation) {
+	let imageSize;
+	imageSize = { width: "100%", height: "auto" };
+
+	if (typeof popupBoxNum === "number") {
+		popupBoxNum = popupBoxNum.toString();
+	}
+	returnPopupBoxContent(popupBoxNum);
 
 	Swal.fire({
 		html: `
@@ -267,13 +272,13 @@ function showPopup(popupBoxNum) {
 			</div>
 	
 			<div id="event-buttons">
-				<button id="prevBtn">
+				<button id="prevBtn" onclick="prevBtnClick(${popupBoxNum})">
 					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 						<path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
 					</svg>
 				</button>
 				
-				<button id="nextBtn">
+				<button id="nextBtn" onclick="nextBtnClick(${popupBoxNum})">
 					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 						<path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
 					</svg>
@@ -288,29 +293,34 @@ function showPopup(popupBoxNum) {
 			popup: "custom-swal-popup",
 			content: "custom-swal-content",
 		},
-		onOpen: () => {
+		didOpen: () => {
 			const popup = document.querySelector(".custom-swal-popup");
 			if (popup) {
 				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
 			}
-		},
-		didOpen: () => {
-			const prevBtn = document.getElementById("prevBtn");
-			const nextBtn = document.getElementById("nextBtn");
-		
-			prevBtn.addEventListener('click', () => {
-				showPopup((Number(popupBoxNum) + 1).toString());
-			});
-		
-			nextBtn.addEventListener('click', () => {
-				showPopup((Number(popupBoxNum) - 1).toString());
-			});
-		
-			if (popupBoxNum === maxNumberOfCards.toString()) {
-				prevBtn.disabled = true;
-			}
+			popup.style.animation = popupAnimation;
 		}
 	});
 }
 
+function prevBtnClick(popupBoxNum) {
+	var prevBtn = document.getElementById("prevBtn");
+	if (popupBoxNum === maxNumberOfCards.toString()) {
+		prevBtn.disabled = true;
+	}
+	else {
+		prevBtn.disabled = false;
+		showPopup((Number(popupBoxNum) + 1).toString(), "swipeInFromRight 0.3s ease");
+	}
+}
 
+function nextBtnClick(popupBoxNum) {
+	var nextBtn = document.getElementById("nextBtn");
+	if (popupBoxNum === maxNumberOfCards.toString()) {
+		nextBtn.disabled = true;
+	}
+	else {
+		nextBtn.disabled = false;
+		showPopup((Number(popupBoxNum) - 1).toString(), "swipeInFromLeft 0.3s ease");
+	}
+}
