@@ -188,7 +188,6 @@ updateEventListeners();
 // Update on window resize
 window.addEventListener("resize", updateEventListeners);
 
-
 let popupBoxTitle, popupBoxText, maxNumberOfCards;
 
 function returnPopupBoxContent(popupBoxNum) {
@@ -241,11 +240,12 @@ function returnPopupBoxContent(popupBoxNum) {
 			"Date: Thursday, November 2nd, 2023<br>Time: 6:00pm-7:30pm MT<br>Location: HNSC 128<br><a href='#' class='highlight-link link-closed'>Join here</a>";
 		popupBoxText = `In today's ever-changing business landscape, the expertise of students within the fields of science, technology, engineering, and mathematics has become more in demand as firms strive to gain a competitive advantage in the age of innovation. The unique skills and knowledge that STEM students possess are highly applicable within different areas of consulting! The University of Calgary of Calgary Association (UCCA) in collaboration with the Engineering Student Society (ESS), Project90, the Biology Students Association (BSA) and TechStart, would like to invite you to join us on Thursday, November 2, 2023 from 6:00 – 7:30 PM MT in HNSC 128 for our STEM In Consulting event! This year, UCCA is collaborating with Accenture, IBM, McKinsey and Deloitte to host a panel night to educate both business and STEM students on careers in consulting. Don’t miss out on the opportunity to learn from professionals in consulting with STEM backgrounds and to grow your professional network! This event is open to University of Calgary students from any faculty and any year. To register, please fill out the registration form by Monday, October 31, 2023 at 11:59 PM MT and until spots remain.`;
 	} else if (popupBoxNum === "13") {
-		popupBoxTitle = "Date: Tuesday, March 26th, 2024<br>Time: 5pm - 7pm MT<br>Location: ENGG Lounge<br><a href='#' class='highlight-link link-closed'>Join here</a>";
+		popupBoxTitle =
+			"Date: Tuesday, March 26th, 2024<br>Time: 5pm - 7pm MT<br>Location: ENGG Lounge<br><a href='#' class='highlight-link link-closed'>Join here</a>";
 		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! For just $5, dive into a night of vibrant colours at Project90's Charity Paint Night! Come enjoy painting, pizza, and the chance to support a worthy cause! All proceeds will go to Grow Calgary.`;
 	}
 
-	maxNumberOfCards = document.getElementsByClassName('event-image').length;
+	maxNumberOfCards = document.getElementsByClassName("event-image").length;
 }
 
 // for pop up display containing event details when the "read more" button is pressed in the events page
@@ -272,13 +272,17 @@ function showPopup(popupBoxNum, popupAnimation) {
 			</div>
 	
 			<div id="event-buttons">
-				<button id="prevBtn" onclick="prevBtnClick(${popupBoxNum})">
+				<button id="prevBtn" onclick='showPopup((Number(${popupBoxNum}) + 1).toString(), "swipe-in-from-left")' ${
+				popupBoxNum === maxNumberOfCards.toString() ? "disabled" : ""
+				}>
 					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 						<path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
 					</svg>
 				</button>
-				
-				<button id="nextBtn" onclick="nextBtnClick(${popupBoxNum})">
+
+				<button id="nextBtn" onclick='showPopup((Number(${popupBoxNum}) - 1).toString(), "swipe-in-from-right");' ${
+				popupBoxNum === "1" ? "disabled" : ""
+				}>
 					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 						<path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
 					</svg>
@@ -293,34 +297,8 @@ function showPopup(popupBoxNum, popupAnimation) {
 			popup: "custom-swal-popup",
 			content: "custom-swal-content",
 		},
-		didOpen: () => {
-			const popup = document.querySelector(".custom-swal-popup");
-			if (popup) {
-				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
-			}
-			popup.style.animation = popupAnimation;
+		showClass: {
+			popup: popupAnimation,
 		}
 	});
-}
-
-function prevBtnClick(popupBoxNum) {
-	var prevBtn = document.getElementById("prevBtn");
-	if (popupBoxNum === maxNumberOfCards.toString()) {
-		prevBtn.disabled = true;
-	}
-	else {
-		prevBtn.disabled = false;
-		showPopup((Number(popupBoxNum) + 1).toString(), "swipeInFromRight 0.3s ease");
-	}
-}
-
-function nextBtnClick(popupBoxNum) {
-	var nextBtn = document.getElementById("nextBtn");
-	if (popupBoxNum === maxNumberOfCards.toString()) {
-		nextBtn.disabled = true;
-	}
-	else {
-		nextBtn.disabled = false;
-		showPopup((Number(popupBoxNum) - 1).toString(), "swipeInFromLeft 0.3s ease");
-	}
 }

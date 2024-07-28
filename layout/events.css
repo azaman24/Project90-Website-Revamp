@@ -734,50 +734,54 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
 	height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
 @keyframes swipeInFromLeft {
-    from {
+    0% {
         transform: translateX(-100%);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
 @keyframes swipeInFromRight {
-    from {
+    0% {
         transform: translateX(100%);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-@keyframes popupAnimation {
-    from {
-        transform: scale(0.5);
+@keyframes popup-animation {
+    0% {
+        transform: scale(0.5) translateY(-50px);
         opacity: 0;
     }
-    to {
-        transform: scale(1);
+    50% {
+        transform: scale(1.05) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0);
         opacity: 1;
     }
 }
 
+.swipe-in-from-left {
+    animation: swipeInFromLeft 0.3s ease;
+}
 
+.swipe-in-from-right {
+    animation: swipeInFromRight 0.3s ease;
+}
+
+.popup-animation {
+	animation: popup-animation 0.5s ease;
+}
 
 .highlight-link {
     text-decoration: underline;
@@ -805,4 +809,3 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
     z-index: 1; /* Ensure the message is on top */
 	font-size: 1rem;
 }
-
