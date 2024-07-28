@@ -158,16 +158,16 @@ function updateEventListeners() {
 	if (window.innerWidth >= 1024) {
 		// Add event listeners for desktop mode
 		document.querySelectorAll(".image-wrapper").forEach((item) => {
+			var btn = item.querySelector(".btn");
+			var eventImg = item.querySelector(".event-image");
+			btn.style.display = "none";
+			eventImg.style.opacity = "1";
 			item.addEventListener("mousemove", (e) => {
-				var btn = item.querySelector(".btn");
-				var eventImg = item.querySelector(".event-image");
 				btn.style.display = "block";
 				eventImg.style.opacity = "0.4";
 			});
 
 			item.addEventListener("mouseout", (e) => {
-				var btn = item.querySelector(".btn");
-				var eventImg = item.querySelector(".event-image");
 				btn.style.display = "none";
 				eventImg.style.opacity = "1";
 			});
