@@ -174,13 +174,11 @@ function updateEventListeners() {
 		});
 	} else {
 		document.querySelectorAll(".image-wrapper").forEach((item) => {
-			item.addEventListener("mousemove", (e) => {
 			var btn = item.querySelector(".btn");
 			var eventImg = item.querySelector(".event-image");
 			btn.style.display = "block";
 			btn.style.opacity = "0.85";
 			eventImg.style.opacity = "1";
-			});
 		});
 	}
 }
