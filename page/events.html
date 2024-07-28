@@ -3,32 +3,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Project 90 | Events</title>
+		<title>Project90 | Events</title>
 		<!-- Libraries -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-			integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
-			crossorigin="anonymous"
-		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
 		<!-- Font -->
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap"
-		/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap"/>
 		<!-- Icons -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<!-- Layouts -->
 		<link rel="stylesheet" href="../homepage.css" />
@@ -43,12 +26,9 @@
 			<!-- Navigation Menu -->
 			<header>
 				<div class="navigation-logo">
-					<a href="../homepage.html"
-						><img
-							src="../image/P90_Homepage_Logo.svg"
-							alt="Project 90 Logo"
-							class="logoSizing"
-					/></a>
+					<a href="../homepage.html">
+						<img src="../image/P90_Homepage_Logo.svg" alt="Project 90 Logo" class="logoSizing"/>
+					</a>
 				</div>
 
 				<input id="toggle" type="checkbox" />
@@ -139,13 +119,13 @@
 							</a>
 						</div>
 					</div>
-						</div>
+				</div>
 			</header>
 
 			<div class="sponsor-photo">
 				<img
 					src="../image/sponsors_page_images/blank photo.png"
-					alt="Our Team"
+					alt="Events"
 					class="team-header"
 				/>
 			</div>
@@ -175,11 +155,51 @@
 				</h2>
 			</div>
 
-			<div class="event-container">
+			<!-- Uncomment the code below when there are no current events. -->
+			<!-- <div class="event-container">
 				<div class="no-current-events-container">
 					<p class="no-current-events">No events currently scheduled.</p>
 					<div class="moon-animation">
 						<img src="../image/events_page_images/sleep.png" alt="Cloud" />
+					</div>
+				</div>
+			</div> -->
+
+			<div class="event-container">
+				<div class="image-wrapper" onclick="showPopup('11')">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/11.png"
+						alt="Event Image"
+						onclick="showPopup('11', 'popup-animation')"
+	
+					/>
+					<div class="readMoreMsg" onclick="showPopup('11', 'popup-animation')">
+						Click For More!
+					</div>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/10.png"
+						alt="Event Image"
+						onclick="showPopup('10', 'popup-animation')"
+					/>
+					<div class="readMoreMsg" onclick="showPopup('10', 'popup-animation')">
+						Click For More!
+					</div>
+				</div>
+
+				<div class="image-wrapper">
+					<img
+						class="event-image"
+						src="../image/events_page_images/past_events/9.png"
+						alt="Event Image"
+						onclick="showPopup('9', 'popup-animation')"
+					/>
+					<div class="readMoreMsg" onclick="showPopup('9', 'popup-animation')">
+						Click For More!
 					</div>
 				</div>
 			</div>
@@ -203,41 +223,16 @@
 			</div>
 
 			<div class="event-container">
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/11.png"
-						alt="Event Image"
-					/>
-					<button class="btn" onclick="showPopup('11')">Read More</button>
-				</div>
-
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/10.png"
-						alt="Event Image"
-					/>
-					<button class="btn" onclick="showPopup('10')">Read More</button>
-				</div>
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/9.png"
-						alt="Event Image"
-					/>
-					<button class="btn" onclick="showPopup('9')">Read More</button>
-				</div>
-
 				<div class="image-wrapper">
 					<img
 						class="event-image"
 						src="../image/events_page_images/past_events/8.png"
 						alt="Event Image"
+						onclick="showPopup('8', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('8')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('8', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -245,8 +240,11 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/7.png"
 						alt="Event Image"
+						onclick="showPopup('7', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('7')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('7', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -254,8 +252,11 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/6.png"
 						alt="Event Image"
+						onclick="showPopup('6', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('6')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('6', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -263,8 +264,11 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/5.png"
 						alt="Event Image"
+						onclick="showPopup('5', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('5')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('5', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -272,8 +276,11 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/4.png"
 						alt="Event Image"
+						onclick="showPopup('4', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('4')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('4', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -281,8 +288,11 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/3.png"
 						alt="Event Image"
+						onclick="showPopup('3', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('3')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('3', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -290,8 +300,11 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/2.png"
 						alt="Event Image"
+						onclick="showPopup('2', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('2')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('2', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 
 				<div class="image-wrapper">
@@ -299,44 +312,31 @@
 						class="event-image"
 						src="../image/events_page_images/past_events/1.png"
 						alt="Event Image"
+						onclick="showPopup('1', 'popup-animation')"
 					/>
-					<button class="btn" onclick="showPopup('1')">Read More</button>
+					<div class="readMoreMsg" onclick="showPopup('1', 'popup-animation')">
+						Click For More!
+					</div>
 				</div>
 			</div>
 
-			<div class="load-more-btn-container">
-				<button id="load-more-btn" class="secondary-btn">Load More</button>
+			<div class="show-more-btn-container">
+				<button id="show-more-btn" class="secondary-btn">Show More!</button>
 			</div>
 		</div>
-
 
 		<div class="bottomNavContainer">
 			<!-- Join Us -->
 			<div class="bottomNav">
-				<h2>
-					<a href="https://linktr.ee/project90uofc" class="joinOrContact"
-						>Join Us</a
-					>
-				</h2>
-				<ul>
-					Click the button above to get started today!
-				</ul>
+				<h2><a href="https://linktr.ee/project90uofc" class="joinOrContact">Join Us</a></h2>
+				<ul>Click the button above to get started today!</ul>
 			</div>
-
+	
 			<div class="bottomNav">
-				<h2 class="text">
-					<a
-						href="mailto:Project90@gmail.com"
-						target="_blank"
-						class="joinOrContact"
-						>Contact Us</a
-					>
-				</h2>
-				<ul>
-					Reach out to us for any inquiries!
-				</ul>
-
-								<!--Facebook Logo -->
+				<h2 class="text"><a href="mailto:Project90@gmail.com" target="_blank" class="joinOrContact">Contact Us</a></h2>
+				<ul>Reach out to us for any inquiries!</ul>
+				
+				<!--Facebook Logo -->
 				<!-- Reference link: https://iconduck.com/icons/21119/facebook -->
 				<a href="https://www.facebook.com/Project90uc/">
 					<svg class="socials" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="12.5%">
@@ -352,7 +352,7 @@
 						/>
 					</svg>
 				</a>
-
+	
 				<!--Instagram Logo -->
 				<!-- Reference link: https://iconduck.com/icons/21194/instagram -->
 				<a href="https://www.instagram.com/project90.uofc/">
@@ -369,7 +369,7 @@
 						/>
 					</svg>
 				</a>
-
+	
 				<!-- Linkedin Logo -->
 				<!-- Reference link: https://iconduck.com/icons/103018/social-linkedin -->
 				<a href="https://www.linkedin.com/company/project-90-ucalgary/mycompany/">
@@ -386,7 +386,7 @@
 						/>
 					</svg>
 				</a>
-
+	
 				<!-- Github Logo -->
 				<!-- Reference link: https://iconduck.com/icons/11081/github -->
 				<a href="https://github.com/project90uc" alt="GitHub">
@@ -403,7 +403,6 @@
 						/>
 					</svg>
 				</a>
-       
 			</div>
 		</div>
 
