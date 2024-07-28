@@ -158,26 +158,26 @@ function updateEventListeners() {
 	if (window.innerWidth >= 1024) {
 		// Add event listeners for desktop mode
 		document.querySelectorAll(".image-wrapper").forEach((item) => {
-			var btn = item.querySelector(".btn");
+			var readMoreMsg = item.querySelector(".readMoreMsg");
 			var eventImg = item.querySelector(".event-image");
-			btn.style.display = "none";
+			readMoreMsg.style.display = "none";
 			eventImg.style.opacity = "1";
 			item.addEventListener("mousemove", (e) => {
-				btn.style.display = "block";
+				readMoreMsg.style.display = "block";
 				eventImg.style.opacity = "0.4";
 			});
 
 			item.addEventListener("mouseout", (e) => {
-				btn.style.display = "none";
+				readMoreMsg.style.display = "none";
 				eventImg.style.opacity = "1";
 			});
 		});
 	} else {
 		document.querySelectorAll(".image-wrapper").forEach((item) => {
-			var btn = item.querySelector(".btn");
+			var readMoreMsg = item.querySelector(".readMoreMsg");
 			var eventImg = item.querySelector(".event-image");
-			btn.style.display = "block";
-			btn.style.opacity = "0.85";
+			readMoreMsg.style.display = "block";
+			readMoreMsg.style.opacity = "0.85";
 			eventImg.style.opacity = "1";
 		});
 	}
