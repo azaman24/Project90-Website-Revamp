@@ -390,10 +390,10 @@
 }
 
 /* Mobile devices */
-
 @media (max-width: 600px) {
 	.impact-heading {
 		margin-top: 25rem;
+		font-size: 1.6rem;
 	}
 	.swiper-button-next,
 	.swiper-button-prev {
@@ -422,9 +422,6 @@
 	}
 	:root {
 		--swiper-navigation-size: 45px;
-	}
-	.impact-heading {
-		font-size: 1.6rem;
 	}
 }
 
