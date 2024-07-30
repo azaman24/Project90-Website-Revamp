@@ -72,7 +72,6 @@ var mySwiper = new Swiper(".mySwiper", {
 });
 
 /* for creating a bounce effect to the "become sponsor message" in the sponsors page when the user reaches that message for the first time */
-
 document.addEventListener("DOMContentLoaded", function () {
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
@@ -94,23 +93,31 @@ document.addEventListener("DOMContentLoaded", function () {
 	const images = document.querySelectorAll(".image-wrapper");
 	let currentCount = 6;
 
-	document
-		.getElementById("load-more-btn")
-		.addEventListener("click", function () {
+	const showMoreBtn = document.getElementById("show-more-btn");
+	
+	showMoreBtn.addEventListener("click", function () {
+		if (showMoreBtn.textContent === "Show More!") {
 			const nextCount = currentCount + 6;
 			for (let i = currentCount; i < nextCount && i < images.length; i++) {
-				images[i].style.display = "block";
+			images[i].style.display = 'block';
 			}
 			currentCount += 6;
 			if (currentCount >= images.length) {
-				var loadMoreBtnContainer = document.getElementsByClassName(
-					"load-more-btn-container"
-				)[0];
-				console.log(loadMoreBtnContainer);
-				loadMoreBtnContainer.style.display = "none";
-				this.style.display = "none"; // Hide the button if there are no more images to show
+			showMoreBtn.textContent = "Show Less";
 			}
-		});
+		} else {
+			const prevCount = Math.max(currentCount - 6, 9);
+			for (let i = currentCount - 1; i >= prevCount; i--) {
+				if (images[i]) { // Check if images[i] exists
+					images[i].style.display = 'none';
+				}
+			}
+			currentCount = prevCount;
+			if (currentCount === 9) {
+				showMoreBtn.textContent = "Show More!";
+			}
+		}
+	});
 });
 
 // for display of "read more" button when the user hovers over the event image in the events page
@@ -119,26 +126,26 @@ function updateEventListeners() {
 	if (window.innerWidth >= 1024) {
 		// Add event listeners for desktop mode
 		document.querySelectorAll(".image-wrapper").forEach((item) => {
+			var readMoreMsg = item.querySelector(".readMoreMsg");
+			var eventImg = item.querySelector(".event-image");
+			readMoreMsg.style.display = "none";
+			eventImg.style.opacity = "1";
 			item.addEventListener("mousemove", (e) => {
-				var btn = item.querySelector(".btn");
-				var eventImg = item.querySelector(".event-image");
-				btn.style.display = "block";
+				readMoreMsg.style.display = "block";
 				eventImg.style.opacity = "0.4";
 			});
 
 			item.addEventListener("mouseout", (e) => {
-				var btn = item.querySelector(".btn");
-				var eventImg = item.querySelector(".event-image");
-				btn.style.display = "none";
+				readMoreMsg.style.display = "none";
 				eventImg.style.opacity = "1";
-			});
+			});			
 		});
 	} else {
 		document.querySelectorAll(".image-wrapper").forEach((item) => {
-			var btn = item.querySelector(".btn");
+			var readMoreMsg = item.querySelector(".readMoreMsg");
 			var eventImg = item.querySelector(".event-image");
-			btn.style.display = "block";
-			btn.style.opacity = "0.85";
+			readMoreMsg.style.display = "block";
+			readMoreMsg.style.opacity = "0.85";
 			eventImg.style.opacity = "1";
 		});
 	}
@@ -150,11 +157,9 @@ updateEventListeners();
 // Update on window resize
 window.addEventListener("resize", updateEventListeners);
 
-// for pop up display containing event details when the "read more" button is pressed in the events page
-function showPopup(popupBoxNum) {
-	let imageSize, popupBoxTitle, popupBoxText;
-	imageSize = { width: "100%", height: "auto" };
+let popupBoxTitle, popupBoxText, maxNumberOfCards;
 
+function returnPopupBoxContent(popupBoxNum) {
 	if (typeof popupBoxNum === "number") {
 		popupBoxNum = popupBoxNum.toString();
 	}
@@ -249,7 +254,18 @@ function showPopup(popupBoxNum) {
 		`;
 		popupBoxText = `Join us for an unforgettable evening in the ENGG Lounge! 🎨 For just $5, dive into a night of vibrant colors at Project90's Charity Paint Night. Enjoy painting, pizza, and the chance to support a worthy cause. All proceeds will go to Grow Calgary.`;	}
 
-	const maxNumberOfCards = document.getElementsByClassName('event-image').length;
+	maxNumberOfCards = document.getElementsByClassName('event-image').length;
+}
+
+// for pop up display containing event details when the "read more" button is pressed in the events page
+function showPopup(popupBoxNum, popupAnimation) {
+	let imageSize;
+	imageSize = { width: "100%", height: "auto" };
+
+	if (typeof popupBoxNum === "number") {
+		popupBoxNum = popupBoxNum.toString();
+	}
+	returnPopupBoxContent(popupBoxNum);
 
 	Swal.fire({
 		html: `
@@ -258,30 +274,30 @@ function showPopup(popupBoxNum) {
 				<div>
 					<img src="../image/events_page_images/past_events/${popupBoxNum}.png">
 				</div>
-
+	
 				<div>
 					${`<span id="popupBoxTitle">${popupBoxTitle}</span><br></br>${popupBoxText}`}
 				</div>
 			</div>
-
+	
 			<div id="event-buttons">
-				<button id="prevBtn" onclick="showPopup(${(Number(popupBoxNum) + 1).toString()})" ${
-					popupBoxNum === maxNumberOfCards.toString() ? "disabled" : ""
+				<button id="prevBtn" onclick='showPopup((Number(${popupBoxNum}) + 1).toString(), "swipe-in-from-left")' ${
+				popupBoxNum === maxNumberOfCards.toString() ? "disabled" : ""
 				}>
 					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 						<path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
 					</svg>
 				</button>
 
-				<button id="nextBtn" onclick="showPopup(${(Number(popupBoxNum) - 1).toString()})" ${
-					popupBoxNum === "1" ? "disabled" : ""
+				<button id="nextBtn" onclick='showPopup((Number(${popupBoxNum}) - 1).toString(), "swipe-in-from-right");' ${
+				popupBoxNum === "1" ? "disabled" : ""
 				}>
 					<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 						<path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
 					</svg>
 				</button>
 			</div>
-
+	
 		</div>
 		`,
 		showCloseButton: true,
@@ -290,11 +306,55 @@ function showPopup(popupBoxNum) {
 			popup: "custom-swal-popup",
 			content: "custom-swal-content",
 		},
-		onOpen: () => {
-			const popup = document.querySelector(".custom-swal-popup");
-			if (popup) {
-				popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
-			}
-		},
+		showClass: {
+			popup: popupAnimation,
+		}
 	});
 }
+
+// Swal.fire({
+// 	html: `
+// 	<div id="custom-swal-container">
+// 		<div id="custom-swal-content">
+// 			<div>
+// 				<img src="../image/events_page_images/past_events/${popupBoxNum}.png">
+// 			</div>
+
+// 			<div>
+// 				${`<span id="popupBoxTitle">${popupBoxTitle}</span><br></br>${popupBoxText}`}
+// 			</div>
+// 		</div>
+
+// 		<div id="event-buttons">
+// 			<button id="prevBtn" onclick="showPopup(${(Number(popupBoxNum) + 1).toString()})" ${
+// 				popupBoxNum === maxNumberOfCards.toString() ? "disabled" : ""
+// 			}>
+// 				<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+// 					<path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+// 				</svg>
+// 			</button>
+
+// 			<button id="nextBtn" onclick="showPopup(${(Number(popupBoxNum) - 1).toString()})" ${
+// 				popupBoxNum === "1" ? "disabled" : ""
+// 			}>
+// 				<svg class="arrow-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+// 					<path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+// 				</svg>
+// 			</button>
+// 		</div>
+
+// 	</div>
+// 	`,
+// 	showCloseButton: true,
+// 	showConfirmButton: false,
+// 	customClass: {
+// 		popup: "custom-swal-popup",
+// 		content: "custom-swal-content",
+// 	},
+// 	onOpen: () => {
+// 		const popup = document.querySelector(".custom-swal-popup");
+// 		if (popup) {
+// 			popup.style.maxWidth = "1200px"; // Adjust the Swal width if necessary
+// 		}
+// 	},
+// });
