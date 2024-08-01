@@ -6,6 +6,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 	if (navigationList.classList.contains("display")) {
 		socialContacts.style.display = "flex";
 		body.style.overflowY = "hidden";
+		body.style.overflowY = "hidden";
 	} else {
 		body.style.overflow = "auto";
 		socialContacts.style.display = "none";

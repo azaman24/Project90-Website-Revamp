@@ -34,13 +34,16 @@ header {
 }
 
 @media (min-width: 200px) and (max-width: 400px) {
+@media (min-width: 200px) and (max-width: 400px) {
 	.navigation-logo {
+		width: 50%;
 		width: 50%;
 	}
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
 	.navigation-logo {
+		width: 40%;
 		width: 40%;
 	}
 }

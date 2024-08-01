@@ -473,6 +473,11 @@ ul {
    margin-bottom: -1%;
 }
 
+::selection {
+   background-color: #00008B; /* Dark blue background */
+   color: #FFFFFF; /* White text */
+}
+
 /* animations */
 @keyframes bounce {
    from {
