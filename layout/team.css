@@ -18,7 +18,7 @@ section {
 .slide-container {
 	max-width: 1120px;
 	width: 100%;
-	padding: 40px 0;
+	padding: 40px 0px 15px 0px;
 }
 
 .slide-content {
@@ -125,9 +125,11 @@ section {
 }
 
 .member-heading {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	color: white;
 	margin-bottom: 0.5rem;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
 	text-align: center;
 }
 
@@ -138,69 +140,82 @@ section {
 	margin: 1rem auto;
 }
 
-/* Sizing for Different Media */
-@media (min-width: 300px) {
-	:root {
-		--LogoWidth: 40%;
-		--globeSize: 500px;
-		--HeaderOne: 1.25rem;
-		--HeaderTwo: 0.625rem;
-		--HeaderThree: 0.45rem;
-		--Body: 0.625rem;
-		--bottomNavSize: 65px;
+/* Mobile devices */
+@media (max-width: 600px) {
+	.team-intro-inner-box {
+		width: 80%;
 	}
-}
-@media (min-width: 600px) {
-	:root {
-		--LogoWidth: 35%;
-		--HeaderOne: 1.5rem;
-		--HeaderTwo: 1rem;
-		--HeaderThree: 0.75rem;
-		--Body: 0.75rem;
-		--bottomNavSize: 115px;
+	.team-intro-outer-box {
+		width: 100%;
 	}
-}
-@media (min-width: 900px) {
-	:root {
-		--LogoWidth: 30%;
-		--HeaderOne: 1.75rem;
-		--HeaderTwo: 1.25rem;
-		--HeaderThree: 1rem;
-		--Body: 0.875rem;
-		--bottomNavSize: 160px;
+	.team-intro-inner-box h1 {
+		font-size: 1.2rem;
+		margin-bottom: 0.8rem;
 	}
-}
-@media (min-width: 1200px) {
-	:root {
-		--LogoWidth: 25%;
-		--HeaderOne: 2.3rem;
-		--HeaderTwo: 1.5rem;
-		--HeaderThree: 1.1rem;
-		--Body: 1rem;
-		--bottomNavSize: 170px;
-	}
-}
-@media (min-width: 1500px) {
-	:root {
-		--LogoWidth: 20%;
-		--HeaderOne: 2.75rem;
-		--HeaderTwo: 1.75rem;
-		--HeaderThree: 1.25rem;
-		--Body: 1.125rem;
-		--bottomNavSize: 215px;
+
+	.team-intro-inner-box p {
+		font-size: 1rem;
 	}
 }
 
-.logoSizing {
-	width: var(--LogoWidth);
+/* iPad devices */
+@media (min-width: 600px) and (max-width: 750px) {
+	.team-intro-inner-box {
+		width: 80%;
+	}
+	.team-intro-inner-box h1 {
+		font-size: 1.3rem;
+	}
+
+	.team-intro-inner-box p {
+		font-size: 1.1rem;
+	}
+	.team-intro-outer-box {
+		width: 100%;
+	}
 }
+
+/* iPad devices */
+@media (min-width: 750px) and (max-width: 1024px) {
+	.team-intro-inner-box {
+		width: 60%;
+	}
+	.team-intro-inner-box h1 {
+		font-size: 1.3rem;
+	}
+
+	.team-intro-inner-box p {
+		font-size: 1.1rem;
+	}
+	.team-intro-outer-box {
+		width: 100%;
+	}
+}
+
+/* Laptop devices */
+@media (min-width: 1024px) {
+	.team-intro-inner-box {
+		width: 50%;
+	}
+	.team-intro-inner-box h1 {
+		font-size: 1.5rem;
+	}
+	.team-intro-inner-box p {
+		font-size: 1.2rem;
+	}
+}
+
 
 .swiper-button-next1,
 .swiper-button-prev1,
 .swiper-button-next2,
 .swiper-button-prev2,
 .swiper-button-next3,
-.swiper-button-prev3 {
+.swiper-button-prev3,
+.swiper-button-next4,
+.swiper-button-prev4,
+.swiper-button-next5,
+.swiper-button-prev5 {
 	color: white;
 	margin: 0 10px;
 }
@@ -210,7 +225,11 @@ section {
 .swiper-button-next2:hover,
 .swiper-button-prev2:hover,
 .swiper-button-next3:hover,
-.swiper-button-prev3:hover {
+.swiper-button-prev3:hover,
+.swiper-button-next4:hover,
+.swiper-button-prev4:hover,
+.swiper-button-next5:hover,
+.swiper-button-prev5:hover {
 	transform: scale(1.2);
 	transition: transform 0.3s ease;
 }

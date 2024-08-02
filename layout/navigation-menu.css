@@ -7,7 +7,7 @@ header {
 	height: 9rem;
 }
 .navigation-logo a {
-    display: block; /* Ensure the link is a block element */
+    display: block;
     width: 100%;
     height: 100%;
 }
@@ -15,8 +15,8 @@ header {
 .navigation-logo img {
     width: auto;
     height: auto;
-    object-fit: cover; /* Ensures the image covers the entire area while maintaining aspect ratio */
 }
+
 .navigation-logo {
     display: flex;
     align-items: center;
@@ -34,15 +34,22 @@ header {
 }
 
 @media (min-width: 200px) and (max-width: 400px) {
+	header {
+		height: 7rem;
+	}
 	.navigation-logo {
 		width: 50%;
-		width: 50%;
+	}
+	.navigation-logo a {
+		margin-bottom: 2rem;
 	}
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
+	header {
+		height: 8rem;
+	}
 	.navigation-logo {
-		width: 40%;
 		width: 40%;
 	}
 }
@@ -58,6 +65,16 @@ header {
     .navigation-logo {
         width: 30%;
     }
+	.navigation-logo a {
+		margin-top: 2rem;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+	.navigation-logo a {
+		margin-top: 0rem;
+		margin-bottom: 1rem;
+	}
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
@@ -140,7 +157,7 @@ header {
 		align-items: center;
 		flex-direction: column;
 		z-index: 100;
-		padding-top: 120px;
+		padding-top: 110px;
 		background: linear-gradient(to bottom right, var(--ColourStop1), var(--ColourStop2) 70%);
 	}
 
@@ -269,7 +286,7 @@ header {
 }
 #toggle:checked + .hamburger .bar2 {
 	transform: rotate(45deg);
-	margin-top: -7px;
+	margin-top: -13px;
 }
 
 .link-row {

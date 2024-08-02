@@ -27,7 +27,7 @@ window.onload = function () {
 
 /* Swip buttons for teams page */
 
-var swiper1 = new Swiper("#swiper-teams-page-1", {
+var swiper1 = new Swiper("#swiper1", {
 	slidesPerView: 3,
 	spaceBetween: 25,
 	loop: true,
@@ -50,7 +50,7 @@ var swiper1 = new Swiper("#swiper-teams-page-1", {
 	},
 });
 
-var swiper2 = new Swiper("#swiper-teams-page-2", {
+var swiper2 = new Swiper("#swiper2", {
 	slidesPerView: 3,
 	spaceBetween: 25,
 	loop: true,
@@ -73,7 +73,7 @@ var swiper2 = new Swiper("#swiper-teams-page-2", {
 	},
 });
 
-var swiper3 = new Swiper("#swiper-teams-page-3", {
+var swiper3 = new Swiper("#swiper3", {
 	slidesPerView: 3,
 	spaceBetween: 25,
 	loop: true,
@@ -86,6 +86,54 @@ var swiper3 = new Swiper("#swiper-teams-page-3", {
 	},
 	pagination: {
 		el: ".swiper-pagination3",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	breakpoints: {
+		0: { slidesPerView: 1 },
+		525: { slidesPerView: 2 },
+		950: { slidesPerView: 3 },
+	},
+});
+
+
+var swiper4 = new Swiper("#swiper4", {
+	slidesPerView: 3,
+	spaceBetween: 25,
+	loop: true,
+	centerSlide: "true",
+	fade: "true",
+	grabCursor: "true",
+	navigation: {
+		nextEl: ".swiper-button-next4",
+		prevEl: ".swiper-button-prev4",
+	},
+	pagination: {
+		el: ".swiper-pagination4",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	breakpoints: {
+		0: { slidesPerView: 1 },
+		525: { slidesPerView: 2 },
+		950: { slidesPerView: 3 },
+	},
+});
+
+
+var swiper5 = new Swiper("#swiper5", {
+	slidesPerView: 3,
+	spaceBetween: 25,
+	loop: true,
+	centerSlide: "true",
+	fade: "true",
+	grabCursor: "true",
+	navigation: {
+		nextEl: ".swiper-button-next5",
+		prevEl: ".swiper-button-prev5",
+	},
+	pagination: {
+		el: ".swiper-pagination5",
 		clickable: true,
 		dynamicBullets: true,
 	},
