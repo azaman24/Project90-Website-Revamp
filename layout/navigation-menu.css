@@ -250,7 +250,7 @@ header {
 .social-contacts {
 	margin-top: 30px;
 	justify-content: center;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .social-contacts svg {
@@ -287,10 +287,4 @@ header {
 #toggle:checked + .hamburger .bar2 {
 	transform: rotate(45deg);
 	margin-top: -13px;
-}
-
-.link-row {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 10px;
 }

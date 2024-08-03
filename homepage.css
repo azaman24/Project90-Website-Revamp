@@ -408,7 +408,7 @@ body {
 }
 
 .bottomNavContainer h2 {
-   width: 80%;
+   width: 75%;
 }
 
 .bottomNavContainer .social-icon-container {
@@ -427,13 +427,6 @@ body {
 
 .bottomNavContainer svg {
    width: 4rem;
-}
-
-.link-row-2 {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   width: 50%;
 }
 
 .joinOrContact {
@@ -471,26 +464,18 @@ body {
       margin-bottom: 10%;
    }
    .bottomNavContainer .social-icon-container {
-      flex-direction: column;
-      width: 70%;
+      width: 80%;
       margin-left: 0%;
       margin-right: 0%;
-      margin-top: 5%;
-      margin-bottom: 5%;
+      margin-top: 10%;
+      margin-bottom: 10%;
    }
    .bottomNavContainer svg {
-      width: 3.5rem;
+      width: 3.3rem;
    }
    .bottomNavContainer a {
       font-size: 1.5rem;
       width: 100%;
-   }
-   .link-row-2 {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      margin-top: 5%;
-      margin-bottom: 5%;
    }
 }
 
@@ -504,7 +489,6 @@ body {
       margin-top: 0%;
    }
    .bottomNavContainer .social-icon-container {
-      flex-direction: row;
       width: 60%;
       margin-left: 5%;
       margin-right: 5%;
@@ -517,13 +501,6 @@ body {
    .bottomNavContainer a {
       font-size: 1.4rem;
       width: 100%;
-   }
-   .link-row-2 {
-      display: flex;
-      flex-direction: row;
-      width: 50%;
-      margin-top: 5%;
-      margin-bottom: 5%;
    }
 }
 
@@ -562,7 +539,7 @@ body {
       width: 3.5rem;
    }
    .bottomNavContainer a {
-      font-size: 2rem;
+      font-size: 1.8rem;
       width: 100%;
    }  
 }
