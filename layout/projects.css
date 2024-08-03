@@ -1,3 +1,17 @@
+.navigation-list-items a.active {
+	color: black;
+	text-decoration: none;
+	padding-bottom: 0px;
+	padding-left: 11px;
+	padding-right: 11px;
+	box-shadow: 0px 5px 0px -3px black;
+}
+
+.navigation-list-items a.active:hover {
+	color: black;
+}
+
+
 .row::after {
   content: "";
   clear: both;

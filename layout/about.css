@@ -28,6 +28,20 @@
 	}
 }
 
+.navigation-list-items a.active {
+	color: black;
+	text-decoration: none;
+	padding-bottom: 0px;
+	padding-left: 11px;
+	padding-right: 11px;
+	box-shadow: 0px 5px 0px -3px black;
+}
+
+.navigation-list-items a.active:hover {
+	color: black;
+}
+
+
 .heading {
 	display: flex;
 	flex-direction: column;
@@ -45,10 +59,17 @@
 	}
 }
 
-/* iPad devices */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-height: 800px) {
 	.heading {
-		margin-bottom: 3rem;
+		margin-top: 5rem;
+		font-size: 2rem;
+	}
+}
+
+/* iPad devices */
+@media (min-width: 800px) and (max-width: 1024px) {
+	.heading {
+		margin-bottom: 5rem;
 		font-size: 2rem;
 	}
 }
@@ -64,7 +85,7 @@
 @media (min-width: 1200px) {
 	.heading {
 		font-size: 2.2rem;
-		margin-bottom: 5rem;
+		margin-bottom: 7rem;
 	}
 }
 
@@ -175,12 +196,13 @@
 /* iPad devices */
 @media (min-width: 600px) and (max-width: 750px) {
     .about-us-info {
+        flex-direction: row;
         margin: 3rem 4rem 9rem 4rem;
-        height: 20rem;
     }
     .intro-outer-box {
         width: 50%;
         height: 100%;
+        margin-top: 0rem;
     }
     .image-wrapper {
         width: 50%;
@@ -191,6 +213,7 @@
     }
 	.intro-inner-box h1 {
 		font-size: 1.2rem;
+        margin-bottom: 0rem;
 	}
 
 	.intro-inner-box p {
@@ -202,7 +225,6 @@
 @media (min-width: 750px) and (max-width: 900px) {
     .about-us-info {
         margin: 3rem 4rem 12rem 4rem;
-        height: 16rem;
     }
     .intro-outer-box {
         width: 100%;
@@ -225,7 +247,6 @@
 @media (min-width: 900px) and (max-width: 1024px) {
     .about-us-info {
         margin: 3rem 6rem 12rem 6rem;
-        height: 15rem;
     }
     .intro-outer-box {
         width: 50%;
