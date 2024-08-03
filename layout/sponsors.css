@@ -1,10 +1,10 @@
-.intro-outer-box {
+.sponsors-intro-outer-box {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.intro-inner-box {
+.sponsors-intro-inner-box {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -14,65 +14,65 @@
 
 /* Mobile devices */
 @media (max-width: 600px) {
-	.intro-inner-box {
+	.sponsors-intro-inner-box {
 		width: 80%;
 	}
-	.intro-outer-box {
+	.sponsors-intro-outer-box {
 		width: 100%;
 	}
-	.intro-inner-box h1 {
+	.sponsors-intro-inner-box h1 {
 		font-size: 1.3rem;
 		margin-bottom: 0.8rem;
 	}
 
-	.intro-inner-box p {
+	.sponsors-intro-inner-box p {
 		font-size: 1.1rem;
 	}
 }
 
 /* iPad devices */
 @media (min-width: 600px) and (max-width: 750px) {
-	.intro-inner-box {
+	.sponsors-intro-inner-box {
 		width: 80%;
 	}
-	.intro-inner-box h1 {
+	.sponsors-intro-inner-box h1 {
 		font-size: 1.3rem;
 	}
 
-	.intro-inner-box p {
+	.sponsors-intro-inner-box p {
 		font-size: 1.1rem;
 	}
-	.intro-outer-box {
+	.sponsors-intro-outer-box {
 		width: 100%;
 	}
 }
 
 /* iPad devices */
 @media (min-width: 750px) and (max-width: 1024px) {
-	.intro-inner-box {
+	.sponsors-intro-inner-box {
 		width: 60%;
 	}
-	.intro-inner-box h1 {
+	.sponsors-intro-inner-box h1 {
 		font-size: 1.3rem;
 	}
 
-	.intro-inner-box p {
+	.sponsors-intro-inner-box p {
 		font-size: 1.1rem;
 	}
-	.intro-outer-box {
+	.sponsors-intro-outer-box {
 		width: 100%;
 	}
 }
 
 /* Laptop devices */
 @media (min-width: 1024px) {
-	.intro-inner-box {
+	.sponsors-intro-inner-box {
 		width: 50%;
 	}
-	.intro-inner-box h1 {
+	.sponsors-intro-inner-box h1 {
 		font-size: 1.5rem;
 	}
-	.intro-inner-box p {
+	.sponsors-intro-inner-box p {
 		font-size: 1.2rem;
 	}
 }
@@ -90,11 +90,11 @@
 	width: 100%;
 }
 
-.sponsor-container .intro-inner-box {
+.sponsor-container .sponsors-intro-inner-box {
 	width: 100%;
 }
 
-.sponsor-container .intro-inner-box ul {
+.sponsor-container .sponsors-intro-inner-box ul {
 	padding: 0px 25px;
 	font-size: 1rem;
 }
@@ -142,14 +142,14 @@
 		margin-bottom: 450px;
 		margin-top: 3rem;
 	}
-	.sponsor-container .intro-inner-box h1 {
+	.sponsor-container .sponsors-intro-inner-box h1 {
 		font-size: 1.3rem;
 		margin-bottom: 0.5rem;
 	}
-	.sponsor-container .intro-inner-box ul li {
+	.sponsor-container .sponsors-intro-inner-box ul li {
 		font-size: 1.1rem;
 	}
-	.sponsor-container .intro-outer-box {
+	.sponsor-container .sponsors-intro-outer-box {
 		width: 80%;
 		margin-bottom: 5rem;
 	}
@@ -167,14 +167,14 @@
 		margin-bottom: 450px; /* Adjust this value as needed for iPad */
 		margin-top: 3rem;
 	}
-	.sponsor-container .intro-inner-box h1 {
+	.sponsor-container .sponsors-intro-inner-box h1 {
 		font-size: 1.3rem; /* Slightly larger than mobile for better readability */
 	}
-	.sponsor-container .intro-inner-box ul li {
+	.sponsor-container .sponsors-intro-inner-box ul li {
 		font-size: 1.1rem; /* Adjusted for iPad screen size */
 		margin-bottom: 1%;
 	}
-	.sponsor-container .intro-outer-box {
+	.sponsor-container .sponsors-intro-outer-box {
 		width: 80%; /* You might want to adjust this for iPad */
 		margin-bottom: 5rem;
 	}
@@ -192,14 +192,14 @@
 		margin-bottom: 450px; /* Adjust this value as needed for iPad */
 		margin-top: 3rem;
 	}
-	.sponsor-container .intro-inner-box h1 {
+	.sponsor-container .sponsors-intro-inner-box h1 {
 		font-size: 1.3rem; /* Slightly larger than mobile for better readability */
 	}
-	.sponsor-container .intro-inner-box ul li {
+	.sponsor-container .sponsors-intro-inner-box ul li {
 		font-size: 1.1rem; /* Adjusted for iPad screen size */
 		margin-bottom: 1%;
 	}
-	.sponsor-container .intro-outer-box {
+	.sponsor-container .sponsors-intro-outer-box {
 		width: 100%; /* You might want to adjust this for iPad */
 		margin-bottom: 5rem;
 	}
@@ -207,7 +207,7 @@
 		margin-top: 1px;
 		margin-bottom: 60px; /* Adjust if necessary for iPad layout */
 	}
-	.sponsor-container .intro-inner-box {
+	.sponsor-container .sponsors-intro-inner-box {
 		width: 60%;
 	}
 }
@@ -228,23 +228,23 @@
 		top: -2vh; /* Adjust based on the desired position above the first circle */
 		left: 21vw; /* Adjust so it's to the right of the first circle but still above the div */
 	}
-	.sponsor-container .intro-outer-box {
+	.sponsor-container .sponsors-intro-outer-box {
 		width: 50%;
 	}
 	.sponsor-container .circle-container {
 		width: 50%;
 	}
-	.sponsor-container .intro-inner-box {
+	.sponsor-container .sponsors-intro-inner-box {
 		width: 80%;
 		margin-right: 50px;
 	}
-	.sponsor-container .intro-outer-box {
+	.sponsor-container .sponsors-intro-outer-box {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 	}
 
-	.sponsor-container .intro-inner-box ul li {
+	.sponsor-container .sponsors-intro-inner-box ul li {
 		font-size: 1.2rem; /* Adjusted for iPad screen size */
 		margin-bottom: 1%;
 	}
