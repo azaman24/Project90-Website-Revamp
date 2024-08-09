@@ -1,110 +1,169 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Project90 | About Us</title>
-      <!-- Libraries -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
-            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
-      <!-- Font -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap">
-      <!-- Icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-      <!-- Layouts -->
-      <link rel="stylesheet" href="../index.css" />
-      <link rel="stylesheet" href="../layout/navigation-menu.css"/>
-      <link rel="stylesheet" href="../swiper-bundle.min.css"/>
-      <link rel="stylesheet" href="../layout/about.css"/>
-      <link rel="icon" href="../image/P90_Icon.svg" type="x-icon"/>
-   </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project90 | About Us</title>
+		<!-- Libraries -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+			integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+			crossorigin="anonymous"
+		/>
+		<!-- Font -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap"
+		/>
+		<!-- Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+		/>
+		<!-- Layouts -->
+		<link rel="stylesheet" href="../index.css" />
+		<link rel="stylesheet" href="../layout/navigation-menu.css" />
+		<link rel="stylesheet" href="../swiper-bundle.min.css" />
+		<link rel="stylesheet" href="../layout/about.css" />
+		<link rel="icon" href="../image/P90_Icon.svg" type="x-icon" />
+	</head>
 
-   <!-- Navigation Menu -->
-   <header>
-        <div class="navigation-logo">
-            <a href="../index.html"><img src = "../image/P90_Homepage_Logo.svg" alt="Project 90 Logo" class="logoSizing"/></a>
-        </div>
+	<!-- Navigation Menu -->
+	<header>
+		<div class="navigation-logo">
+			<a href="../index.html"
+				><img
+					src="../image/P90_Homepage_Logo.svg"
+					alt="Project 90 Logo"
+					class="logoSizing"
+			/></a>
+		</div>
 
-        <!-- Hamburger menu for mobile -->
-        <input id="toggle" type="checkbox"/>
-        <label for="toggle" class="hamburger">
-            <!-- creating hamburger icon -->
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </label>
-   
-        <div class="navigation-list">
-            <ul class="navigation-list-items">
-                <li> <a href="../page/about.html" class="active">About Us</a> </li>
-                <li> <a href="../page/projects.html">Projects</a> </li>
-                <li> <a href="../page/events.html">Events</a> </li>
-                <li> <a href="../page/sponsors.html">Sponsors</a> </li>
-                <li> <a href="../page/team.html">Our Team</a> </li>
-            </ul>
+		<!-- Hamburger menu for mobile -->
+		<input id="toggle" type="checkbox" />
+		<label for="toggle" class="hamburger">
+			<!-- creating hamburger icon -->
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</label>
 
-            <div class="social-contacts">
-                <div class="link-row">
-                    <!--Instagram Logo (Reference link: https://iconduck.com/icons/21194/instagram) -->
-                    <a href="https://www.instagram.com/project90.uofc/">
-                        <svg class="socials" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="12.5%">
-                            <defs>
-                                <linearGradient id="iconGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color: var(--startColor)" />
-                                    <stop offset="100%" style="stop-color: var(--endColor)" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                fill="url(#iconGradient1)"
-                                d="M150,25c-33.98,0-38.22.16-51.51.73-13.35.66-22.39,2.73-30.36,5.82-8.22,3.22-15.22,7.49-22.14,14.45-6.96,6.91-11.27,13.92-14.45,22.14-3.09,7.97-5.16,17-5.82,30.36-.6,13.31-.73,17.53-.73,51.51s.16,38.22.73,51.51c.66,13.31,2.73,22.39,5.82,30.36,3.22,8.22,7.49,15.22,14.45,22.14,6.91,6.96,13.92,11.27,22.14,14.45,7.97,3.06,17.04,5.16,30.36,5.82,13.31.6,17.53.73,51.51.73s38.22-.16,51.51-.73c13.31-.66,22.39-2.77,30.36-5.82,8.22-3.22,15.22-7.49,22.14-14.45,6.96-6.91,11.27-13.88,14.45-22.14,3.06-7.97,5.16-17.04,5.82-30.36.6-13.31.73-17.53.73-51.51s-.16-38.22-.73-51.51c-.66-13.31-2.77-22.43-5.82-30.36-3.22-8.22-7.49-15.22-14.45-22.14-6.91-6.96-13.88-11.27-22.14-14.45-7.97-3.09-17.04-5.16-30.36-5.82-13.31-.6-17.53-.73-51.51-.73ZM150,47.5c33.37,0,37.36.16,50.55.73,12.17.57,18.79,2.6,23.19,4.32,5.87,2.27,9.97,4.96,14.41,9.35,4.35,4.35,7.04,8.5,9.31,14.37,1.72,4.4,3.75,11.02,4.32,23.19.56,13.19.73,17.18.73,50.55s-.16,37.36-.77,50.55c-.66,12.17-2.69,18.79-4.4,23.19-2.37,5.87-5.01,9.97-9.37,14.41-4.4,4.35-8.59,7.04-14.41,9.31-4.34,1.72-11.06,3.75-23.28,4.32-13.26.56-17.17.73-50.62.73s-37.36-.16-50.63-.77c-12.17-.66-18.88-2.69-23.28-4.4-5.94-2.37-10.01-5.01-14.37-9.37-4.4-4.4-7.2-8.59-9.35-14.41-1.75-4.34-3.75-11.06-4.4-23.28-.45-13.1-.66-17.17-.66-50.47s.21-37.36.66-50.62c.65-12.21,2.65-18.92,4.4-23.28,2.16-5.95,4.96-10.01,9.35-14.41,4.35-4.35,8.43-7.16,14.37-9.37,4.4-1.71,10.95-3.74,23.16-4.35,13.26-.48,17.17-.65,50.58-.65l.52.36ZM150,85.84c-35.48,0-64.17,28.73-64.17,64.17s28.73,64.17,64.17,64.17,64.17-28.73,64.17-64.17-28.73-64.17-64.17-64.17ZM150,191.68c-23.03,0-41.67-18.64-41.67-41.67s18.64-41.67,41.67-41.67,41.67,18.64,41.67,41.67-18.64,41.67-41.67,41.67ZM231.76,83.28c0,8.31-6.76,15.01-15.03,15.01s-15.01-6.71-15.01-15.01,6.75-14.98,15.01-14.98,15.03,6.72,15.03,14.98Z"
-                            />
-                        </svg>
-                    </a>
+		<div class="navigation-list">
+			<ul class="navigation-list-items">
+				<li><a href="../page/about.html" class="active">About Us</a></li>
+				<li><a href="../page/projects.html">Projects</a></li>
+				<li><a href="../page/events.html">Events</a></li>
+				<li><a href="../page/sponsors.html">Sponsors</a></li>
+				<li><a href="../page/team.html">Our Team</a></li>
+			</ul>
 
-                    <!-- Linkedin Logo (Reference link: https://iconduck.com/icons/103018/social-linkedin) -->
-                    <a href="https://www.linkedin.com/company/project-90-ucalgary/mycompany/">
-                        <svg class="socials" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="12.5%">
-                            <defs>
-                                <linearGradient id="iconGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color: var(--startColor)" />
-                                    <stop offset="100%" style="stop-color: var(--endColor)" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                fill="url(#iconGradient2)"
-                                d="M256.48,25H43.45c-10.19,0-18.45,8.07-18.45,18.01v213.95c0,9.95,8.27,18.04,18.45,18.04h213.03c10.19,0,18.52-8.08,18.52-18.04V43.01c0-9.94-8.32-18.01-18.52-18.01ZM99.15,238.03h-37.1v-119.3h37.1v119.3ZM80.6,102.42c-11.89,0-21.49-9.63-21.49-21.51s9.61-21.49,21.49-21.49,21.49,9.63,21.49,21.49-9.63,21.51-21.49,21.51ZM238.02,238.03h-37.04v-58.01c0-13.84-.27-31.64-19.27-31.64s-22.24,15.07-22.24,30.63v59.02h-37.07v-119.31h35.57v16.29h.51c4.95-9.38,17.05-19.27,35.09-19.27,37.52,0,44.45,24.7,44.45,56.84v65.44h0Z"
-                            />
-                        </svg>
-                    </a>
+			<div class="social-contacts">
+				<!--Instagram Logo (Reference link: https://iconduck.com/icons/21194/instagram) -->
+				<a href="https://www.instagram.com/project90.uofc/">
+					<svg
+						class="socials"
+						data-name="Layer 1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 300 300"
+						width="12.5%"
+					>
+						<defs>
+							<linearGradient
+								id="iconGradient1"
+								x1="0%"
+								y1="0%"
+								x2="100%"
+								y2="0%"
+							>
+								<stop offset="0%" style="stop-color: var(--startColor)" />
+								<stop offset="100%" style="stop-color: var(--endColor)" />
+							</linearGradient>
+						</defs>
+						<path
+							fill="url(#iconGradient1)"
+							d="M150,25c-33.98,0-38.22.16-51.51.73-13.35.66-22.39,2.73-30.36,5.82-8.22,3.22-15.22,7.49-22.14,14.45-6.96,6.91-11.27,13.92-14.45,22.14-3.09,7.97-5.16,17-5.82,30.36-.6,13.31-.73,17.53-.73,51.51s.16,38.22.73,51.51c.66,13.31,2.73,22.39,5.82,30.36,3.22,8.22,7.49,15.22,14.45,22.14,6.91,6.96,13.92,11.27,22.14,14.45,7.97,3.06,17.04,5.16,30.36,5.82,13.31.6,17.53.73,51.51.73s38.22-.16,51.51-.73c13.31-.66,22.39-2.77,30.36-5.82,8.22-3.22,15.22-7.49,22.14-14.45,6.96-6.91,11.27-13.88,14.45-22.14,3.06-7.97,5.16-17.04,5.82-30.36.6-13.31.73-17.53.73-51.51s-.16-38.22-.73-51.51c-.66-13.31-2.77-22.43-5.82-30.36-3.22-8.22-7.49-15.22-14.45-22.14-6.91-6.96-13.88-11.27-22.14-14.45-7.97-3.09-17.04-5.16-30.36-5.82-13.31-.6-17.53-.73-51.51-.73ZM150,47.5c33.37,0,37.36.16,50.55.73,12.17.57,18.79,2.6,23.19,4.32,5.87,2.27,9.97,4.96,14.41,9.35,4.35,4.35,7.04,8.5,9.31,14.37,1.72,4.4,3.75,11.02,4.32,23.19.56,13.19.73,17.18.73,50.55s-.16,37.36-.77,50.55c-.66,12.17-2.69,18.79-4.4,23.19-2.37,5.87-5.01,9.97-9.37,14.41-4.4,4.35-8.59,7.04-14.41,9.31-4.34,1.72-11.06,3.75-23.28,4.32-13.26.56-17.17.73-50.62.73s-37.36-.16-50.63-.77c-12.17-.66-18.88-2.69-23.28-4.4-5.94-2.37-10.01-5.01-14.37-9.37-4.4-4.4-7.2-8.59-9.35-14.41-1.75-4.34-3.75-11.06-4.4-23.28-.45-13.1-.66-17.17-.66-50.47s.21-37.36.66-50.62c.65-12.21,2.65-18.92,4.4-23.28,2.16-5.95,4.96-10.01,9.35-14.41,4.35-4.35,8.43-7.16,14.37-9.37,4.4-1.71,10.95-3.74,23.16-4.35,13.26-.48,17.17-.65,50.58-.65l.52.36ZM150,85.84c-35.48,0-64.17,28.73-64.17,64.17s28.73,64.17,64.17,64.17,64.17-28.73,64.17-64.17-28.73-64.17-64.17-64.17ZM150,191.68c-23.03,0-41.67-18.64-41.67-41.67s18.64-41.67,41.67-41.67,41.67,18.64,41.67,41.67-18.64,41.67-41.67,41.67ZM231.76,83.28c0,8.31-6.76,15.01-15.03,15.01s-15.01-6.71-15.01-15.01,6.75-14.98,15.01-14.98,15.03,6.72,15.03,14.98Z"
+						/>
+					</svg>
+				</a>
 
-                    <!-- Github Logo (Reference link: https://iconduck.com/icons/11081/github)-->
-                    <a href="https://github.com/project90uc" alt="GitHub">
-                        <svg class="socials" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="12.5%">
-                            <defs>
-                                <linearGradient id="iconGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color: var(--startColor)" />
-                                    <stop offset="100%" style="stop-color: var(--endColor)" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                fill="url(#iconGradient3)"
-                                d="M150.01,25.01c-70.8,0-128.16,57.41-128.16,128.16,0,56.65,36.72,104.67,87.6,121.61,6.43,1.21,8.75-2.76,8.75-6.18,0-3.04-.07-11.09-.12-21.78-35.67,7.72-43.18-17.23-43.18-17.23-5.84-14.77-14.27-18.73-14.27-18.73-11.6-7.92.92-7.75.92-7.75,12.85.87,19.61,13.18,19.61,13.18,11.43,19.61,29.99,13.94,37.33,10.64,1.12-8.26,4.46-13.94,8.1-17.1-28.45-3.21-58.37-14.23-58.37-63.33,0-14.03,4.97-25.45,13.18-34.42-1.42-3.21-5.76-16.27,1.13-33.92,0,0,10.73-3.42,35.24,13.14,10.26-2.84,21.15-4.26,32.04-4.33,10.89.07,21.78,1.5,32.04,4.33,24.37-16.56,35.09-13.14,35.09-13.14,6.88,17.65,2.54,30.7,1.29,33.92,8.13,8.97,13.1,20.4,13.1,34.42,0,49.22-29.96,60.07-58.44,63.21,4.45,3.84,8.63,11.73,8.63,23.7,0,17.14-.16,30.95-.16,35.12,0,3.33,2.24,7.34,8.84,6.05,51.26-16.76,87.94-64.82,87.94-121.4,0-70.75-57.36-128.16-128.16-128.16h.02Z"
-                            />
-                        </svg>
-                    </a>							
-                </div>
-            </div>
-        </div>
-    </header>
+				<!-- Linkedin Logo (Reference link: https://iconduck.com/icons/103018/social-linkedin) -->
+				<a
+					href="https://www.linkedin.com/company/project-90-ucalgary/mycompany/"
+				>
+					<svg
+						class="socials"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 300 300"
+						width="12.5%"
+					>
+						<defs>
+							<linearGradient
+								id="iconGradient2"
+								x1="0%"
+								y1="0%"
+								x2="100%"
+								y2="0%"
+							>
+								<stop offset="0%" style="stop-color: var(--startColor)" />
+								<stop offset="100%" style="stop-color: var(--endColor)" />
+							</linearGradient>
+						</defs>
+						<path
+							fill="url(#iconGradient2)"
+							d="M256.48,25H43.45c-10.19,0-18.45,8.07-18.45,18.01v213.95c0,9.95,8.27,18.04,18.45,18.04h213.03c10.19,0,18.52-8.08,18.52-18.04V43.01c0-9.94-8.32-18.01-18.52-18.01ZM99.15,238.03h-37.1v-119.3h37.1v119.3ZM80.6,102.42c-11.89,0-21.49-9.63-21.49-21.51s9.61-21.49,21.49-21.49,21.49,9.63,21.49,21.49-9.63,21.51-21.49,21.51ZM238.02,238.03h-37.04v-58.01c0-13.84-.27-31.64-19.27-31.64s-22.24,15.07-22.24,30.63v59.02h-37.07v-119.31h35.57v16.29h.51c4.95-9.38,17.05-19.27,35.09-19.27,37.52,0,44.45,24.7,44.45,56.84v65.44h0Z"
+						/>
+					</svg>
+				</a>
 
-    <body>
-        <div class="top-webpage-photo">
-            <img src="../image/Top_Photo_Placeholder.png" alt="About Us Photo" class="team-header"/>
-        </div>
+				<!-- Github Logo (Reference link: https://iconduck.com/icons/11081/github)-->
+				<a href="https://github.com/project90uc" alt="GitHub">
+					<svg
+						class="socials"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 300 300"
+						width="12.5%"
+					>
+						<defs>
+							<linearGradient
+								id="iconGradient3"
+								x1="0%"
+								y1="0%"
+								x2="100%"
+								y2="0%"
+							>
+								<stop offset="0%" style="stop-color: var(--startColor)" />
+								<stop offset="100%" style="stop-color: var(--endColor)" />
+							</linearGradient>
+						</defs>
+						<path
+							fill="url(#iconGradient3)"
+							d="M150.01,25.01c-70.8,0-128.16,57.41-128.16,128.16,0,56.65,36.72,104.67,87.6,121.61,6.43,1.21,8.75-2.76,8.75-6.18,0-3.04-.07-11.09-.12-21.78-35.67,7.72-43.18-17.23-43.18-17.23-5.84-14.77-14.27-18.73-14.27-18.73-11.6-7.92.92-7.75.92-7.75,12.85.87,19.61,13.18,19.61,13.18,11.43,19.61,29.99,13.94,37.33,10.64,1.12-8.26,4.46-13.94,8.1-17.1-28.45-3.21-58.37-14.23-58.37-63.33,0-14.03,4.97-25.45,13.18-34.42-1.42-3.21-5.76-16.27,1.13-33.92,0,0,10.73-3.42,35.24,13.14,10.26-2.84,21.15-4.26,32.04-4.33,10.89.07,21.78,1.5,32.04,4.33,24.37-16.56,35.09-13.14,35.09-13.14,6.88,17.65,2.54,30.7,1.29,33.92,8.13,8.97,13.1,20.4,13.1,34.42,0,49.22-29.96,60.07-58.44,63.21,4.45,3.84,8.63,11.73,8.63,23.7,0,17.14-.16,30.95-.16,35.12,0,3.33,2.24,7.34,8.84,6.05,51.26-16.76,87.94-64.82,87.94-121.4,0-70.75-57.36-128.16-128.16-128.16h.02Z"
+						/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
 
-        <h1 class="webpage-heading">Meet Project90</h1>
+	<body>
+		<div class="top-webpage-photo">
+			<img
+				src="../image/Top_Photo_Placeholder.png"
+				alt="About Us Photo"
+				class="team-header"
+			/>
+		</div>
+
+		<h1 class="webpage-heading">Meet Project90</h1>
 
 		<div class="about-us-info reverse-items">
 			<div class="intro-outer-box">
@@ -119,15 +178,23 @@
 					</p>
 				</div>
 			</div>
-            <div class="image-wrapper identity">
-                <img src="../image/about_us_page_images/Identity.svg" alt="Identity" class="about-us-svg" />
-            </div>
-        </div>
+			<div class="image-wrapper identity">
+				<img
+					src="../image/about_us_page_images/Identity.svg"
+					alt="Identity"
+					class="about-us-svg"
+				/>
+			</div>
+		</div>
 
-        <div class="about-us-info">
-            <div class="image-wrapper mission">
-                <img src="../image/about_us_page_images/Mission.svg" alt="Mission" class="about-us-image" />
-            </div>
+		<div class="about-us-info">
+			<div class="image-wrapper mission">
+				<img
+					src="../image/about_us_page_images/Mission.svg"
+					alt="Mission"
+					class="about-us-image"
+				/>
+			</div>
 			<div class="intro-outer-box">
 				<div class="intro-inner-box">
 					<h1>Our Mission</h1>
@@ -142,7 +209,7 @@
 			</div>
 		</div>
 
-        <div class="about-us-info reverse-items">
+		<div class="about-us-info reverse-items">
 			<div class="intro-outer-box">
 				<div class="intro-inner-box">
 					<h1>Our Philosophy</h1>
@@ -156,15 +223,23 @@
 					</p>
 				</div>
 			</div>
-            <div class="image-wrapper philosophy">
-                <img src="../image/about_us_page_images/Philosophy.svg" alt="Philosophy" class="about-us-svg" />
-            </div>
+			<div class="image-wrapper philosophy">
+				<img
+					src="../image/about_us_page_images/Philosophy.svg"
+					alt="Philosophy"
+					class="about-us-svg"
+				/>
+			</div>
 		</div>
 
-        <div class="about-us-info">
-            <div class="image-wrapper teamwork">
-                <img src="../image/about_us_page_images/Teamwork.svg" alt="Teamwork" class="about-us-image" />
-            </div>
+		<div class="about-us-info">
+			<div class="image-wrapper teamwork">
+				<img
+					src="../image/about_us_page_images/Teamwork.svg"
+					alt="Teamwork"
+					class="about-us-image"
+				/>
+			</div>
 			<div class="intro-outer-box bottom">
 				<div class="intro-inner-box">
 					<h1>Be Part Of Our Team</h1>
@@ -178,167 +253,182 @@
 			</div>
 		</div>
 
-        <h1 class="testimonials-heading">Our Partners Say</h1>
+		<h1 class="testimonials-heading">Our Partners Say</h1>
 
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div>
-                        <p>
-                            “Grow Calgary thoroughly enjoyed working with Project90. The team was professional, responsive, knowledgeable, and committed to helping our organization. They successfully built a drip irrigation system which has greatly improved our watering practices. Thank you Project90!”
-                        </p>
-                        <img
+		<!-- Swiper -->
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<!-- Slide 1 -->
+				<div class="swiper-slide">
+					<div>
+						<p>
+							“Grow Calgary thoroughly enjoyed working with Project90. The team
+							was professional, responsive, knowledgeable, and committed to
+							helping our organization. They successfully built a drip
+							irrigation system which has greatly improved our watering
+							practices. Thank you Project90!”
+						</p>
+						<img
 							src="../image/about_us_page_images/growcalgary.jpg"
 							alt="Testimonial 1"
 						/>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div>
-                        <p>
-                            “The club has volunteered in our ReStore, on our build sites several times, helped with community engagement events and recruited volunteers for us. The communication with the team has been phenomenal. Project90 is a well-run, organized, student club, full of passion and drive and doing amazing things for non-profits in the city and beyond.”
-                        </p>
-                        <img
+					</div>
+				</div>
+				<!-- Slide 2 -->
+				<div class="swiper-slide">
+					<div>
+						<p>
+							“The club has volunteered in our ReStore, on our build sites
+							several times, helped with community engagement events and
+							recruited volunteers for us. The communication with the team has
+							been phenomenal. Project90 is a well-run, organized, student club,
+							full of passion and drive and doing amazing things for non-profits
+							in the city and beyond.”
+						</p>
+						<img
 							src="../image/about_us_page_images/habitatforhumanity2.jpg"
 							alt="Testimonial 2"
 						/>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div>
-                        <p>
-                            "My experience collaborating with Project90 has been very good! The team's professionalism have significantly contributed to the success of  CAWST project. Their unwavering support have been invaluable.  I highly recommend their services to any organization."
-                        </p>
-                        <img
+					</div>
+				</div>
+				<!-- Slide 3 -->
+				<div class="swiper-slide">
+					<div>
+						<p>
+							"My experience collaborating with Project90 has been very good!
+							The team's professionalism have significantly contributed to the
+							success of CAWST project. Their unwavering support have been
+							invaluable. I highly recommend their services to any
+							organization."
+						</p>
+						<img
 							src="../image/about_us_page_images/cawst.jpg"
 							alt="Testimonial 3"
 						/>
-                    </div>
-                </div>
-            </div>
-            <!-- Add Pagination -->
-            <br />
-            <br />
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+					</div>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<br />
+			<br />
+			<div class="swiper-pagination"></div>
+			<!-- Add Navigation -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
 
 		<div class="bottomNavContainer">
-            <h2>
-                <a href="https://linktr.ee/project90uofc" class="joinOrContact">Join Us</a>
-            </h2>
+			<h2>
+				<a href="https://linktr.ee/project90uofc" class="joinOrContact"
+					>Join Us</a
+				>
+			</h2>
 
-            <div class="social-icon-container">
-                <div class="link-row-2">
-                    <!--Instagram Logo -->
-                    <!-- Reference link: https://iconduck.com/icons/21194/instagram -->
-                    <a href="https://www.instagram.com/project90.uofc/">
-                        <svg
-                            class="socials"
-                            data-name="Layer 1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 300 300"
-                            width="12.5%"
-                        >
-                            <defs>
-                                <linearGradient
-                                    id="iconGradient4"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="100%"
-                                    y2="0%"
-                                >
-                                    <stop offset="0%" style="stop-color: var(--startColor)" />
-                                    <stop offset="100%" style="stop-color: var(--endColor)" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                fill="url(#iconGradient4)"
-                                d="M150,25c-33.98,0-38.22.16-51.51.73-13.35.66-22.39,2.73-30.36,5.82-8.22,3.22-15.22,7.49-22.14,14.45-6.96,6.91-11.27,13.92-14.45,22.14-3.09,7.97-5.16,17-5.82,30.36-.6,13.31-.73,17.53-.73,51.51s.16,38.22.73,51.51c.66,13.31,2.73,22.39,5.82,30.36,3.22,8.22,7.49,15.22,14.45,22.14,6.91,6.96,13.92,11.27,22.14,14.45,7.97,3.06,17.04,5.16,30.36,5.82,13.31.6,17.53.73,51.51.73s38.22-.16,51.51-.73c13.31-.66,22.39-2.77,30.36-5.82,8.22-3.22,15.22-7.49,22.14-14.45,6.96-6.91,11.27-13.88,14.45-22.14,3.06-7.97,5.16-17.04,5.82-30.36.6-13.31.73-17.53.73-51.51s-.16-38.22-.73-51.51c-.66-13.31-2.77-22.43-5.82-30.36-3.22-8.22-7.49-15.22-14.45-22.14-6.91-6.96-13.88-11.27-22.14-14.45-7.97-3.09-17.04-5.16-30.36-5.82-13.31-.6-17.53-.73-51.51-.73ZM150,47.5c33.37,0,37.36.16,50.55.73,12.17.57,18.79,2.6,23.19,4.32,5.87,2.27,9.97,4.96,14.41,9.35,4.35,4.35,7.04,8.5,9.31,14.37,1.72,4.4,3.75,11.02,4.32,23.19.56,13.19.73,17.18.73,50.55s-.16,37.36-.77,50.55c-.66,12.17-2.69,18.79-4.4,23.19-2.37,5.87-5.01,9.97-9.37,14.41-4.4,4.35-8.59,7.04-14.41,9.31-4.34,1.72-11.06,3.75-23.28,4.32-13.26.56-17.17.73-50.62.73s-37.36-.16-50.63-.77c-12.17-.66-18.88-2.69-23.28-4.4-5.94-2.37-10.01-5.01-14.37-9.37-4.4-4.4-7.2-8.59-9.35-14.41-1.75-4.34-3.75-11.06-4.4-23.28-.45-13.1-.66-17.17-.66-50.47s.21-37.36.66-50.62c.65-12.21,2.65-18.92,4.4-23.28,2.16-5.95,4.96-10.01,9.35-14.41,4.35-4.35,8.43-7.16,14.37-9.37,4.4-1.71,10.95-3.74,23.16-4.35,13.26-.48,17.17-.65,50.58-.65l.52.36ZM150,85.84c-35.48,0-64.17,28.73-64.17,64.17s28.73,64.17,64.17,64.17,64.17-28.73,64.17-64.17-28.73-64.17-64.17-64.17ZM150,191.68c-23.03,0-41.67-18.64-41.67-41.67s18.64-41.67,41.67-41.67,41.67,18.64,41.67,41.67-18.64,41.67-41.67,41.67ZM231.76,83.28c0,8.31-6.76,15.01-15.03,15.01s-15.01-6.71-15.01-15.01,6.75-14.98,15.01-14.98,15.03,6.72,15.03,14.98Z"
-                            />
-                        </svg>
-                    </a>
-                    <!-- Linkedin Logo -->
-                    <!-- Reference link: https://iconduck.com/icons/103018/social-linkedin -->
-                    <a
-                        href="https://www.linkedin.com/company/project-90-ucalgary/mycompany/"
-                    >
-                        <svg
-                            class="socials"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 300 300"
-                            width="12.5%"
-                        >
-                            <defs>
-                                <linearGradient
-                                    id="iconGradient5"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="100%"
-                                    y2="0%"
-                                >
-                                    <stop offset="0%" style="stop-color: var(--startColor)" />
-                                    <stop offset="100%" style="stop-color: var(--endColor)" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                fill="url(#iconGradient5)"
-                                d="M256.48,25H43.45c-10.19,0-18.45,8.07-18.45,18.01v213.95c0,9.95,8.27,18.04,18.45,18.04h213.03c10.19,0,18.52-8.08,18.52-18.04V43.01c0-9.94-8.32-18.01-18.52-18.01ZM99.15,238.03h-37.1v-119.3h37.1v119.3ZM80.6,102.42c-11.89,0-21.49-9.63-21.49-21.51s9.61-21.49,21.49-21.49,21.49,9.63,21.49,21.49-9.63,21.51-21.49,21.51ZM238.02,238.03h-37.04v-58.01c0-13.84-.27-31.64-19.27-31.64s-22.24,15.07-22.24,30.63v59.02h-37.07v-119.31h35.57v16.29h.51c4.95-9.38,17.05-19.27,35.09-19.27,37.52,0,44.45,24.7,44.45,56.84v65.44h0Z"
-                            />
-                        </svg>
-                    </a>
+			<div class="social-icon-container">
+				<div class="link-row-2">
+					<!--Instagram Logo -->
+					<!-- Reference link: https://iconduck.com/icons/21194/instagram -->
+					<a href="https://www.instagram.com/project90.uofc/">
+						<svg
+							class="socials"
+							data-name="Layer 1"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 300 300"
+							width="12.5%"
+						>
+							<defs>
+								<linearGradient
+									id="iconGradient4"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop offset="0%" style="stop-color: var(--startColor)" />
+									<stop offset="100%" style="stop-color: var(--endColor)" />
+								</linearGradient>
+							</defs>
+							<path
+								fill="url(#iconGradient4)"
+								d="M150,25c-33.98,0-38.22.16-51.51.73-13.35.66-22.39,2.73-30.36,5.82-8.22,3.22-15.22,7.49-22.14,14.45-6.96,6.91-11.27,13.92-14.45,22.14-3.09,7.97-5.16,17-5.82,30.36-.6,13.31-.73,17.53-.73,51.51s.16,38.22.73,51.51c.66,13.31,2.73,22.39,5.82,30.36,3.22,8.22,7.49,15.22,14.45,22.14,6.91,6.96,13.92,11.27,22.14,14.45,7.97,3.06,17.04,5.16,30.36,5.82,13.31.6,17.53.73,51.51.73s38.22-.16,51.51-.73c13.31-.66,22.39-2.77,30.36-5.82,8.22-3.22,15.22-7.49,22.14-14.45,6.96-6.91,11.27-13.88,14.45-22.14,3.06-7.97,5.16-17.04,5.82-30.36.6-13.31.73-17.53.73-51.51s-.16-38.22-.73-51.51c-.66-13.31-2.77-22.43-5.82-30.36-3.22-8.22-7.49-15.22-14.45-22.14-6.91-6.96-13.88-11.27-22.14-14.45-7.97-3.09-17.04-5.16-30.36-5.82-13.31-.6-17.53-.73-51.51-.73ZM150,47.5c33.37,0,37.36.16,50.55.73,12.17.57,18.79,2.6,23.19,4.32,5.87,2.27,9.97,4.96,14.41,9.35,4.35,4.35,7.04,8.5,9.31,14.37,1.72,4.4,3.75,11.02,4.32,23.19.56,13.19.73,17.18.73,50.55s-.16,37.36-.77,50.55c-.66,12.17-2.69,18.79-4.4,23.19-2.37,5.87-5.01,9.97-9.37,14.41-4.4,4.35-8.59,7.04-14.41,9.31-4.34,1.72-11.06,3.75-23.28,4.32-13.26.56-17.17.73-50.62.73s-37.36-.16-50.63-.77c-12.17-.66-18.88-2.69-23.28-4.4-5.94-2.37-10.01-5.01-14.37-9.37-4.4-4.4-7.2-8.59-9.35-14.41-1.75-4.34-3.75-11.06-4.4-23.28-.45-13.1-.66-17.17-.66-50.47s.21-37.36.66-50.62c.65-12.21,2.65-18.92,4.4-23.28,2.16-5.95,4.96-10.01,9.35-14.41,4.35-4.35,8.43-7.16,14.37-9.37,4.4-1.71,10.95-3.74,23.16-4.35,13.26-.48,17.17-.65,50.58-.65l.52.36ZM150,85.84c-35.48,0-64.17,28.73-64.17,64.17s28.73,64.17,64.17,64.17,64.17-28.73,64.17-64.17-28.73-64.17-64.17-64.17ZM150,191.68c-23.03,0-41.67-18.64-41.67-41.67s18.64-41.67,41.67-41.67,41.67,18.64,41.67,41.67-18.64,41.67-41.67,41.67ZM231.76,83.28c0,8.31-6.76,15.01-15.03,15.01s-15.01-6.71-15.01-15.01,6.75-14.98,15.01-14.98,15.03,6.72,15.03,14.98Z"
+							/>
+						</svg>
+					</a>
+					<!-- Linkedin Logo -->
+					<!-- Reference link: https://iconduck.com/icons/103018/social-linkedin -->
+					<a
+						href="https://www.linkedin.com/company/project-90-ucalgary/mycompany/"
+					>
+						<svg
+							class="socials"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 300 300"
+							width="12.5%"
+						>
+							<defs>
+								<linearGradient
+									id="iconGradient5"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop offset="0%" style="stop-color: var(--startColor)" />
+									<stop offset="100%" style="stop-color: var(--endColor)" />
+								</linearGradient>
+							</defs>
+							<path
+								fill="url(#iconGradient5)"
+								d="M256.48,25H43.45c-10.19,0-18.45,8.07-18.45,18.01v213.95c0,9.95,8.27,18.04,18.45,18.04h213.03c10.19,0,18.52-8.08,18.52-18.04V43.01c0-9.94-8.32-18.01-18.52-18.01ZM99.15,238.03h-37.1v-119.3h37.1v119.3ZM80.6,102.42c-11.89,0-21.49-9.63-21.49-21.51s9.61-21.49,21.49-21.49,21.49,9.63,21.49,21.49-9.63,21.51-21.49,21.51ZM238.02,238.03h-37.04v-58.01c0-13.84-.27-31.64-19.27-31.64s-22.24,15.07-22.24,30.63v59.02h-37.07v-119.31h35.57v16.29h.51c4.95-9.38,17.05-19.27,35.09-19.27,37.52,0,44.45,24.7,44.45,56.84v65.44h0Z"
+							/>
+						</svg>
+					</a>
 
-                    <!-- Github Logo -->
-                    <!-- Reference link: https://iconduck.com/icons/11081/github -->
-                    <a href="https://github.com/project90uc" alt="GitHub">
-                        <svg
-                            class="socials"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 300 300"
-                            width="12.5%"
-                        >
-                            <defs>
-                                <linearGradient
-                                    id="iconGradient6"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="100%"
-                                    y2="0%"
-                                >
-                                    <stop offset="0%" style="stop-color: var(--startColor)" />
-                                    <stop offset="100%" style="stop-color: var(--endColor)" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                fill="url(#iconGradient6)"
-                                d="M150.01,25.01c-70.8,0-128.16,57.41-128.16,128.16,0,56.65,36.72,104.67,87.6,121.61,6.43,1.21,8.75-2.76,8.75-6.18,0-3.04-.07-11.09-.12-21.78-35.67,7.72-43.18-17.23-43.18-17.23-5.84-14.77-14.27-18.73-14.27-18.73-11.6-7.92.92-7.75.92-7.75,12.85.87,19.61,13.18,19.61,13.18,11.43,19.61,29.99,13.94,37.33,10.64,1.12-8.26,4.46-13.94,8.1-17.1-28.45-3.21-58.37-14.23-58.37-63.33,0-14.03,4.97-25.45,13.18-34.42-1.42-3.21-5.76-16.27,1.13-33.92,0,0,10.73-3.42,35.24,13.14,10.26-2.84,21.15-4.26,32.04-4.33,10.89.07,21.78,1.5,32.04,4.33,24.37-16.56,35.09-13.14,35.09-13.14,6.88,17.65,2.54,30.7,1.29,33.92,8.13,8.97,13.1,20.4,13.1,34.42,0,49.22-29.96,60.07-58.44,63.21,4.45,3.84,8.63,11.73,8.63,23.7,0,17.14-.16,30.95-.16,35.12,0,3.33,2.24,7.34,8.84,6.05,51.26-16.76,87.94-64.82,87.94-121.4,0-70.75-57.36-128.16-128.16-128.16h.02Z"
-                            />
-                        </svg>
-                    </a>
-                </div>
-            </div>
+					<!-- Github Logo -->
+					<!-- Reference link: https://iconduck.com/icons/11081/github -->
+					<a href="https://github.com/project90uc" alt="GitHub">
+						<svg
+							class="socials"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 300 300"
+							width="12.5%"
+						>
+							<defs>
+								<linearGradient
+									id="iconGradient6"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop offset="0%" style="stop-color: var(--startColor)" />
+									<stop offset="100%" style="stop-color: var(--endColor)" />
+								</linearGradient>
+							</defs>
+							<path
+								fill="url(#iconGradient6)"
+								d="M150.01,25.01c-70.8,0-128.16,57.41-128.16,128.16,0,56.65,36.72,104.67,87.6,121.61,6.43,1.21,8.75-2.76,8.75-6.18,0-3.04-.07-11.09-.12-21.78-35.67,7.72-43.18-17.23-43.18-17.23-5.84-14.77-14.27-18.73-14.27-18.73-11.6-7.92.92-7.75.92-7.75,12.85.87,19.61,13.18,19.61,13.18,11.43,19.61,29.99,13.94,37.33,10.64,1.12-8.26,4.46-13.94,8.1-17.1-28.45-3.21-58.37-14.23-58.37-63.33,0-14.03,4.97-25.45,13.18-34.42-1.42-3.21-5.76-16.27,1.13-33.92,0,0,10.73-3.42,35.24,13.14,10.26-2.84,21.15-4.26,32.04-4.33,10.89.07,21.78,1.5,32.04,4.33,24.37-16.56,35.09-13.14,35.09-13.14,6.88,17.65,2.54,30.7,1.29,33.92,8.13,8.97,13.1,20.4,13.1,34.42,0,49.22-29.96,60.07-58.44,63.21,4.45,3.84,8.63,11.73,8.63,23.7,0,17.14-.16,30.95-.16,35.12,0,3.33,2.24,7.34,8.84,6.05,51.26-16.76,87.94-64.82,87.94-121.4,0-70.75-57.36-128.16-128.16-128.16h.02Z"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
 
-            <h2 class="text">
-                <a
-                    href="mailto:Project90@gmail.com"
-                    target="_blank"
-                    class="joinOrContact"
-                    >Contact Us</a
-                >
-            </h2>
-    </div>
+			<h2 class="text">
+				<a
+					href="mailto:Project90@gmail.com"
+					target="_blank"
+					class="joinOrContact"
+					>Contact Us</a
+				>
+			</h2>
+		</div>
 
-    <p class="copyright">&copy; 2024 Project90. All Right Reserved.</p>
+		<p class="copyright">&copy; 2024 Project90. All Right Reserved.</p>
 
-      <!-- JavaScript Scripts -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-      <script src="../swiper-bundle.min.js"></script>
-      <script src="../script/main.js"></script>
-   </body>
+		<!-- JavaScript Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="../swiper-bundle.min.js"></script>
+		<script src="../script/main.js"></script>
+	</body>
 </html>

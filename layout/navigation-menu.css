@@ -6,73 +6,94 @@ header {
 	transition: all 0.5s ease;
 	height: 9rem;
 }
-
 .navigation-logo a {
-	width: 100%;
-	height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.navigation-logo img
-{
-	width: auto;
-	height: auto;
+.navigation-logo img {
+    width: auto;
+    height: auto;
 }
 
 .navigation-logo {
-	display: flex;
-	align-items: center;
-	width: 45%;
-	height: 100%;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 100%;
 }
+
 
 /* Base styles */
 .navigation-logo {
-	display: flex;
-	align-items: center;
-	width: 20%;
-	height: 100%;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
 }
 
 @media (min-width: 200px) and (max-width: 400px) {
+	header {
+		height: 7rem;
+	}
 	.navigation-logo {
 		width: 50%;
+	}
+	.navigation-logo a {
+		margin-bottom: 2rem;
 	}
 }
 
 @media (min-width: 400px) and (max-width: 600px) {
+	header {
+		height: 8rem;
+	}
 	.navigation-logo {
 		width: 40%;
 	}
 }
 
+/* Media queries */
 @media (min-width: 600px) and (max-width: 800px) {
-	.navigation-logo {
-		width: 35%;
-	}
+    .navigation-logo {
+        width: 35%;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
-	.navigation-logo {
-		width: 30%;
+    .navigation-logo {
+        width: 30%;
+    }
+	.navigation-logo a {
+		margin-top: 2rem;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+	.navigation-logo a {
+		margin-top: 0rem;
+		margin-bottom: 1rem;
 	}
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
-	.navigation-logo {
-		width: 30%;
-	}
+    .navigation-logo {
+        width: 24%;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-	.navigation-logo {
-		width: 20%;
-	}
+    .navigation-logo {
+        width: 20%;
+    }
 }
 
 .logoSizing {
     max-width: 100%;
     height: auto;
 }
+
 
 .bar1, .bar2, .bar3 {
     width: 35px; /* Adjust the width of the bars */
@@ -111,19 +132,6 @@ header {
 	color: #133082;
 }
 
-.navigation-list-items a.active {
-	color: #133082;
-	text-decoration: none;
-	padding-bottom: 0px;
-	padding-left: 11px;
-	padding-right: 11px;
-	box-shadow: 0px 5px 0px -3px #133082;
-}
-
-.navigation-list-items a.active:hover {
-	color: #133082;
-}
-
 .bx-menu {
 	font-size: var(--HeaderTwo);
 	cursor: pointer;
@@ -142,7 +150,6 @@ header {
 		width: 100%;
 		height: 100%;
 		margin: 0;
-		background: #081b4e;
 		transform: translateX(-100%);
 		transition: transform 0.3s ease, opacity 0.3s ease;
 		display: flex;
@@ -150,15 +157,14 @@ header {
 		align-items: center;
 		flex-direction: column;
 		z-index: 100;
-		padding-top: 120px;
-		background: linear-gradient(to bottom, #036bd3, #1333cd);
+		padding-top: 110px;
+		background: linear-gradient(to bottom right, var(--ColourStop1), var(--ColourStop2) 70%);
 	}
 
 	.navigation-list-items {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
 	}
 
 	.navigation-list.display {
@@ -203,7 +209,6 @@ header {
 		margin-top: 8px;
 		transition: all 0.3s ease-in-out;
 	}
-
 }
 
 /* Base case, no media query needed if you want it to apply from the start (0px) up to 300px */
@@ -245,7 +250,7 @@ header {
 .social-contacts {
 	margin-top: 30px;
 	justify-content: center;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .social-contacts svg {
@@ -281,11 +286,5 @@ header {
 }
 #toggle:checked + .hamburger .bar2 {
 	transform: rotate(45deg);
-	margin-top: -7px;
-}
-
-.link-row {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-top: -13px;
 }

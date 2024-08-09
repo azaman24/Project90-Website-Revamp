@@ -1,3 +1,16 @@
+.navigation-list-items a.active {
+	color: black;
+	text-decoration: none;
+	padding-bottom: 0px;
+	padding-left: 11px;
+	padding-right: 11px;
+	box-shadow: 0px 5px 0px -3px black;
+}
+
+.navigation-list-items a.active:hover {
+	color: black;
+}
+
 *{ margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -224,18 +237,96 @@
    }
 }
 
+
+/* Typography*/
+section { 
+   padding: 7.25em 1em; 
+}
+strong, a { 
+   font-weight: var(--Regular);
+   color: var(--Text);
+   font-family: var(--PrimaryFont);
+   text-decoration: none;
+}
+h1, h2 {
+   flex: 50%;
+   color: var(--Text);
+   font-weight: var(--Regular);
+   line-height: var(--height);
+   margin: 0;
+}
+h1 { font-size: var(--HeaderOne); }
+h2 { font-size: var(--HeaderTwo); }
+ul, li { font-size: var(--HeaderThree); }
+p {font-size: var(--HeaderThree); font-weight: var(--Regular); }
+li {
+   word-spacing: 2px;
+   margin-bottom: 3%;
+}
+ul {
+   word-spacing: 2px;
+   margin-top: 3%;
+   margin-bottom: -1%;
+}
+
+::selection {
+   background-color: #00008B; /* Dark blue background */
+   color: #FFFFFF; /* White text */
+}
+
+.top-webpage-msg {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+.webpage-heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-webpage-photo img {
+	width: 100%;
+   margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+@media (max-width: 600px) {
+   .top-webpage-photo img {
+      margin-top: 7%;
+      margin-bottom: 7%;
+   }
+}
+
+.white-line {
+   width: 40%;
+   height: 2px;
+   background-color: white;
+   border: none;
+   margin: 1rem auto;
+   margin-bottom: 50px;
+ }
+
+
 /* Mobile devices */
 @media (max-width: 600px) {
 	.webpage-heading {
-		margin-top: 6rem;
-		margin-bottom: 2rem;
-		font-size: 1.6rem;
+      text-align: center;
+		margin: 2rem;
+		font-size: 2rem;
 	}
 	.top-webpage-msg {
-		margin-bottom: 2rem; /* Adjust margin for screens <= 600px */
+		margin-bottom: 4rem; /* Adjust margin for screens <= 600px */
 		margin-left: 4rem;
 		margin-right: 4rem;
+      font-size: 1rem;
 	}
+   .top-webpage-msg p {
+      font-size: 1rem;
+   }
 	.top-webpage-msg h2 {
 		font-size: 0.8rem;
 	}
@@ -325,7 +416,7 @@
 		margin-bottom: 1rem;
 	}
    .top-webpage-msg {
-		margin-bottom: 2rem;
+		margin-bottom: 8rem;
 		margin-left: 8rem;
 		margin-right: 8rem;
 	}
@@ -362,6 +453,7 @@
 		margin-bottom: 2rem;	
    }
    .top-webpage-msg {
+      margin-bottom: 10rem;
 		margin-left: 30rem;
 		margin-right: 30rem;
 	}
@@ -463,12 +555,18 @@ body {
       height: 55%;
    }
    .intro-inner-box h1 {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       margin-bottom: 0.7rem;
   }
-
   .intro-inner-box p {
    font-size: 1rem;
+  }
+  .intro-inner-box li {
+   font-size: 0.9rem;
+   margin-left: 0.5rem;
+  }
+  .intro-inner-box a {
+   font-size: 0.9rem;
   }
 }
 
@@ -787,70 +885,6 @@ body {
    margin-top: -7.5%;
    margin-bottom: 5%;
 }
-
-/* Typography*/
-section { 
-   padding: 7.25em 1em; 
-}
-strong, a { 
-   font-weight: var(--Regular);
-   color: var(--Text);
-   font-family: var(--PrimaryFont);
-   text-decoration: none;
-}
-h1, h2 {
-   flex: 50%;
-   color: var(--Text);
-   font-weight: var(--Regular);
-   line-height: var(--height);
-   margin: 0;
-}
-h1 { font-size: var(--HeaderOne); }
-h2 { font-size: var(--HeaderTwo); }
-ul, li { font-size: var(--HeaderThree); }
-p {font-size: var(--HeaderThree); font-weight: var(--Regular); }
-li {
-   word-spacing: 2px;
-   margin-bottom: 3%;
-}
-ul {
-   word-spacing: 2px;
-   margin-top: 3%;
-   margin-bottom: -1%;
-}
-
-::selection {
-   background-color: #00008B; /* Dark blue background */
-   color: #FFFFFF; /* White text */
-}
-
-.top-webpage-msg {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin-bottom: 5rem;
-}
-
-.webpage-heading {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.top-webpage-photo img {
-	width: 100%;
-   margin-top: 1%;
-}
-
-.white-line {
-   width: 40%;
-   height: 2px;
-   background-color: white;
-   border: none;
-   margin: 1rem auto;
-   margin-bottom: 50px;
- }
 
 /* animations */
 @keyframes bounce {
