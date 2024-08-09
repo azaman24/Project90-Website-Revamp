@@ -113,7 +113,7 @@
 		margin-right: 4rem;
 	}
 	.event-join-msg h2 {
-		font-size: 1rem;
+		font-size: 0.8rem;
 	}
 }
 
@@ -289,6 +289,7 @@
 
 .image-wrapper {
 	display: none;
+	position: relative; /* Added to position the button absolutely */
 }
 
 .image-wrapper:nth-child(-n + 6) {
@@ -302,9 +303,9 @@
 	background-image: linear-gradient(to right, #229fff, #0c69c6);
 }
 
-/* Style the button and place it in the middle of the container/image */
+/* Style the button and place it in the middle of the container(image) */
 .image-wrapper .readMoreMsg {
-	display: flex;
+	display: hidden;
 	text-align: center;
 	position: absolute;
 	top: 50%;
@@ -315,13 +316,15 @@
 	padding: 10px 18px;
 	cursor: pointer;
 	color: white;
-	display: none;
+}
+
+.image-wrapper:hover .readMoreMsg {
+	display: block; /* Show on hover */
 }
 
 @media (max-width: 1024px) {
 	.image-wrapper .readMoreMsg {
-		display: block;
-		opacity: 0.85;
+		opacity: 0; /* Initially hidden */
 		top: 50%;
 	}
 	.image-wrapper img:hover {
@@ -331,18 +334,18 @@
 
 @media (max-width: 600px) {
 	.image-wrapper .readMoreMsg {
-		display: block;
-		opacity: 0.85;
+		opacity: 0;
 		font-size: 14px;
 		padding: 8px 14px;
 		top: 50%;
 	}
 	.image-wrapper img:hover {
-		opacity: 1;
+		opacity: 0;
 	}
 }
 
-.load-more-btn-container {
+.show-more-btn-container,
+.show-less-btn-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -353,8 +356,8 @@
 	height: auto; /* Adjust height as needed */
 }
 
-#load-more-btn {
-	font-weight: bold;
+.secondary-btn {
+	font-family: 'Poppins';
 	padding: 0.8rem;
 	border-radius: 20px;
 	border: 3.5px solid white; /* Use the primary color for the border */
@@ -364,14 +367,14 @@
 	transition: all 0.2s ease; /* Smooth transition for hover and focus */
 }
 
-#load-more-btn:hover,
-#load-more-btn:focus {
-	color: rgba(23, 10, 81); /* White text on hover/focus */
-	border: 3.5px solid rgba(23, 10, 81); /* Transparent border on hover/focus */
+.secondary-btn:hover {
+	color: rgba(23, 10, 81);
+	background-color: white;
 }
 
 @media (max-width: 600px) {
-	.load-more-btn-container {
+	.show-more-btn-container,
+	.show-less-btn-container {
 		margin: 2rem 0rem; /* Adjust margin for screens <= 600px */
 		padding: 0.5rem 1.5rem 4rem 1.5rem; /* Adjust padding for screens <= 600px */
 		font-size: 1.2rem; /* Adjust font size for screens <= 600px */
@@ -381,11 +384,6 @@
 		border-radius: 10px; /* Adjust border radius for screens <= 600px */
 		border: 3px solid white; /* Use the primary color for the border */
 		color: white;
-	}
-	#load-more-btn:hover,
-	#load-more-btn:focus {
-		color: rgba(23, 10, 81);
-		border: 3px solid rgba(23, 10, 81);
 	}
 }
 
@@ -489,7 +487,7 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
 
 
 #popupBoxTitle {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	margin-bottom: 1rem;
 }
 
@@ -549,7 +547,7 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
 		height: 80%;
 	}
 	#popupBoxTitle {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 	}
 }
 

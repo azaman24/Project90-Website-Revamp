@@ -1,16 +1,3 @@
-.navigation-list-items a.active {
-	color: black;
-	text-decoration: none;
-	padding-bottom: 0px;
-	padding-left: 11px;
-	padding-right: 11px;
-	box-shadow: 0px 5px 0px -3px black;
-}
-
-.navigation-list-items a.active:hover {
-	color: black;
-}
-
 section {
 	padding: 5vh 0 5vh 0;
 }
@@ -18,7 +5,7 @@ section {
 .slide-container {
 	max-width: 1120px;
 	width: 100%;
-	padding: 40px 0px 15px 0px;
+	padding: 40px 0;
 }
 
 .slide-content {
@@ -74,7 +61,7 @@ section {
 .team-photo {
 	display: flex;
 	justify-content: center;
-	margin: 5% 0% 8% 0%;
+	margin: 0% 0% 8% 0%;
 }
 
 /* Mobile devices */
@@ -86,7 +73,7 @@ section {
 }
 
 /* iPad devices */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 	.team-photo img {
 		width: 100%;
 		height: 50vh;
@@ -94,10 +81,10 @@ section {
 }
 
 /* Laptop devices */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 	.team-photo img {
 		width: 100%;
-		height: 65vh;
+		height: 70vh;
 	}
 }
 
@@ -125,11 +112,9 @@ section {
 }
 
 .member-heading {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: white;
 	margin-bottom: 0.5rem;
-	margin-left: 1.5rem;
-	margin-right: 1.5rem;
 	text-align: center;
 }
 
@@ -140,96 +125,12 @@ section {
 	margin: 1rem auto;
 }
 
-/* Mobile devices */
-@media (max-width: 600px) {
-	.team-intro-inner-box {
-		width: 80%;
-	}
-	.team-intro-outer-box {
-		width: 100%;
-	}
-	.team-intro-inner-box h1 {
-		font-size: 1.2rem;
-		margin-bottom: 0.8rem;
-	}
-
-	.team-intro-inner-box p {
-		font-size: 1rem;
-	}
-}
-
-/* iPad devices */
-@media (min-width: 600px) and (max-width: 750px) {
-	.team-intro-inner-box {
-		width: 80%;
-	}
-	.team-intro-inner-box h1 {
-		font-size: 1.3rem;
-	}
-
-	.team-intro-inner-box p {
-		font-size: 1.1rem;
-	}
-	.team-intro-outer-box {
-		width: 100%;
-	}
-}
-
-/* iPad devices */
-@media (min-width: 750px) and (max-width: 1024px) {
-	.team-intro-inner-box {
-		width: 60%;
-	}
-	.team-intro-inner-box h1 {
-		font-size: 1.3rem;
-	}
-
-	.team-intro-inner-box p {
-		font-size: 1.1rem;
-	}
-	.team-intro-outer-box {
-		width: 100%;
-	}
-}
-
-/* Laptop devices */
-@media (min-width: 1024px) {
-	.team-intro-inner-box {
-		width: 50%;
-	}
-	.team-intro-inner-box h1 {
-		font-size: 1.5rem;
-	}
-	.team-intro-inner-box p {
-		font-size: 1.2rem;
-	}
-}
-
-
-.swiper-button-next1,
-.swiper-button-prev1,
-.swiper-button-next2,
-.swiper-button-prev2,
-.swiper-button-next3,
-.swiper-button-prev3,
-.swiper-button-next4,
-.swiper-button-prev4,
-.swiper-button-next5,
-.swiper-button-prev5 {
+[class*="swiper-button-"] {
 	color: white;
 	margin: 0 10px;
 }
 
-.swiper-button-next1:hover,
-.swiper-button-prev1:hover,
-.swiper-button-next2:hover,
-.swiper-button-prev2:hover,
-.swiper-button-next3:hover,
-.swiper-button-prev3:hover,
-.swiper-button-next4:hover,
-.swiper-button-prev4:hover,
-.swiper-button-next5:hover,
-.swiper-button-prev5:hover {
+[class*="swiper-button-"]:hover {
 	transform: scale(1.2);
 	transition: transform 0.3s ease;
 }

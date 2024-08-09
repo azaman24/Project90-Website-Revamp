@@ -336,9 +336,11 @@
 .swiper-button-next {
 	border-radius: 50%; /* Optional: Makes the background circle */
 	padding: 10px; /* Adjusts the size of the circle background */
+	width: calc(var(--swiper-navigation-size) / 44 * 100);
 }
 
 /* Mobile devices */
+
 @media (max-width: 600px) {
 	.impact-heading {
 		margin-top: 25rem;
@@ -386,50 +388,19 @@
 	}
 }
 /* iPad devices */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: white;
 		margin: 0 2rem;
-		top: 40%;
-		width: calc(var(--swiper-navigation-size) / 44 * 20);
-		height: calc(var(--swiper-navigation-size) / 4);
+		width: calc(var(--swiper-navigation-size) / 44 * 1);
+		height: calc(var(--swiper-navigation-size) / 2	* 1);
 	}
 	:root {
 		--swiper-navigation-size: 70px;
 	}
 	.swiper-slide div {
-		width: 70%;
-		min-height: 10rem;
-	}
-	.swiper-slide div h1 {
-		font-size: 1.2rem;
-	}
-
-	.swiper-slide div p {
-		font-size: 1rem;
-	}
-
-	.impact-heading {
-		margin-bottom: 3rem;
-		font-size: 2rem;
-	}
-}
-
-@media (min-width: 900px) and (max-width: 1024px) {
-	.swiper-button-next,
-	.swiper-button-prev {
-		color: white;
-		margin: 0 2rem;
-		top: 40%;
-		width: calc(var(--swiper-navigation-size) / 44 * 30);
-		height: calc(var(--swiper-navigation-size) / 4);
-	}
-	:root {
-		--swiper-navigation-size: 70px;
-	}
-	.swiper-slide div {
-		width: 70%;
+		width: 75%;
 		min-height: 10rem;
 	}
 	.swiper-slide div h1 {
@@ -453,15 +424,14 @@
 		color: white;
 		margin: 0 3.5rem;
 		top: 25%;
-		height: calc(var(--swiper-navigation-size) / 0.8 );
-		width: calc(var(--swiper-navigation-size) / 44 * 30);
+		height: calc(var(--swiper-navigation-size) / 0.65 );
+
 	}
 	:root {
 		--swiper-navigation-size: 80px;
 	}
 	.swiper-slide div {
-		min-height: 10rem;
-		width: 70%;
+		min-height: 17rem;
 	}
 	.swiper-slide div h1 {
 		font-size: 1.5rem;
@@ -477,53 +447,17 @@
 	}
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) {
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: white;
 		margin: 0 5rem;
 		top: 25%;
-		width: calc(var(--swiper-navigation-size) / 44 * 100);
-		height: calc(var(--swiper-navigation-size) / 0.8 );
 	}
 	:root {
 		--swiper-navigation-size: 80px;
 	}
-	.swiper-slide div {
-		min-height: 10rem;
-		width: 50%;
-	}
-	.swiper-slide div h1 {
-		font-size: 1.5rem;
-	}
 
-	.swiper-slide div p {
-		font-size: 1.1rem;
-	}
-
-	.impact-heading {
-		font-size: 2.2rem;
-		margin-bottom: 5rem;
-	}
-}
-
-
-@media (min-width: 1400px) {
-	.swiper-button-next,
-	.swiper-button-prev {
-		color: white;
-		margin: 0 5rem;
-		top: 25%;
-		width: calc(var(--swiper-navigation-size) / 44 * 140);
-		height: calc(var(--swiper-navigation-size) / 0.8 );
-	}
-	:root {
-		--swiper-navigation-size: 80px;
-	}
-	.swiper-slide div {
-		min-height: 10rem;
-		width: 50%;
-	}
 	.swiper-slide div h1 {
 		font-size: 1.5rem;
 	}
@@ -569,7 +503,7 @@
 	.affiliations h1,
 	.partners h1,
 	.sponsors h1 {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		margin: 1rem 1rem;
 	}
 	.become-sponsor-msg {
@@ -733,7 +667,7 @@
 	}
 }
 
-@media (min-width: 750px) and (max-width: 1024px) {
+@media (min-width: 750) and (max-width: 1024px) {
 	.partners h1 {
 		margin-bottom: 0px;
 	}
@@ -758,6 +692,13 @@
 	width: 1500px;
 	overflow: hidden;
 	-webkit-mask-image: linear-gradient(
+		90deg,
+		transparent,
+		#fff 20%,
+		#fff 80%,
+		transparent
+	);
+	mask-image: linear-gradient(
 		90deg,
 		transparent,
 		#fff 20%,
@@ -865,36 +806,12 @@
 .become-sponsor-msg {
 	display: inline-block;
 	font-size: 3rem;
-	margin: 5rem 0.8rem 6rem 0.8rem;
+	margin: 0rem 0.7rem 8rem 0.7rem;
 	color: transparent;
 	color: var(--Text);
 	text-decoration: none;
 	font-weight: var(--Bold);
 	transition: all 0.5s ease;
-}
-
-/* Small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-    .become-sponsor-msg {
-        font-size: 2rem;
-        margin: 3rem 1rem 4rem 1rem;
-    }
-}
-
-/* Medium devices (tablets, 600px to 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .become-sponsor-msg {
-        font-size: 2.5rem;
-        margin: 4rem 0.6rem 5rem 0.6rem;
-    }
-}
-
-/* Large devices (desktops, 900px and up) */
-@media (min-width: 901px) {
-    .become-sponsor-msg {
-        font-size: 3rem;
-        margin: 5rem 0.7rem 6rem 0.7rem;
-    }
 }
 
 .become-sponsor-msg:hover {
@@ -920,4 +837,3 @@
 .bounce {
 	animation: bounceAnimation 1s;
 }
-
