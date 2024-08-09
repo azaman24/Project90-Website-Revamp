@@ -71,8 +71,8 @@
   margin-left: 10px;
 }
 .info {
-   font-size: 15px;
-   margin-left: 5%;
+  font-size: 15px;
+  margin-left: 5%;
 }
 
 .currentProjects {
@@ -122,6 +122,13 @@
 
 .projectTitle {
   margin-top: -2.5%;
+}
+
+.iconName {
+  font-size: 1.4rem;
+}
+.card-content li, .icon-info li {
+  font-size: 1.1rem;
 }
 
 .card-image {
@@ -182,4 +189,79 @@ button {
   margin-bottom: 20rem;
   text-align: center;
   width: 50%;
+}
+
+/* Mobile devices */
+@media (max-width: 450px) {
+  .iconName {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .card-content li, .icon-info li {
+    font-size: 1rem;
+  }
+}
+
+/* iPad devices */
+@media (min-width: 450px) and (max-width: 600px) {
+  .iconName {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .card-content li, .icon-info li {
+    font-size: 1rem;
+  }
+}
+
+/* iPad devices */
+@media (min-width: 600px) and (max-width: 750px) {
+  .iconName {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .card-content li, .icon-info li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 900px) {
+  .iconName {
+    font-size: 1.6rem;
+  }
+
+  .card-content li, .icon-info li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .iconName {
+    font-size: 1.75rem;
+  }
+
+  .card-content li, .icon-info li {
+    font-size: 1.2rem;
+  }
+}
+
+/* Laptop devices */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .iconName {
+    font-size: 1.85rem;
+  }
+  .card-content li, .icon-info li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .iconName {
+    font-size: 2rem;
+  }
+  .card-content li, .icon-info li {
+    font-size: 1.25rem;
+  }
 }
