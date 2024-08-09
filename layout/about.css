@@ -1,57 +1,3 @@
-.sponsor-photo {
-	display: flex;
-	justify-content: center;
-	margin: 5% 0% 8% 0%;
-}
-
-/* Mobile devices */
-@media (max-width: 600px) {
-	.sponsor-photo img {
-		width: 100%;
-		height: 45vh;
-	}
-}
-
-/* iPad devices */
-@media (min-width: 600px) and (max-width: 1024px) {
-	.sponsor-photo img {
-		width: 100%;
-		height: 50vh;
-	}
-}
-
-/* Laptop devices */
-@media (min-width: 1024px) {
-	.sponsor-photo img {
-		width: 100%;
-		height: 65vh;
-	}
-}
-
-.navigation-list-items a.active {
-	color: black;
-	text-decoration: none;
-	padding-bottom: 0px;
-	padding-left: 11px;
-	padding-right: 11px;
-	box-shadow: 0px 5px 0px -3px black;
-}
-
-.navigation-list-items a.active:hover {
-	color: black;
-}
-
-
-.heading {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-}
-
-/* Mobile devices */
 @media (max-width: 600px) {
 	.heading {
 		margin-top: 5rem;
@@ -59,14 +5,13 @@
 	}
 }
 
-@media (min-width: 600px) and (max-height: 800px) {
+/* iPad devices */
+@media (min-width: 600px) and (max-width: 800px) {
 	.heading {
 		margin-top: 5rem;
 		font-size: 2rem;
 	}
 }
-
-/* iPad devices */
 @media (min-width: 800px) and (max-width: 1024px) {
 	.heading {
 		margin-bottom: 5rem;
@@ -89,6 +34,15 @@
 	}
 }
 
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
 .about-us-info {
 	margin: 3rem 10rem 6rem 10rem;
 	display: flex;
@@ -101,6 +55,7 @@
 	flex-direction: column;
 	align-items: center;
     width: 50%;
+    height: 100%;
 }
 
 .intro-inner-box {
@@ -128,12 +83,13 @@
 }
 
 .image-wrapper img {
-    width: 40%;
-    transition: transform 0.3s ease;
+    width: 50%;
+	transform: scale(0.8);
+	transition: transform 0.3s ease;
 }
 
 .image-wrapper:hover img {
-    transform: scale(1.15);
+    transform: scale(1);
 }
 
 /* Mobile devices */
@@ -153,7 +109,7 @@
         width: 100%;
     }
     .image-wrapper img {
-        width: 55%;
+        height: 55%;
     }
 	.intro-inner-box h1 {
 		font-size: 1.2rem;
@@ -165,17 +121,18 @@
 	}
 }
 
+/* iPad devices */
 @media (min-width: 450px) and (max-width: 600px) {
     .about-us-info {
-        flex-direction: column;
-        margin: 3rem 2rem 5rem 2rem;
+		flex-direction: column;
+        margin: 3rem 4rem 6rem 4rem;
     }
-    .reverse-items {
+	.reverse-items {
         flex-direction: column-reverse;
     }
     .intro-outer-box {
         width: 100%;
-        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
     .image-wrapper {
         width: 100%;
@@ -221,7 +178,6 @@
 	}
 }
 
-/* iPad devices */
 @media (min-width: 750px) and (max-width: 900px) {
     .about-us-info {
         margin: 3rem 4rem 12rem 4rem;
@@ -304,9 +260,319 @@
         width: 40%;
     }
     .intro-inner-box h1 {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
     .intro-inner-box p {
         font-size: 1.1rem;
     }
 }
+
+.navigation-list-items a.active:hover {
+	color: black;
+}
+
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+	.heading {
+		margin-top: 5rem;
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 600px) and (max-height: 800px) {
+	.heading {
+		margin-top: 5rem;
+		font-size: 2rem;
+	}
+}
+
+/* iPad devices */
+@media (min-width: 800px) and (max-width: 1024px) {
+	.heading {
+		margin-bottom: 5rem;
+		font-size: 2rem;
+	}
+}
+
+/* Laptop devices */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .heading {
+		font-size: 2.2rem;
+		margin-bottom: 5rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.heading {
+		font-size: 2.2rem;
+		margin-bottom: 7rem;
+	}
+}
+
+.about-us-info {
+	margin: 3rem 10rem 6rem 10rem;
+	display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.intro-outer-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    width: 50%;
+}
+
+.swiper-slide div {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    max-width: 30%; /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+    border-radius: 18px;
+    background-color: rgba(42, 75, 170, 0.3);
+}
+
+.swiper-slide div {
+	max-width: 80%; 
+	margin: auto; 
+}
+
+.intro-inner-box h1 {
+    font-size: 1.4rem;
+}
+.intro-inner-box p {
+    font-size: 1.1rem;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 40%;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.15);
+}
+
+/* Mobile devices */
+
+@media (max-width: 600px) {
+	.testimonials-heading {
+		margin-top: 25rem;
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+	}
+
+	:root {
+		--swiper-navigation-size: 50px;
+	}
+	.swiper-slide {
+		padding: 10px;
+	}
+
+	.swiper-slide div {
+		width: 100%;
+		max-width: 100%;
+		min-height: 18rem;
+	}
+
+	.intro-inner-box p {
+		font-size: 1rem;
+	}
+
+    .swiper-slide img {
+        max-width: 30%; 
+        margin: 10px auto; 
+        display: block;
+    }
+    .intro-outer-box {
+        width: 100%;
+        margin-top: 5rem;
+    }
+    .image-wrapper {
+        width: 100%;
+    }
+    .image-wrapper img {
+        width: 44%;
+    }
+	.intro-inner-box h1 {
+		font-size: 1.2rem;
+		margin-bottom: 0.7rem;
+	}
+
+	.intro-inner-box p {
+		font-size: 1rem;
+	}
+}
+
+/* iPad devices */
+@media (min-width: 600px) and (max-width: 750px) {
+    .about-us-info {
+        flex-direction: row;
+        margin: 3rem 4rem 9rem 4rem;
+    }
+    .intro-outer-box {
+        width: 50%;
+        height: 100%;
+        margin-top: 0rem;
+    }
+    .image-wrapper {
+        width: 50%;
+        height: 100%;
+    }
+    .image-wrapper img {
+        width: 55%;
+    }
+	.intro-inner-box h1 {
+		font-size: 1.2rem;
+        margin-bottom: 0rem;
+	}
+
+	.intro-inner-box p {
+		font-size: 0.9rem;
+	}
+}
+
+/* iPad devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: white;
+		margin: 0 4rem;
+		width: calc(var(--swiper-navigation-size) / 44 * 1);
+		height: calc(var(--swiper-navigation-size) / 2	* 1);
+	}
+	:root {
+		--swiper-navigation-size: 70px;
+	}
+	.swiper-slide div {
+		width: 75%;
+		min-height: 10rem;
+	}
+
+	.intro-inner-box p {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+    .about-us-info {
+        margin: 3rem 6rem 12rem 6rem;
+    }
+    .intro-outer-box {
+        width: 50%;
+    }
+    .image-wrapper {
+        width: 50%;
+    }
+    .image-wrapper img {
+        width: 45%;
+    }
+    .intro-inner-box h1 {
+        font-size: 1.3rem;
+    }
+
+    .intro-inner-box p {
+        font-size: 1rem;
+    }
+}
+
+/* Laptop devices */
+@media (min-width: 1024px) and (max-width: 1200px) {
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: white;
+		margin: 0 8rem;
+		top: 25%;
+		height: calc(var(--swiper-navigation-size) / 0.65 );
+
+	}
+	:root {
+		--swiper-navigation-size: 80px;
+	}
+	.swiper-slide div {
+		min-height: 17rem;
+	}
+
+	.swiper-slide div p {
+		font-size: 1.1rem;
+	}
+
+    .swiper-slide img {
+        max-width: 10%; 
+        margin: 15px 30px; 
+        display: center;
+    }
+	.intro-inner-box h1 {
+		font-size: 1.3rem;
+	}
+	.intro-inner-box p {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: white;
+		margin: 0 10rem;
+		top: 25%;
+	}
+	:root {
+		--swiper-navigation-size: 80px;
+	}
+
+	.swiper-slide div p {
+		font-size: 1.1rem;
+	}
+
+    .swiper-slide img {
+        max-width: 10%; 
+        margin: 15px 30px; 
+        display: center; 
+    }
+
+	.testimonials-heading {
+		font-size: 2.2rem;
+		margin-bottom: 5rem;
+	}
+}
+
+.mission {
+	animation: scaleUp 3s ease-in;
+	animation-timeline: view(7.5%);
+	background-repeat: no-repeat;
+	transition: transform 0.3s ease;
+ }
+
+@keyframes scaleUp {
+	from {
+		transform: scale(0.75);
+	}
+	10% {
+		transform: scale(1);
+	}
+ }

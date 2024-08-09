@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Project90 | Events</title>
+   <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Project90 | Home</title>
 		<!-- Libraries -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-			integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
-			crossorigin="anonymous"
-		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
 		<!-- Font -->
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap"
-		/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500,900|Source+Sans+Pro:300,700&display=swap">
 		<!-- Icons -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 		<!-- Layouts -->
-		<link rel="stylesheet" href="../index.css" />
-		<link rel="stylesheet" href="../layout/navigation-menu.css" />
-		<link rel="stylesheet" href="../swiper-bundle.min.css" />
-		<link rel="stylesheet" href="../layout/events.css" />
-		<link rel="icon" href="../image/P90_Icon.svg" type="x-icon" />
-	</head>
-	<body>
+		<link rel="stylesheet" href="../index.css">
+		<link rel="stylesheet" href="../layout/navigation-menu.css">
+		<link rel="icon" href="../image/P90_Icon.svg" type="x-icon"/>
+		<link rel="shortcut icon" href="../image/P90_Icon.svg" type="image/x-icon" />
+   </head>
+   <body>
 		<!-- Main Page -->
 		<div class="main">
 			<!-- Navigation Menu -->
@@ -58,7 +39,7 @@
 
 				<div class="navigation-list">
 					<ul class="navigation-list-items">
-						<li><a href="../page/about.html" class="active">About Us</a></li>
+						<li><a href="../page/about.html">About Us</a></li>
 						<li><a href="../page/projects.html">Projects</a></li>
 						<li><a href="../page/events.html">Events</a></li>
 						<li><a href="../page/sponsors.html">Sponsors</a></li>
@@ -119,218 +100,79 @@
 				</div>
 			</header>
 
-			<div class="top-webpage-photo">
-				<img src="../image/Top_Photo_Placeholder.png" alt="Events Photo" class="team-header"/>
-			</div>
+		<!-- Slogan and Globe API -->
+		<!-- Reference link: https://commons.wikimedia.org/wiki/File:Rotating_earth_animated_transparent.gif -->
+		<section class="globeSection">
+            <h2 class="globeBackground"></h2>
+            <div class = "slogan-path" >
+               	<svg viewBox = "-25 -20 500 400">
+					<path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,45.5,-106.8,148.6,-105.6c111.3,1.2,150.8,120.3,155.1,127" />
+					<text width="500" text-anchor="middle">
+						<textPath id = "path" xlink:href="#curve" startOffset="47.5%" style="fill: white;" spacing="auto">
+						ENGINEERING FOR THE OTHER 90%
+                     	</textPath>
+                  	</text>
+               	</svg>
+            </div>
+            <div class = "globe-gif">
+				<img src="Rotating_earth_animated_transparent.gif" alt=Globe_API height="65%" width="55%"></a>
+            </div>
+		</section>
 
-			<h1 class="webpage-heading">Current Events</h1>
+		<!-- Summary -->
+		<h1 class="webpage-heading">Who We Are</h1>
+			
+		<div class="top-webpage-msg">
+			<p>
+				Project90 is a University of Calgary engineering club fostering hands-on design projects and helping the community.
+			</p>
+		</div>
 
-			<div class="event-icon-container">
-				<div class="hr-div-class">
-					<hr class="hr-class-1" />
-				</div>
-				<div class="event-icon">
-					<img
-						src="../image/events_page_images/calendar.png"
-						alt="calendar icon"
-						class="event-icon-image"
-					/>
-				</div>
-				<div class="hr-div-class">
-					<hr class="hr-class-2" />
-				</div>
-			</div>
-
-			<div class="top-webpage-msg">
-				<p>
-					Join us for thrilling events, workshops, games, and more! Mark your
-					calendars and don't miss out!
-				</p>
-			</div>
-
-			<!-- Uncomment the code below when there are NO current events. -->
-			<div class="event-container">
-				<div class="no-current-events-container">
-					<p class="no-current-events">No events currently scheduled.</p>
-					<div class="moon-animation">
-						<img src="../image/events_page_images/sleep.png" alt="Cloud" />
-					</div>
-				</div>
-			</div>
-
-			<!-- Uncomment the code below when there ARE current events. -->
-			<!-- <div class="event-container"> -->
-				<!-- Example structure of an event below -->
-				<!-- <div class="image-wrapper" onclick="showPopup('11')">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/11.png"
-						alt="Event Image"
-						onclick="showPopup('11', 'popup-animation')"
-	
-					/>
-					<div class="readMoreMsg" onclick="showPopup('11', 'popup-animation')">
-						Click For More!
-					</div>
-				</div> -->
-			<!-- </div> -->
-
-			<h1 class="webpage-heading">Past Events</h1>
-
-			<div class="event-icon-container">
-				<div class="hr-div-class">
-					<hr class="hr-class-1" />
-				</div>
-				<div class="event-icon">
-					<img
-						src="../image/events_page_images/clock.png"
-						alt="calendar icon"
-						class="event-icon-image"
-					/>
-				</div>
-				<div class="hr-div-class">
-					<hr class="hr-class-2" />
+		<!-- Purpose -->
+		<div class="homepage-info reverse-items">
+			<div class="intro-outer-box">
+				<div class="intro-inner-box">
+					<h1>Purpose</h1>
+					<li>Empower students to leverage their academic expertise for tangible impact.</ul>
+					<li>Collaborate with established NGOs, our organization fosters practical design projects that drive meaningful change.</ul>
+					<li>Cultive awareness of local and international development through campus-wide seminars and events to take action.</li>
 				</div>
 			</div>
+            <div class="image-wrapper handshake">
+                <img src="../image/handshake.svg" alt="Handshake" class="homepage-svg" />
+            </div>
+        </div>
 
-			<div class="event-container">
-				<div class="image-wrapper" onclick="showPopup('11')">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/11.png"
-						alt="Event Image"
-						onclick="showPopup('11', 'popup-animation')"
-	
-					/>
-					<div class="readMoreMsg" onclick="showPopup('11', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/10.png"
-						alt="Event Image"
-						onclick="showPopup('10', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('10', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/9.png"
-						alt="Event Image"
-						onclick="showPopup('9', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('9', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/8.png"
-						alt="Event Image"
-						onclick="showPopup('8', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('8', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/7.png"
-						alt="Event Image"
-						onclick="showPopup('7', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('7', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/6.png"
-						alt="Event Image"
-						onclick="showPopup('6', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('6', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/5.png"
-						alt="Event Image"
-						onclick="showPopup('5', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('5', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/4.png"
-						alt="Event Image"
-						onclick="showPopup('4', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('4', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/3.png"
-						alt="Event Image"
-						onclick="showPopup('3', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('3', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/2.png"
-						alt="Event Image"
-						onclick="showPopup('2', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('2', 'popup-animation')">
-						Click For More!
-					</div>
-				</div>
-
-				<div class="image-wrapper">
-					<img
-						class="event-image"
-						src="../image/events_page_images/past_events/1.png"
-						alt="Event Image"
-						onclick="showPopup('1', 'popup-animation')"
-					/>
-					<div class="readMoreMsg" onclick="showPopup('1', 'popup-animation')">
-						Click For More!
-					</div>
+		<!-- Goals -->
+        <div class="homepage-info">
+            <div class="image-wrapper pointingAtStars">
+                <img src="../image/stars.svg" alt="Pointing at Stars" class="homepage-image" />
+            </div>
+			<div class="intro-outer-box">
+				<div class="intro-inner-box">
+					<h1>Goals</h1>
+					<li>Utilize academic knowledge to execute targeted, small-scale projects with precision and efficacy.</li>
+					<li>Foster active engagement within the campus community towards the advancement of local and international development initiatives.</li>
+					<li>Effectuate direct and tangible impact on the socio-economic landscape of developing nations through our strategic interventions.</li>
+					
 				</div>
 			</div>
+		</div>
 
-			<div class="load-more-btn-container">
-				<button id="load-more-btn" class="secondary-btn">Show More!</button>
+		<!-- Plans -->
+        <div class="homepage-info reverse-items">
+			<div class="intro-outer-box">
+				<div class="intro-inner-box">
+					<h1>Plans</h1>
+					<li>Actively engage in contributions to
+						<a href="../page/projects.html" class="urlLink">impact-driven engineering projects</a>
+						to effectuate positive change in local and global communities.</li>
+					<li>Expand our impact through student-led projects that help various communities.</li>
+				</div>
 			</div>
+            <div class="image-wrapper lightBulb">
+                <img src="../image/Light_Bulb.svg" alt="Light Bulb" class="homepage-svg" />
+            </div>
 		</div>
 
 		<div class="bottomNavContainer">
@@ -436,13 +278,13 @@
                     >Contact Us</a
                 >
             </h2>
-		</div>
+    	</div>	
 
 		<p class="copyright">&copy; 2024 Project90. All Right Reserved.</p>
-
+      
 		<!-- JavaScript Scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 		<script src="../swiper-bundle.min.js"></script>
 		<script src="../script/main.js"></script>
-	</body>
+   </body>
 </html>
