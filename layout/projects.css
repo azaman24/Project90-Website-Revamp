@@ -12,193 +12,294 @@
 }
 
 .row::after {
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 .row {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
 }
 
 .column {
-  float: left;
-  width: 33.33%;
-  position: relative;
+	float: left;
+	width: 33.33%;
+	position: relative;
 }
 
-.picture{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.picture {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
 }
 
-.gradient{
-  width: 100%;
-  height: 100%;
-  padding-top: 5em;
-  padding-bottom: 5em;
-  background-image: linear-gradient(to bottom, rgb(1,124,237) 0%, rgb(0,0,0,0) 10%,rgb(0,0,0,0) 90%, rgb(7,102,230) 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
+.gradient {
+	width: 100%;
+	height: 100%;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	background-image: linear-gradient(
+		to bottom,
+		rgb(1, 124, 237) 0%,
+		rgb(0, 0, 0, 0) 10%,
+		rgb(0, 0, 0, 0) 90%,
+		rgb(7, 102, 230) 100%
+	);
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .Icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  width: 100%;
-  margin: -12.5% auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
+	width: 100%;
+	margin: 0.1rem;
+  padding: 0.1rem;
+}
+
+/* Below 600px */
+@media (max-width: 599px) {
+    .Icons {
+        margin: 0.2rem;
+    }
+}
+
+/* 600px to 899px */
+@media (min-width: 600px) and (max-width: 899px) {
+    .Icons {
+        margin: 0.3rem;
+    }
+}
+
+/* 900px to 1024px */
+@media (min-width: 900px) and (max-width: 1024px) {
+    .Icons {
+        margin: 0.4rem;
+    }
+}
+
+/* Beyond 1024px */
+@media (min-width: 1025px) {
+    .Icons {
+        margin: 0.1rem;
+    }
 }
 
 .iconTypeTop img {
-  width: 100px; 
-  height: 100px;
+	width: 100px;
+	height: 100px;
+}
+
+/* Below 600px */
+@media (max-width: 600px) {
+	.iconTypeTop img {
+		width: 65px;
+		height: 65px;
+	}
 }
 
 .Icons div {
-  text-align: center;
+	text-align: center;
 }
 
-.IconInfo{
+.IconInfoOuterContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  column-gap: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: -175px;
+  width: 100%;
+}
+
+.IconInfo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  width: 100%;
+	column-gap: 50px;
+	margin-bottom: -175px;
 }
 
 .icon-info {
-  background:rgba(33, 112, 235, 0.3);
-  width: 300px;
-  border-radius: 30px;
-  padding: 15px 20px;
-  margin-bottom: 50px;
+	background: rgba(33, 112, 235, 0.3);
+	width: 100%;
+	border-radius: 30px;
+	padding: 15px 20px;
+	margin-bottom: 50px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
+
+@media (max-width: 600px) {
+  .icon-info {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .icon-info {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  .icon-info {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .icon-info {
+    width: 25%;
+  }
+}
+
 .icon_type {
-  display: flex;
-  align-items: center;
-  margin-bottom: 7.5px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 7.5px;
 }
 .iconName {
-  margin-left: 10px;
+	margin-left: 10px;
 }
+
 .info {
-   font-size: 15px;
-   margin-left: 5%;
+	font-size: 15px;
+	margin-left: 5%;
+}
+
+@media (max-width: 600px) {
+  .iconName {
+    font-size: 1.2rem;
+  }
+  .info li {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .iconName {
+    font-size: 1.5rem;
+  }
+  .info li {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .iconName {
+    font-size: 1.6rem;
+  }
+  .info li {
+    font-size: 1rem !important;
+  }
 }
 
 .currentProjects {
-  font-size: 1.3rem;
-  color: white;
-  text-align: center;
+	color: white;
+	text-align: center;
 }
 .previousProjects {
-  font-size: 1.3rem;
-  color: white;
-  text-align: center;
-  margin-top: -10%;
+	color: white;
+	text-align: center;
+	margin-top: -10%;
 }
 
 .grid-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 100px;
-  padding-inline-start: 80px;
-  padding-inline-end: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 100px;
+	padding-inline-start: 80px;
+	padding-inline-end: 80px;
 }
 
 .about-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px; 
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 80px;
 }
 
 .projectCard {
-  min-width: 300px;
-  max-width: 500px;
-  background-color: rgba(19,76,160,0.4);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto; /*remove after adding projectCard into grid */
-  transition: all 0.2s ease;
+	min-width: 300px;
+	max-width: 500px;
+	background-color: rgba(19, 76, 160, 0.4);
+	border-radius: 1.5rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto; /*remove after adding projectCard into grid */
+	transition: all 0.2s ease;
 }
 
 .projectCard:hover {
-  box-shadow: 0 0 40px rgba(0, 128, 255, 0.75)
+	box-shadow: 0 0 40px rgba(0, 128, 255, 0.75);
 }
 
 .projectTitle {
-  margin-top: -2.5%;
+	margin-top: -2.5%;
 }
 
 .card-image {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
 
 .card-content {
-  padding: 20px;
-  color: #fff;
-  display: flex;
-    flex-direction: column;
-    align-items: center;
+	padding: 20px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .statusClosed {
-  width: 50%;
-  text-align: center;
-  color: #0056b3;
-  background-color: rgba(255,255,255,0.75);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 15rem;
-  border: 2px solid #0056b3;
+	width: 50%;
+	text-align: center;
+	color: #0056b3;
+	background-color: rgba(255, 255, 255, 0.75);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15rem;
+	border: 2px solid #0056b3;
 }
 
 button {
-  font-family: var(--PrimaryFont);
-  border: none;
-  align-content: center;
-  width: 50%;
-  height: 50px;
+	font-family: var(--PrimaryFont);
+	border: none;
+	align-content: center;
+	width: 50%;
+	height: 50px;
 }
 
 .statusOpen {
-  width: 50%;
-  text-align: center;
-  color: white;
-  background-image: linear-gradient(to right, #229fff, #0c69c6);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 15rem;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease;
+	width: 50%;
+	text-align: center;
+	color: white;
+	background-image: linear-gradient(to right, #229fff, #0c69c6);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15rem;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 .statusOpen:hover {
-  background-image: linear-gradient(to right, #0582ff 20%, #0158bc);
+	background-image: linear-gradient(to right, #0582ff 20%, #0158bc);
 }
 
-.placeHolder { /* used when there are no current projects*/
-  margin: auto;
-  margin-bottom: 20rem;
-  text-align: center;
-  width: 50%;
+.placeHolder {
+	/* used when there are no current projects*/
+	margin: auto;
+	margin-bottom: 20rem;
+	text-align: center;
+	width: 50%;
 }
-

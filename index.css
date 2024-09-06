@@ -366,7 +366,6 @@ ul {
 		font-size: 2rem;
 	}
    .webpage-heading {
-		margin-top: 6rem;
 		margin-bottom: 3rem;
 		font-size: 2rem;
 	}
@@ -375,6 +374,9 @@ ul {
 		margin-left: 8rem;
 		margin-right: 8rem;
 	}
+   .top-webpage-msg p {
+      font-size: 1.1rem;
+   }
 	.top-webpage-msg h2 {
 		font-size: 1.1rem;
 	}
@@ -416,7 +418,7 @@ ul {
 		margin-bottom: 1rem;
 	}
    .top-webpage-msg {
-		margin-bottom: 8rem;
+		margin-bottom: 5rem;
 		margin-left: 8rem;
 		margin-right: 8rem;
 	}
@@ -453,9 +455,9 @@ ul {
 		margin-bottom: 2rem;	
    }
    .top-webpage-msg {
-      margin-bottom: 10rem;
-		margin-left: 30rem;
-		margin-right: 30rem;
+      margin-bottom: 7rem;
+		margin-left: 22rem;
+		margin-right: 22rem;
 	}
    .bottomNavContainer {
       margin-left: 8rem;
